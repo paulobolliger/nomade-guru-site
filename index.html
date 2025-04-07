@@ -178,3 +178,66 @@
   <header>
     <div class="container">
       <div class="logo">
+        <!-- Substitua o caminho abaixo, se necessário -->
+        <img src="logo_nomade_guru.png" alt="Nomade Guru">
+      </div>
+      <nav>
+        <ul>
+          <li><a href="#sobre">Sobre</a></li>
+          <li><a href="#servicos">Serviços</a></li>
+          <li><a href="#contato">Contato</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div>
+      <h1>Desperte o Seu Espírito Nômade</h1>
+      <p>Transforme sua maneira de viver e trabalhar. Inspire-se com experiências únicas e alcance a liberdade de explorar o mundo.</p>
+      <button class="btn" onclick="document.getElementById('contato').scrollIntoView({behavior:'smooth'})">Fale Conosco</button>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="sobre">
+    <h2>Quem Somos</h2>
+    <p>A Nomade Guru é uma marca inovadora que une tecnologia, estilo e paixão por viagens. Nossa missão é empoderar você a viver uma vida sem fronteiras, com experiências transformadoras e consultoria especializada para nômades digitais.</p>
+  </section>
+
+  <!-- Services Section -->
+  <section id="servicos">
+    <h2>Nossos Serviços</h2>
+    <p>Oferecemos consultoria personalizada, planejamento de viagens e suporte completo para que você possa conquistar a liberdade de trabalhar e explorar o mundo com segurança e estilo.</p>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contato">
+    <h2>Entre em Contato</h2>
+    <p>Quer saber mais ou agendar uma consultoria? Envie-nos uma mensagem e vamos juntos transformar sua jornada.</p>
+    <form action="https://formspree.io/f/SEU-ENDERECO" method="POST">
+      <label for="name">Nome:</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="email">E-mail:</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="message">Mensagem:</label>
+      <textarea id="message" name="message" rows="4" required></textarea>
+
+      <button type="submit" class="btn">Enviar</button>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Nomade Guru. Todos os direitos reservados.</p>
+    <p>
+      <a href="#">Facebook</a> |
+      <a href="#">Instagram</a> |
+      <a href="#">LinkedIn</a>
+    </p>
+  </footer>
+</body>
+</html>

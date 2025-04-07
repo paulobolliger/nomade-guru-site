@@ -24,6 +24,7 @@ document.getElementById('form-ideias').addEventListener('submit', async function
     }
 
   } catch (err) {
+    console.error('Erro no fetch:', err);
     box.innerHTML = '<p><strong>Erro:</strong> Não foi possível se conectar ao servidor.</p>';
   }
 });

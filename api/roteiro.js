@@ -11,13 +11,13 @@ module.exports = async (req, res) => {
     return res.status(405).json({ message: 'Método não permitido' });
   }
 
-  const { mensagem } = req.body;
-
-  if (!mensagem) {
-    return res.status(400).json({ message: 'Texto da viagem é obrigatório.' });
-  }
-
   try {
+    const { mensagem } = req.body;
+
+    if (!mensagem || mensagem.trim().length < 10) {
+      return res.status(400).json({ message: 'Descreva melhor sua ideia de viagem.' });
+    }
+
     const completion = await openai.createChatCompletion({
       model: 'gpt-3.5-turbo',
       messages: [
@@ -28,10 +28,10 @@ module.exports = async (req, res) => {
     });
 
     const resposta = completion.data.choices[0].message.content.trim();
-    res.status(200).json({ roteiro: resposta });
+    return res.status(200).json({ roteiro: resposta });
 
   } catch (error) {
-    console.error('Erro ao acessar OpenAI:', error);
-    res.status(500).json({ message: 'Erro ao gerar roteiro com IA.' });
+    console.error('Erro OpenAI:', error?.response?.data || error.message);
+    return res.status(500).json({ message: 'Erro ao gerar roteiro com IA.' });
   }
 };

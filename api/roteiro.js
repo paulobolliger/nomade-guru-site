@@ -1,13 +1,12 @@
 
-import { Configuration, OpenAIApi } from 'openai';
+const { Configuration, OpenAIApi } = require('openai');
 
 const configuration = new Configuration({
   apiKey: process.env.OPENAI_API_KEY,
 });
-
 const openai = new OpenAIApi(configuration);
 
-export default async function handler(req, res) {
+module.exports = async (req, res) => {
   if (req.method !== 'POST') {
     return res.status(405).json({ message: 'Método não permitido' });
   }
@@ -35,4 +34,4 @@ export default async function handler(req, res) {
     console.error('Erro ao acessar OpenAI:', error);
     res.status(500).json({ message: 'Erro ao gerar roteiro com IA.' });
   }
-}
+};

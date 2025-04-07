@@ -1,29 +1,42 @@
-
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NOMADE GURU</title>
-    <link rel="stylesheet" href="/styles/style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NOMADE GURU | Viagens Inteligentes</title>
+  <link rel="stylesheet" href="/styles/style.css" />
 </head>
 <body>
-    <header>
-        <h1>Bem-vindo à NOMADE GURU</h1>
-        <p>Viaje com propósito, viva com liberdade.</p>
-    </header>
-    <main>
-        <section>
-            <h2>Quem somos</h2>
-            <p>Uma agência de viagens inteligente, conectando pessoas com experiências autênticas ao redor do mundo.</p>
-        </section>
-        <section>
-            <h2>Entre em contato</h2>
-            <a href="https://wa.me/5511947745710" target="_blank">Fale conosco no WhatsApp</a>
-        </section>
-    </main>
-    <footer>
-        <p>&copy; 2025 NOMADE GURU</p>
-    </footer>
+  <header>
+    <h1>NOMADE GURU</h1>
+    <p>Viaje com propósito, viva com liberdade.</p>
+  </header>
+
+  <section class="hero">
+    <h2>Crie um roteiro único com inteligência artificial</h2>
+    <p>Descreva sua viagem dos sonhos e receba uma prévia criada por IA. Nós ajustamos com o toque humano que transforma uma ideia em experiência real.</p>
+    <form id="form-ideias">
+      <textarea placeholder="Descreva sua viagem dos sonhos..." rows="5"></textarea>
+      <button type="submit">Gerar prévia do roteiro</button>
+    </form>
+  </section>
+
+  <section id="preview" class="hidden">
+    <h3>Aqui está um gostinho do que preparamos pra você:</h3>
+    <div class="roteiro-box">
+      <p><em>Estamos analisando suas ideias...</em></p>
+    </div>
+    <p>Gostou? Cadastre-se para receber o roteiro completo por e-mail:</p>
+    <form id="form-cadastro">
+      <input type="email" placeholder="Seu e-mail" required />
+      <button type="submit">Receber roteiro completo</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 NOMADE GURU — Consultoria em turismo inteligente</p>
+  </footer>
+
+  <script src="/public/script.js"></script>
 </body>
 </html>

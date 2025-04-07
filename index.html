@@ -6,6 +6,8 @@
   <title>Nomade Guru</title>
   <!-- Fonte Poppins -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+  <!-- Font Awesome para o ícone do WhatsApp -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-p1Cm0GgW8+z1w0Gp4eA0ZnC7y6wEv9B5Sih+nEM+VqFXOqR9m6yPZgW+82e3dvBw0ax0evutQ6DSh3O/hO+9pg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <style>
     /* Reset e configurações básicas */
     * {
@@ -43,9 +45,8 @@
     }
     /* Logo */
     .logo img {
-      height: 50px; /* Ajuste a altura conforme desejar */
+      height: 50px;
     }
-
     nav ul {
       list-style: none;
       display: flex;
@@ -77,6 +78,7 @@
       max-width: 600px;
       margin-left: auto;
       margin-right: auto;
+      color: #fff; /* Frase em branco */
     }
     .hero .btn {
       background: #fff;
@@ -156,6 +158,26 @@
       color: #fff;
       margin: 0 10px;
     }
+    /* WhatsApp Floating Icon */
+    .whatsapp {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: #25d366;
+      color: #fff;
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2em;
+      z-index: 10000;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    }
+    .whatsapp:hover {
+      background: #1ebe57;
+    }
     /* Responsividade */
     @media (max-width: 768px) {
       .hero h1 {
@@ -178,8 +200,7 @@
   <header>
     <div class="container">
       <div class="logo">
-        <!-- Substitua o caminho abaixo, se necessário -->
-        <img src="logo_nomade_guru.png" alt="Nomade Guru">
+        <img src="https://i.imgur.com/6BMetQH.png" alt="Nomade Guru">
       </div>
       <nav>
         <ul>
@@ -234,10 +255,14 @@
   <footer>
     <p>&copy; 2025 Nomade Guru. Todos os direitos reservados.</p>
     <p>
-      <a href="#">Facebook</a> |
-      <a href="#">Instagram</a> |
-      <a href="#">LinkedIn</a>
+      <a href="https://www.facebook.com/nomadeguru" target="_blank">Facebook</a> |
+      <a href="https://www.instagram.com/nomade.guru/" target="_blank">Instagram</a>
     </p>
   </footer>
+
+  <!-- WhatsApp Floating Icon -->
+  <a href="https://wa.me/5511947745710" class="whatsapp" target="_blank">
+    <i class="fab fa-whatsapp"></i>
+  </a>
 </body>
 </html>

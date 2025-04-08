@@ -10,7 +10,7 @@
     gtag('config', 'G-HY9T63HTNN');
   </script>
   <!-- End Google tag (gtag.js) -->
-
+  
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Nomade Guru</title>
@@ -18,43 +18,77 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
   <style>
     :root {
-      /* Paleta de Cores conforme o Brand Book */
-      --primary: #5053c4;        /* Roxo primário */
-      --denary: #342ca4;         /* Outro tom roxo primário */
-      --secondary: #333176;
-      --tertiary: #12152c;
-      --quaternary: #232452;
-      --neutral-dark: #2c2b3f;
-      --neutral2: #424452;
-      --dark1: #242c3e;
-      --dark2: #04060b;
-      --dark3: #443c54;
-      /* Cores complementares para textos no footer, etc. */
-      --footer-text: #2c2b3f;
+      /* Paleta de Cores conforme Brand Book */
+      --primary: #5053c4;
+      --denary: #342ca4;
+      --secondary1: #333176;
+      --secondary2: #232452;
+      --secondary3: #2c2b3f;
+      --secondary4: #424452;
+      --neutral-dark1: #12152c;
+      --neutral-dark2: #242c3e;
+      --neutral-dark3: #04060b;
+      --neutral-dark4: #443c54;
       --white: #ffffff;
     }
     
     /* Reset e configurações básicas */
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body { font-family: 'Poppins', sans-serif; line-height: 1.6; color: #333; }
+    * {
+      margin: 0; padding: 0; box-sizing: border-box;
+    }
+    body {
+      font-family: 'Poppins', sans-serif;
+      line-height: 1.6;
+      color: var(--neutral-dark2);
+    }
     a { text-decoration: none; color: inherit; }
-    
+
     /* Header */
-    header { padding: 20px; position: fixed; width: 100%; top: 0; left: 0; background: var(--white); z-index: 1000; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
-    .container { max-width: 1200px; margin: auto; padding: 0 20px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; }
+    header {
+      padding: 20px;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      left: 0;
+      background: var(--white);
+      z-index: 1000;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    .container {
+      max-width: 1200px;
+      margin: auto;
+      padding: 0 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
     .logo img { height: 50px; }
-    nav ul { list-style: none; display: flex; align-items: center; }
-    nav ul li { margin-left: 10px; display: flex; align-items: center; }
-    nav ul li a { font-weight: 500; color: #2c3e50; font-size: 14px; }
-    nav ul li .separator { margin: 0 8px; color: #2c3e50; font-weight: bold; font-size: 14px; }
-    /* Botão destacado no Header */
-    .header-btn { background: var(--primary); color: var(--white); padding: 8px 16px; border: none; border-radius: 50px; font-weight: 700; font-size: 14px; cursor: pointer; transition: background 0.3s ease; }
+    nav ul {
+      list-style: none;
+      display: flex;
+      align-items: center;
+    }
+    nav ul li { margin-left: 10px; }
+    nav ul li a { font-weight: 500; color: var(--neutral-dark2); font-size: 14px; }
+    nav ul li .separator { margin: 0 8px; color: var(--neutral-dark2); font-weight: bold; font-size: 14px; }
+    .header-btn {
+      background: var(--primary);
+      color: var(--white);
+      padding: 8px 16px;
+      border: none;
+      border-radius: 50px;
+      font-weight: 700;
+      font-size: 14px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
     .header-btn:hover { background: var(--denary); }
-    
+
     /* Hero Section */
     .hero {
       height: 100vh;
-      background: url('https://example.com/impacto.jpg') no-repeat center center/cover;
+      background: url('https://example.com/imagem-impactante.jpg') no-repeat center center/cover;
       position: relative;
       display: flex;
       align-items: center;
@@ -63,7 +97,6 @@
       color: var(--white);
       padding: 0 20px;
     }
-    /* Opcional: overlay para garantir a legibilidade do texto */
     .hero::before {
       content: "";
       position: absolute;
@@ -73,50 +106,70 @@
       z-index: 1;
     }
     .hero > div { position: relative; z-index: 2; }
-    .hero h1 { font-size: 3em; margin-bottom: 20px; }
+    .hero h1 { font-size: 3em; margin-bottom: 20px; color: var(--primary); }
     .hero p { font-size: 1.2em; margin-bottom: 30px; max-width: 600px; margin: auto; }
-    .hero .btn { background: var(--white); color: var(--primary); padding: 15px 30px; border: none; border-radius: 50px; font-size: 1em; font-weight: 700; cursor: pointer; transition: background 0.3s ease; }
+    .hero .btn {
+      background: var(--white);
+      color: var(--primary);
+      padding: 15px 30px;
+      border: none;
+      border-radius: 50px;
+      font-size: 1em;
+      font-weight: 700;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
     .hero .btn:hover { background: #f1f1f1; }
-    
+
     /* Diferenciais */
     .diferenciais { padding: 60px 20px; background: var(--white); text-align: center; }
     .diferenciais h2 { font-size: 2em; margin-bottom: 20px; color: var(--primary); }
     .diferenciais .items { display: flex; justify-content: space-around; flex-wrap: wrap; }
     .diferencial-item { flex: 1; margin: 10px; max-width: 200px; }
     .diferencial-item img { height: 40px; margin-bottom: 10px; }
-    .diferencial-item p { font-size: 0.9em; color: #555; }
-    
+    .diferencial-item p { font-size: 0.9em; color: var(--neutral-dark2); }
+
     /* Como Funciona */
     .como-funciona { padding: 60px 20px; background: var(--white); text-align: center; }
     .como-funciona h2 { font-size: 2em; margin-bottom: 20px; color: var(--primary); }
     .passos { display: flex; justify-content: space-around; flex-wrap: wrap; }
     .passo { flex: 1; margin: 10px; max-width: 250px; }
     .passo img { height: 50px; margin-bottom: 10px; }
-    .passo p { font-size: 0.9em; color: #555; }
-    
+    .passo p { font-size: 0.9em; color: var(--neutral-dark2); }
+
     /* Destinos (Carrossel) */
-    .destinos { padding: 60px 20px; background: var(--neutral-dark); text-align: center; color: var(--white); }
+    .destinos { padding: 60px 20px; background: var(--secondary1); text-align: center; color: var(--white); }
     .destinos h2 { font-size: 2em; margin-bottom: 20px; }
     .carousel { display: flex; overflow-x: auto; gap: 20px; padding-bottom: 20px; }
-    .destino-item { flex: 0 0 auto; width: 200px; background: var(--dark1); padding: 10px; border-radius: 8px; }
+    .destino-item { flex: 0 0 auto; width: 200px; background: var(--secondary3); padding: 10px; border-radius: 8px; }
     .destino-item img { width: 100%; border-radius: 4px; }
     .destino-item p { margin-top: 10px; font-size: 0.9em; }
     
     /* Curadoria Humana */
     .curadoria { padding: 60px 20px; background: var(--white); text-align: center; }
     .curadoria h2 { font-size: 2em; margin-bottom: 20px; color: var(--primary); }
-    .curadoria p { font-size: 1em; max-width: 800px; margin: auto; color: #555; text-align: justify; }
+    .curadoria p { font-size: 1em; max-width: 800px; margin: auto; color: var(--neutral-dark2); text-align: justify; }
     
     /* Provas Sociais */
     .provas-sociais { padding: 60px 20px; background: var(--white); text-align: center; }
     .provas-sociais h2 { font-size: 2em; margin-bottom: 20px; color: var(--primary); }
     .testemunhos { display: flex; justify-content: center; flex-wrap: wrap; gap: 20px; }
-    .testemunho { background: #f9f9f9; padding: 20px; border-radius: 8px; max-width: 300px; font-size: 0.9em; color: #555; }
+    .testemunho { background: #f9f9f9; padding: 20px; border-radius: 8px; max-width: 300px; font-size: 0.9em; color: var(--neutral-dark2); }
     
     /* Chamada Final */
     .chamada-final { padding: 60px 20px; background: var(--primary); text-align: center; color: var(--white); }
     .chamada-final h2 { font-size: 2.5em; margin-bottom: 20px; }
-    .chamada-final .btn { background: var(--white); color: var(--primary); padding: 15px 30px; border: none; border-radius: 50px; font-size: 1em; font-weight: 700; cursor: pointer; transition: background 0.3s ease; }
+    .chamada-final .btn {
+      background: var(--white);
+      color: var(--primary);
+      padding: 15px 30px;
+      border: none;
+      border-radius: 50px;
+      font-size: 1em;
+      font-weight: 700;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
     .chamada-final .btn:hover { background: #f1f1f1; }
     
     /* Contato (Mailchimp Form) */
@@ -131,7 +184,7 @@
     
     /* Rodapé */
     footer {
-      background: var(--quaternary);
+      background: var(--secondary2);
       color: var(--white);
       padding: 30px 20px;
       font-size: 11px;
@@ -168,7 +221,7 @@
     <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MNPND843" height="0" width="0" style="display:none;visibility:hidden"></iframe>
   </noscript>
   <!-- End Google Tag Manager (noscript) -->
-
+  
   <!-- Header -->
   <header>
     <div class="container">
@@ -187,27 +240,32 @@
           <li><span class="separator">|</span></li>
           <li><a href="#contato">Contato</a></li>
           <li><span class="separator">|</span></li>
-          <li><button class="header-btn" onclick="document.getElementById('contato').scrollIntoView({behavior:'smooth'})">Experimente seu Roteiro</button></li>
+          <li>
+            <button class="header-btn" onclick="document.getElementById('contato').scrollIntoView({behavior:'smooth'})">
+              Experimente seu Roteiro
+            </button>
+          </li>
         </ul>
       </nav>
     </div>
   </header>
-
+  
   <!-- Hero Section -->
   <section class="hero" id="home">
     <div>
       <h1>Viaje com propósito, viva com liberdade</h1>
       <p>Crie seu roteiro personalizado e descubra novas fronteiras com nossa tecnologia de IA e curadoria humana.</p>
-      <button class="btn" onclick="document.getElementById('contato').scrollIntoView({behavior:'smooth'})">Crie seu roteiro personalizado</button>
+      <button class="btn" onclick="document.getElementById('contato').scrollIntoView({behavior:'smooth'})">
+        Crie seu roteiro personalizado
+      </button>
     </div>
   </section>
-
+  
   <!-- Diferenciais -->
   <section class="diferenciais" id="diferenciais">
     <h2>Diferenciais</h2>
     <div class="items">
       <div class="diferencial-item">
-        <!-- Substitua os src pelos ícones reais -->
         <img src="icone-tecnologia.png" alt="Tecnologia com propósito">
         <p>Tecnologia com propósito</p>
       </div>
@@ -221,7 +279,7 @@
       </div>
     </div>
   </section>
-
+  
   <!-- Como Funciona -->
   <section class="como-funciona" id="como-funciona">
     <h2>Como Funciona</h2>
@@ -240,7 +298,7 @@
       </div>
     </div>
   </section>
-
+  
   <!-- Destinos -->
   <section class="destinos" id="destinos">
     <h2>Destinos em Destaque</h2>
@@ -257,18 +315,18 @@
         <img src="destino-bali.jpg" alt="Bali">
         <p>Bali</p>
       </div>
-      <!-- Outros destinos podem ser adicionados aqui -->
+      <!-- Adicione mais destinos conforme necessário -->
     </div>
   </section>
-
+  
   <!-- Curadoria Humana -->
   <section class="curadoria" id="curadoria">
     <h2>Curadoria Humana</h2>
     <p>
-      Nossa equipe de curadoria une expertise e paixão por viagens para criar roteiros únicos, alinhados ao seu perfil e às tendências de mercado. Cada roteiro é feito com atenção aos detalhes, garantindo experiências autênticas e personalizadas.
+      Nossa equipe de curadoria une expertise e paixão por viagens para criar roteiros únicos, alinhados ao seu perfil e às tendências do mercado. Cada roteiro é cuidadosamente elaborado para garantir experiências autênticas e personalizadas.
     </p>
   </section>
-
+  
   <!-- Provas Sociais -->
   <section class="provas-sociais" id="provas-sociais">
     <h2>O que dizem nossos clientes</h2>
@@ -283,13 +341,15 @@
       </div>
     </div>
   </section>
-
+  
   <!-- Chamada Final -->
   <section class="chamada-final" id="chamada-final">
     <h2>A sua próxima grande jornada começa aqui</h2>
-    <button class="btn" onclick="document.getElementById('contato').scrollIntoView({behavior:'smooth'})">Criar meu roteiro agora</button>
+    <button class="btn" onclick="document.getElementById('contato').scrollIntoView({behavior:'smooth'})">
+      Criar meu roteiro agora
+    </button>
   </section>
-
+  
   <!-- Contato (Mailchimp Form) -->
   <section id="contato">
     <h2>Entre em Contato</h2>
@@ -342,13 +402,13 @@
         (function($) {
           window.fnames = new Array(); 
           window.ftypes = new Array();
-          fnames[1]='FNAME'; ftypes[1]='text';
-          fnames[2]='LNAME'; ftypes[2]='text';
-          fnames[0]='EMAIL'; ftypes[0]='email';
-          fnames[4]='PHONE'; ftypes[4]='phone';
-          fnames[3]='ADDRESS'; ftypes[3]='address';
-          fnames[5]='BIRTHDAY'; ftypes[5]='birthday';
-          fnames[6]='COMPANY'; ftypes[6]='text';
+          fnames[1] = 'FNAME'; ftypes[1] = 'text';
+          fnames[2] = 'LNAME'; ftypes[2] = 'text';
+          fnames[0] = 'EMAIL'; ftypes[0] = 'email';
+          fnames[4] = 'PHONE'; ftypes[4] = 'phone';
+          fnames[3] = 'ADDRESS'; ftypes[3] = 'address';
+          fnames[5] = 'BIRTHDAY'; ftypes[5] = 'birthday';
+          fnames[6] = 'COMPANY'; ftypes[6] = 'text';
         }(jQuery));
         var $mcj = jQuery.noConflict(true);
       </script>
@@ -364,13 +424,14 @@
       </div>
       <div class="footer-col">
         <p>Rua Comendador Torlogo Dauntre, 74 - Sala 1207, Cambuí, Campinas, SP, CEP 13025-270</p>
-        <p>Nossos serviços são ofertados exclusivamente por nossos canais oficiais: website (<a href="https://www.nomade.guru" target="_blank">www.nomade.guru</a>), aplicativo e consultoria online.</p>
+        <p><strong>Canais Oficiais:</strong></p>
         <p>
-          <a href="https://wa.me/5511947745710" target="_blank">WhatsApp</a> |
-          <a href="https://www.facebook.com/nomadeguru" target="_blank">Facebook</a> |
-          <a href="https://www.instagram.com/nomade.guru/" target="_blank">Instagram</a> |
-          <a href="https://www.youtube.com/@NomadeGuru" target="_blank">YouTube</a> |
-          <a href="https://open.spotify.com/playlist/1NaWkXArYokfc7LNTa8zXD?si=71a425de2f384a5f" target="_blank">Spotify</a>
+          Instagram: <a href="https://www.instagram.com/nomade.guru/" target="_blank">nomade.guru</a><br>
+          Facebook: <a href="https://www.facebook.com/nomadeguru" target="_blank">nomadeguru</a><br>
+          YouTube: <a href="https://www.youtube.com/@NomadeGuru" target="_blank">NomadeGuru</a><br>
+          WhatsApp Business: <a href="https://wa.me/5511947745710" target="_blank">Clique aqui</a><br>
+          Website: <a href="https://www.nomade.guru" target="_blank">www.nomade.guru</a><br>
+          Spotify: <a href="https://open.spotify.com/playlist/1NaWkXArYokfc7LNTa8zXD?si=71a425de2f384a5f" target="_blank">Playlist Nomade Guru</a>
         </p>
       </div>
     </div>
@@ -378,29 +439,30 @@
   
   <!-- Start of LiveChat (www.livechat.com) code -->
   <script>
-      window.__lc = window.__lc || {};
-      window.__lc.license = 19120885;
-      window.__lc.integration_name = "manual_onboarding";
-      window.__lc.product_name = "livechat";
-      (function(n,t,c){
-        function i(n){return e._h?e._h.apply(null,n):e._q.push(n)}
-        var e={_q:[],_h:null,_v:"2.0",on:function(){i(["on",c.call(arguments)])},
-        once:function(){i(["once",c.call(arguments)])},
-        off:function(){i(["off",c.call(arguments)])},
-        get:function(){if(!e._h)throw new Error("[LiveChatWidget] You can't use getters before load."); return i(["get",c.call(arguments)])},
-        call:function(){i(["call",c.call(arguments)])},
-        init:function(){
-          var n=t.createElement("script");
-          n.async=!0; n.type="text/javascript"; 
-          n.src="https://cdn.livechatinc.com/tracking.js";
-          t.head.appendChild(n);
-        }};
-        !n.__lc.asyncInit && e.init(), n.LiveChatWidget=n.LiveChatWidget||e;
-      }(window,document,[].slice))
+    window.__lc = window.__lc || {};
+    window.__lc.license = 19120885;
+    window.__lc.integration_name = "manual_onboarding";
+    window.__lc.product_name = "livechat";
+    (function(n,t,c){
+      function i(n){return e._h ? e._h.apply(null,n): e._q.push(n)}
+      var e = {_q:[], _h:null, _v:"2.0", on:function(){i(["on",c.call(arguments)])},
+      once:function(){i(["once",c.call(arguments)])},
+      off:function(){i(["off",c.call(arguments)])},
+      get:function(){if(!e._h)throw new Error("[LiveChatWidget] You can't use getters before load."); return i(["get",c.call(arguments)])},
+      call:function(){i(["call",c.call(arguments)])},
+      init:function(){
+        var n=t.createElement("script");
+        n.async=true;
+        n.type="text/javascript"; 
+        n.src="https://cdn.livechatinc.com/tracking.js";
+        t.head.appendChild(n);
+      }};
+      !n.__lc.asyncInit && e.init(), n.LiveChatWidget = n.LiveChatWidget || e;
+    }(window, document, [].slice));
   </script>
   <noscript>
-      <a href="https://www.livechat.com/chat-with/19120885/" rel="nofollow">Chat with us</a>, powered by 
-      <a href="https://www.livechat.com/?welcome" rel="noopener nofollow" target="_blank">LiveChat</a>
+    <a href="https://www.livechat.com/chat-with/19120885/" rel="nofollow">Chat with us</a>, powered by 
+    <a href="https://www.livechat.com/?welcome" rel="noopener nofollow" target="_blank">LiveChat</a>
   </noscript>
   <!-- End of LiveChat code -->
 </body>

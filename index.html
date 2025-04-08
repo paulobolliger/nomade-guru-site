@@ -98,7 +98,7 @@
     .hero {
       height: 100vh;
       /* Use uma imagem de fundo impactante – substitua a URL abaixo pela sua imagem */
-      background: url('https://example.com/imagem-impactante.jpg') no-repeat center center/cover;
+      background: url('/public/img/imagem-impactante.jpg') no-repeat center center/cover;
       position: relative;
       display: flex;
       align-items: center;
@@ -346,15 +346,15 @@
     <h2>Diferenciais</h2>
     <div class="items">
       <div class="diferencial-item">
-        <img src="icone-tecnologia.png" alt="Tecnologia com propósito">
+        <img loading="lazy" src="/public/img/icone-tecnologia.png" alt="Tecnologia com propósito">
         <p>Tecnologia com propósito</p>
       </div>
       <div class="diferencial-item">
-        <img src="icone-curadoria.png" alt="Curadoria humana especializada">
+        <img loading="lazy" src="/public/img/icone-curadoria.png" alt="Curadoria humana especializada">
         <p>Curadoria humana especializada</p>
       </div>
       <div class="diferencial-item">
-        <img src="icone-roteiros.png" alt="Roteiros autênticos e exclusivos">
+        <img loading="lazy" src="/public/img/icone-roteiros.png" alt="Roteiros autênticos e exclusivos">
         <p>Roteiros autênticos e exclusivos</p>
       </div>
     </div>
@@ -365,39 +365,99 @@
     <h2>Como Funciona</h2>
     <div class="passos">
       <div class="passo">
-        <img src="icone-quiz.png" alt="Responda o quiz">
+        <img loading="lazy" src="/public/img/icone-quiz.png" alt="Responda o quiz">
         <p>Passo 1: Responda o quiz</p>
       </div>
       <div class="passo">
-        <img src="icone-ia.png" alt="Receba seu roteiro com IA">
+        <img loading="lazy" src="/public/img/icone-ia.png" alt="Receba seu roteiro com IA">
         <p>Passo 2: Receba seu roteiro com IA</p>
       </div>
       <div class="passo">
-        <img src="icone-especialista.png" alt="Converse com um especialista">
+        <img loading="lazy" src="/public/img/icone-especialista.png" alt="Converse com um especialista">
         <p>Passo 3: Converse com um especialista</p>
       </div>
     </div>
   </section>
   
-  <!-- Destinos -->
-  <section class="destinos" id="destinos">
-    <h2>Destinos em Destaque</h2>
-    <div class="carousel">
-      <div class="destino-item">
-        <img src="destino-islandia.jpg" alt="Islândia">
-        <p>Islândia</p>
-      </div>
-      <div class="destino-item">
-        <img src="destino-chapada.jpg" alt="Chapada dos Veadeiros">
-        <p>Chapada dos Veadeiros</p>
-      </div>
-      <div class="destino-item">
-        <img src="destino-bali.jpg" alt="Bali">
-        <p>Bali</p>
-      </div>
-      <!-- Adicione mais destinos conforme necessário -->
+ <!-- Destinos -->
+<section class="destinos" id="destinos">
+  <h2>Destinos em Destaque</h2>
+  <div class="carousel">
+    <!-- Experiências Mágicas com Crianças -->
+    <div class="destino-item fade-in">
+      <img loading="lazy" src="/public/img/laponia-papai-noel.jpg" alt="Vila do Papai Noel na Lapônia com cabanas nevadas, luzes suaves e renas.">
+      <p>Lapônia – Vila do Papai Noel</p>
     </div>
-  </section>
+    <div class="destino-item fade-in">
+      <img loading="lazy" src="/public/img/gramado-natal-luz.jpg" alt="Natal Luz em Gramado com luzes vibrantes e atmosfera acolhedora.">
+      <p>Gramado – Natal Luz</p>
+    </div>
+    <div class="destino-item fade-in">
+      <img loading="lazy" src="/public/img/disney-magic-kingdom.jpg" alt="Magic Kingdom ao entardecer, com castelo iluminado e fogos de artifício.">
+      <p>Disney – Magic Kingdom</p>
+    </div>
+
+    <!-- Caçando Auroras Boreais -->
+    <div class="destino-item fade-in">
+      <img loading="lazy" src="/public/img/islandia-aurora-boreal.jpg" alt="Aurora boreal vibrante sobre geleiras ou cachoeiras na Islândia.">
+      <p>Islândia – Aurora Boreal</p>
+    </div>
+    <div class="destino-item fade-in">
+      <img loading="lazy" src="/public/img/kiruna-hotel-gelo.jpg" alt="Interior elegante do Hotel de Gelo em Kiruna com aurora ao fundo.">
+      <p>Kiruna – Hotel de Gelo</p>
+    </div>
+    <div class="destino-item fade-in">
+      <img loading="lazy" src="/public/img/tromso-expedicao-aurora.jpg" alt="Aurora boreal brilhante sobre fiordes ou cabanas em Tromsø.">
+      <p>Tromsø – Expedição Aurora</p>
+    </div>
+
+    <!-- Festivais e Celebrações Únicas -->
+    <div class="destino-item fade-in">
+      <img loading="lazy" src="/public/img/festival-lanternas-tailândia.jpg" alt="Festival das Lanternas em Chiang Mai com céu cheio de lanternas luminosas.">
+      <p>Tailândia – Festival das Lanternas</p>
+    </div>
+    <div class="destino-item fade-in">
+      <img loading="lazy" src="/public/img/holi-india-cores.jpg" alt="Pessoas coloridas e alegres celebrando o festival Holi na Índia.">
+      <p>Índia – Holi</p>
+    </div>
+    <div class="destino-item fade-in">
+      <img loading="lazy" src="/public/img/inti-raymi-peru.jpg" alt="Cerimônia tradicional do Inti Raymi no Peru com trajes incas autênticos.">
+      <p>Peru – Inti Raymi</p>
+    </div>
+
+    <!-- Viagens a Lugares Icônicos -->
+    <div class="destino-item fade-in">
+      <img loading="lazy" src="/public/img/machu-picchu-peru.jpg" alt="Paisagem histórica e inspiradora de Machu Picchu, Peru.">
+      <p>Peru – Machu Picchu</p>
+    </div>
+    <div class="destino-item fade-in">
+      <img loading="lazy" src="/public/img/auschwitz-polonia.jpg" alt="Foto reflexiva e respeitosa de Auschwitz, Polônia.">
+      <p>Polônia – Auschwitz</p>
+    </div>
+    <div class="destino-item fade-in">
+      <img loading="lazy" src="/public/img/piramides-egito.jpg" alt="Pirâmides e Esfinge em Gizé, Egito, com iluminação especial.">
+      <p>Egito – Pirâmides de Gizé</p>
+    </div>
+    <div class="destino-item fade-in">
+      <img loading="lazy" src="/public/img/muralha-china.jpg" alt="Vista da Grande Muralha da China em paisagem ampla.">
+      <p>China – Grande Muralha</p>
+    </div>
+  </div>
+</section>
+
+<style>
+  .fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.8s ease forwards;
+  }
+  @keyframes fadeInUp {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+</style>
   
   <!-- Curadoria Humana -->
   <section class="curadoria" id="curadoria">

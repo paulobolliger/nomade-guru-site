@@ -19,6 +19,20 @@
   <!-- Font Awesome para ícones sociais -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-p1Cm0GgW8+z1w0Gp4eA0ZnC7y6wEv9B5Sih+nEM+VqFXOqR9m6yPZgW+82e3dvBw0ax0evutQ6DSh3O/hO+9pg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <style>
+    /* Definindo a paleta de cores da Nomade Guru */
+    :root {
+      --primary: #5053c4;
+      --secondary: #333176;
+      --tertiary: #12152c;
+      --fourth: #232452;
+      --fifth: #2c2b3f;
+      --sixth: #424452;
+      --seventh: #242c3e;
+      --eighth: #04060b;
+      --ninth: #443c54;
+      --denary: #342ca4;
+    }
+
     /* Reset e configurações básicas */
     * {
       margin: 0;
@@ -80,7 +94,7 @@
       font-weight: bold;
       font-size: 14px;
     }
-    /* Definindo as cores originais para ícones sociais */
+    /* Ícones sociais – utilizando cores oficiais da paleta */
     .social-icon.instagram { color: #E4405F; }
     .social-icon.facebook  { color: #1877F2; }
     .social-icon.whatsapp  { color: #25D366; }
@@ -89,7 +103,7 @@
     /* Hero Section */
     .hero {
       height: 100vh;
-      background: linear-gradient(135deg, #2c3e50, #4ca1af);
+      background: linear-gradient(135deg, var(--primary), var(--denary));
       display: flex;
       align-items: center;
       justify-content: center;
@@ -110,7 +124,7 @@
     }
     .hero .btn {
       background: #fff;
-      color: #2c3e50;
+      color: var(--primary);
       padding: 15px 30px;
       border: none;
       border-radius: 50px;
@@ -130,7 +144,7 @@
     section h2 {
       font-size: 2.5em;
       margin-bottom: 20px;
-      color: #2c3e50;
+      color: var(--primary);
     }
     section p {
       font-size: 1em;
@@ -152,9 +166,9 @@
       max-width: 600px;
       margin: auto;
     }
-    /* Rodapé em duas colunas, fonte 11px */
+    /* Rodapé em duas colunas, com fonte 11px */
     footer {
-      background: #2c3e50;
+      background: var(--fourth);
       color: #fff;
       padding: 30px 20px;
       font-size: 11px;
@@ -200,10 +214,7 @@
       .hero p {
         font-size: 1em;
       }
-      nav ul li a {
-        font-size: 12px;
-      }
-      nav ul li .separator {
+      nav ul li a, nav ul li .separator {
         font-size: 12px;
       }
       footer {

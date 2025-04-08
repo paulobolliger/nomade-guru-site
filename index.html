@@ -57,7 +57,7 @@
     .logo img {
       height: 50px;
     }
-    /* Navegação com separadores e ícones sociais */
+    /* Navegação com separadores e ícones com cores originais */
     nav ul {
       list-style: none;
       display: flex;
@@ -69,12 +69,20 @@
     nav ul li a {
       font-weight: 500;
       color: #2c3e50;
+      font-size: 14px;
     }
     nav ul li .separator {
       margin: 0 8px;
       color: #2c3e50;
       font-weight: bold;
+      font-size: 14px;
     }
+    /* Definindo cores para os ícones sociais */
+    .social-icon.instagram { color: #E4405F; }
+    .social-icon.facebook  { color: #1877F2; }
+    .social-icon.whatsapp  { color: #25D366; }
+    .social-icon.youtube   { color: #FF0000; }
+    
     /* Hero Section */
     .hero {
       height: 100vh;
@@ -142,12 +150,12 @@
       max-width: 600px;
       margin: auto;
     }
-    /* Rodapé em 2 colunas, com fonte 9px */
+    /* Rodapé em duas colunas, com fonte 11px */
     footer {
       background: #2c3e50;
       color: #fff;
       padding: 30px 20px;
-      font-size: 9px;
+      font-size: 11px;
     }
     .footer-container {
       display: grid;
@@ -208,9 +216,26 @@
           <li><span class="separator">|</span></li>
           <li><a href="#contato">Contato</a></li>
           <li><span class="separator">|</span></li>
-          <li><a href="https://www.instagram.com/nomade.guru/" target="_blank"><i class="fab fa-instagram"></i></a></li>
-          <li><a href="https://www.facebook.com/nomadeguru" target="_blank"><i class="fab fa-facebook"></i></a></li>
-          <li><a href="https://wa.me/5511947745710" target="_blank"><i class="fab fa-whatsapp"></i></a></li>
+          <li>
+            <a href="https://www.instagram.com/nomade.guru/" target="_blank">
+              <i class="fab fa-instagram social-icon instagram"></i>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.facebook.com/nomadeguru" target="_blank">
+              <i class="fab fa-facebook social-icon facebook"></i>
+            </a>
+          </li>
+          <li>
+            <a href="https://wa.me/5511947745710" target="_blank">
+              <i class="fab fa-whatsapp social-icon whatsapp"></i>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.youtube.com/@NomadeGuru" target="_blank">
+              <i class="fab fa-youtube social-icon youtube"></i>
+            </a>
+          </li>
         </ul>
       </nav>
     </div>
@@ -250,13 +275,13 @@
   <!-- Contact Section com Mailchimp Form -->
   <section id="contato">
     <h2>Entre em Contato</h2>
-    <p>Quer saber mais ou agendar uma consultoria? Inscreva-se na nossa newsletter:</p>
+    <!-- Removida a mensagem de inscrição -->
     <div id="mc_embed_shell">
       <link href="//cdn-images.mailchimp.com/embedcode/classic-061523.css" rel="stylesheet" type="text/css">
       <div id="mc_embed_signup">
         <form action="https://guru.us20.list-manage.com/subscribe/post?u=7318d15754cc569b753c1eeaf&amp;id=b069757273&amp;f_id=00f1c2e1f0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
           <div id="mc_embed_signup_scroll">
-            <h2>Inscrever</h2>
+            <!-- Removido o título "Inscrever" -->
             <div class="indicates-required"><span class="asterisk">*</span> indica obrigatório</div>
             <div class="mc-field-group">
               <label for="mce-FNAME">Nome </label>
@@ -323,11 +348,12 @@
       </div>
       <div class="footer-col">
         <p>Rua Comendador Torlogo Dauntre, 74 - Sala 1207, Cambuí, Campinas, SP, CEP 13025-270</p>
-        <p>Nossos serviços são ofertados exclusivamente por nossos canais oficiais: website (www.nomadeguru.com.br), aplicativo e consultoria online.</p>
-        <p>WhatsApp: <a href="https://wa.me/5511947745710" target="_blank">wa.me/5511947745710</a></p>
+        <p>Nossos serviços são ofertados exclusivamente por nossos canais oficiais: website (<a href="https://www.nomade.guru" target="_blank">www.nomade.guru</a>), aplicativo e consultoria online.</p>
         <p>
+          <a href="https://wa.me/5511947745710" target="_blank">WhatsApp</a> |
           <a href="https://www.facebook.com/nomadeguru" target="_blank">Facebook</a> |
-          <a href="https://www.instagram.com/nomade.guru/" target="_blank">Instagram</a>
+          <a href="https://www.instagram.com/nomade.guru/" target="_blank">Instagram</a> |
+          <a href="https://www.youtube.com/@NomadeGuru" target="_blank">YouTube</a>
         </p>
       </div>
     </div>

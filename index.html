@@ -10,155 +10,118 @@
     gtag('config', 'G-HY9T63HTNN');
   </script>
   <!-- End Google tag (gtag.js) -->
-  
+
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Nomade Guru</title>
   <!-- Fonte Poppins -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
-  <!-- Font Awesome (mantido para outros usos) -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-p1Cm0GgW8+z1w0Gp4eA0ZnC7y6wEv9B5Sih+nEM+VqFXOqR9m6yPZgW+82e3dvBw0ax0evutQ6DSh3O/hO+9pg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <style>
-    /* Paleta de Cores da Nomade Guru */
     :root {
-      --primary: #5053c4;
+      /* Paleta de Cores conforme o Brand Book */
+      --primary: #5053c4;        /* Roxo primário */
+      --denary: #342ca4;         /* Outro tom roxo primário */
       --secondary: #333176;
       --tertiary: #12152c;
-      --fourth: #232452;
-      --fifth: #2c2b3f;
-      --sixth: #424452;
-      --seventh: #242c3e;
-      --eighth: #04060b;
-      --ninth: #443c54;
-      --denary: #342ca4;
-    }
-
-    /* Reset e configurações básicas */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-    body {
-      font-family: 'Poppins', sans-serif;
-      line-height: 1.6;
-      color: #333;
-    }
-    a {
-      text-decoration: none;
-      color: inherit;
+      --quaternary: #232452;
+      --neutral-dark: #2c2b3f;
+      --neutral2: #424452;
+      --dark1: #242c3e;
+      --dark2: #04060b;
+      --dark3: #443c54;
+      /* Cores complementares para textos no footer, etc. */
+      --footer-text: #2c2b3f;
+      --white: #ffffff;
     }
     
+    /* Reset e configurações básicas */
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Poppins', sans-serif; line-height: 1.6; color: #333; }
+    a { text-decoration: none; color: inherit; }
+    
     /* Header */
-    header {
-      padding: 20px;
-      position: fixed;
-      width: 100%;
-      top: 0;
-      left: 0;
-      background: rgba(255, 255, 255, 0.9);
-      z-index: 1000;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    }
-    .container {
-      max-width: 1200px;
-      margin: auto;
-      padding: 0 20px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      flex-wrap: wrap;
-    }
-    /* Logo */
-    .logo img {
-      height: 50px;
-      max-width: 100%;
-    }
-    /* Navegação com separadores */
-    nav ul {
-      list-style: none;
-      display: flex;
-      align-items: center;
-      flex-wrap: wrap;
-    }
-    nav ul li {
-      margin-left: 10px;
-      display: flex;
-      align-items: center;
-    }
-    nav ul li a {
-      font-weight: 500;
-      color: #2c3e50;
-      font-size: 14px;
-    }
-    nav ul li .separator {
-      margin: 0 8px;
-      color: #2c3e50;
-      font-weight: bold;
-      font-size: 14px;
-    }
+    header { padding: 20px; position: fixed; width: 100%; top: 0; left: 0; background: var(--white); z-index: 1000; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+    .container { max-width: 1200px; margin: auto; padding: 0 20px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; }
+    .logo img { height: 50px; }
+    nav ul { list-style: none; display: flex; align-items: center; }
+    nav ul li { margin-left: 10px; display: flex; align-items: center; }
+    nav ul li a { font-weight: 500; color: #2c3e50; font-size: 14px; }
+    nav ul li .separator { margin: 0 8px; color: #2c3e50; font-weight: bold; font-size: 14px; }
+    /* Botão destacado no Header */
+    .header-btn { background: var(--primary); color: var(--white); padding: 8px 16px; border: none; border-radius: 50px; font-weight: 700; font-size: 14px; cursor: pointer; transition: background 0.3s ease; }
+    .header-btn:hover { background: var(--denary); }
     
     /* Hero Section */
     .hero {
       height: 100vh;
-      background: linear-gradient(135deg, var(--primary), var(--denary));
+      background: url('https://example.com/impacto.jpg') no-repeat center center/cover;
+      position: relative;
       display: flex;
       align-items: center;
       justify-content: center;
       text-align: center;
-      color: #fff;
+      color: var(--white);
       padding: 0 20px;
     }
-    .hero h1 {
-      font-size: 3em;
-      margin-bottom: 20px;
+    /* Opcional: overlay para garantir a legibilidade do texto */
+    .hero::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0, 0, 0, 0.4);
+      z-index: 1;
     }
-    .hero p {
-      font-size: 1.2em;
-      margin-bottom: 30px;
-      max-width: 600px;
-      margin: auto;
-      color: #fff;
-    }
-    .hero .btn {
-      background: #fff;
-      color: var(--primary);
-      padding: 15px 30px;
-      border: none;
-      border-radius: 50px;
-      font-size: 1em;
-      font-weight: 700;
-      transition: background 0.3s ease;
-      cursor: pointer;
-    }
-    .hero .btn:hover {
-      background: #f1f1f1;
-    }
-
-    /* Seções */
-    section {
-      padding: 80px 20px;
-      text-align: center;
-    }
-    section h2 {
-      font-size: 2.5em;
-      margin-bottom: 20px;
-      color: var(--primary);
-    }
-    section p {
-      font-size: 1em;
-      max-width: 800px;
-      margin: auto;
-      color: #555;
-      text-align: justify;
-    }
-    #servicos p + p {
-      margin-top: 20px;
-    }
+    .hero > div { position: relative; z-index: 2; }
+    .hero h1 { font-size: 3em; margin-bottom: 20px; }
+    .hero p { font-size: 1.2em; margin-bottom: 30px; max-width: 600px; margin: auto; }
+    .hero .btn { background: var(--white); color: var(--primary); padding: 15px 30px; border: none; border-radius: 50px; font-size: 1em; font-weight: 700; cursor: pointer; transition: background 0.3s ease; }
+    .hero .btn:hover { background: #f1f1f1; }
     
-    /* Mailchimp Form */
+    /* Diferenciais */
+    .diferenciais { padding: 60px 20px; background: var(--white); text-align: center; }
+    .diferenciais h2 { font-size: 2em; margin-bottom: 20px; color: var(--primary); }
+    .diferenciais .items { display: flex; justify-content: space-around; flex-wrap: wrap; }
+    .diferencial-item { flex: 1; margin: 10px; max-width: 200px; }
+    .diferencial-item img { height: 40px; margin-bottom: 10px; }
+    .diferencial-item p { font-size: 0.9em; color: #555; }
+    
+    /* Como Funciona */
+    .como-funciona { padding: 60px 20px; background: var(--white); text-align: center; }
+    .como-funciona h2 { font-size: 2em; margin-bottom: 20px; color: var(--primary); }
+    .passos { display: flex; justify-content: space-around; flex-wrap: wrap; }
+    .passo { flex: 1; margin: 10px; max-width: 250px; }
+    .passo img { height: 50px; margin-bottom: 10px; }
+    .passo p { font-size: 0.9em; color: #555; }
+    
+    /* Destinos (Carrossel) */
+    .destinos { padding: 60px 20px; background: var(--neutral-dark); text-align: center; color: var(--white); }
+    .destinos h2 { font-size: 2em; margin-bottom: 20px; }
+    .carousel { display: flex; overflow-x: auto; gap: 20px; padding-bottom: 20px; }
+    .destino-item { flex: 0 0 auto; width: 200px; background: var(--dark1); padding: 10px; border-radius: 8px; }
+    .destino-item img { width: 100%; border-radius: 4px; }
+    .destino-item p { margin-top: 10px; font-size: 0.9em; }
+    
+    /* Curadoria Humana */
+    .curadoria { padding: 60px 20px; background: var(--white); text-align: center; }
+    .curadoria h2 { font-size: 2em; margin-bottom: 20px; color: var(--primary); }
+    .curadoria p { font-size: 1em; max-width: 800px; margin: auto; color: #555; text-align: justify; }
+    
+    /* Provas Sociais */
+    .provas-sociais { padding: 60px 20px; background: var(--white); text-align: center; }
+    .provas-sociais h2 { font-size: 2em; margin-bottom: 20px; color: var(--primary); }
+    .testemunhos { display: flex; justify-content: center; flex-wrap: wrap; gap: 20px; }
+    .testemunho { background: #f9f9f9; padding: 20px; border-radius: 8px; max-width: 300px; font-size: 0.9em; color: #555; }
+    
+    /* Chamada Final */
+    .chamada-final { padding: 60px 20px; background: var(--primary); text-align: center; color: var(--white); }
+    .chamada-final h2 { font-size: 2.5em; margin-bottom: 20px; }
+    .chamada-final .btn { background: var(--white); color: var(--primary); padding: 15px 30px; border: none; border-radius: 50px; font-size: 1em; font-weight: 700; cursor: pointer; transition: background 0.3s ease; }
+    .chamada-final .btn:hover { background: #f1f1f1; }
+    
+    /* Contato (Mailchimp Form) */
     #mc_embed_signup {
-      background: #fff;
+      background: var(--white);
       clear: left;
       font: 14px Helvetica, Arial, sans-serif;
       width: 100%;
@@ -166,10 +129,10 @@
       margin: auto;
     }
     
-    /* Rodapé em duas colunas, com fonte 11px */
+    /* Rodapé */
     footer {
-      background: var(--fourth);
-      color: #fff;
+      background: var(--quaternary);
+      color: var(--white);
       padding: 30px 20px;
       font-size: 11px;
     }
@@ -179,56 +142,30 @@
       gap: 10px;
       text-align: justify;
     }
-    .footer-container p {
-      line-height: 1.4;
-      margin-bottom: 4px;
-    }
-    footer a {
-      color: #fff;
-    }
+    .footer-container p { line-height: 1.4; margin-bottom: 4px; }
+    footer a { color: var(--white); }
     
     /* Responsividade */
     @media (max-width: 768px) {
-      .hero h1 {
-        font-size: 2.5em;
-      }
-      nav ul li {
-        margin-left: 5px;
-      }
-      header .container {
-        flex-direction: column;
-        align-items: center;
-      }
-      nav ul {
-        margin-top: 10px;
-        justify-content: center;
-      }
-      .footer-container {
-        grid-template-columns: 1fr;
-        text-align: center;
-      }
+      .hero h1 { font-size: 2.5em; }
+      nav ul li { margin-left: 5px; }
+      header .container { flex-direction: column; align-items: center; }
+      nav ul { margin-top: 10px; justify-content: center; }
+      .footer-container { grid-template-columns: 1fr; text-align: center; }
+      .diferenciais .items, .passos, .testemunhos { flex-direction: column; align-items: center; }
     }
     @media (max-width: 480px) {
-      .hero h1 {
-        font-size: 2em;
-      }
-      .hero p {
-        font-size: 1em;
-      }
-      nav ul li a, nav ul li .separator {
-        font-size: 12px;
-      }
-      footer {
-        font-size: 10px;
-      }
+      .hero h1 { font-size: 2em; }
+      .hero p { font-size: 1em; }
+      nav ul li a, nav ul li .separator { font-size: 12px; }
+      footer { font-size: 10px; }
     }
   </style>
 </head>
 <body>
   <!-- Google Tag Manager (noscript) -->
   <noscript>
-    <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MNPND843"
-            height="0" width="0" style="display:none;visibility:hidden"></iframe>
+    <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MNPND843" height="0" width="0" style="display:none;visibility:hidden"></iframe>
   </noscript>
   <!-- End Google Tag Manager (noscript) -->
 
@@ -240,48 +177,120 @@
       </div>
       <nav>
         <ul>
-          <li><a href="#sobre">Sobre</a></li>
+          <li><a href="#home">Home</a></li>
           <li><span class="separator">|</span></li>
-          <li><a href="#servicos">Serviços</a></li>
+          <li><a href="#como-funciona">Como Funciona</a></li>
+          <li><span class="separator">|</span></li>
+          <li><a href="#destinos">Destinos</a></li>
+          <li><span class="separator">|</span></li>
+          <li><a href="#curadoria">Curadoria Humana</a></li>
           <li><span class="separator">|</span></li>
           <li><a href="#contato">Contato</a></li>
+          <li><span class="separator">|</span></li>
+          <li><button class="header-btn" onclick="document.getElementById('contato').scrollIntoView({behavior:'smooth'})">Experimente seu Roteiro</button></li>
         </ul>
       </nav>
     </div>
   </header>
 
   <!-- Hero Section -->
-  <section class="hero">
+  <section class="hero" id="home">
     <div>
-      <h1>Desperte o Seu Espírito Nômade</h1>
-      <p>Reinvente sua forma de viver e de trabalhar, explorando o mundo com paixão e autenticidade. Inspire-se em experiências únicas que ampliam horizontes e oferecem a verdadeira liberdade de ser quem você é, onde quer que esteja.</p>
-      <button class="btn" onclick="document.getElementById('contato').scrollIntoView({behavior:'smooth'})">Fale Conosco</button>
+      <h1>Viaje com propósito, viva com liberdade</h1>
+      <p>Crie seu roteiro personalizado e descubra novas fronteiras com nossa tecnologia de IA e curadoria humana.</p>
+      <button class="btn" onclick="document.getElementById('contato').scrollIntoView({behavior:'smooth'})">Crie seu roteiro personalizado</button>
     </div>
   </section>
 
-  <!-- About Section -->
-  <section id="sobre">
-    <h2>Quem Somos</h2>
+  <!-- Diferenciais -->
+  <section class="diferenciais" id="diferenciais">
+    <h2>Diferenciais</h2>
+    <div class="items">
+      <div class="diferencial-item">
+        <!-- Substitua os src pelos ícones reais -->
+        <img src="icone-tecnologia.png" alt="Tecnologia com propósito">
+        <p>Tecnologia com propósito</p>
+      </div>
+      <div class="diferencial-item">
+        <img src="icone-curadoria.png" alt="Curadoria humana especializada">
+        <p>Curadoria humana especializada</p>
+      </div>
+      <div class="diferencial-item">
+        <img src="icone-roteiros.png" alt="Roteiros autênticos e exclusivos">
+        <p>Roteiros autênticos e exclusivos</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Como Funciona -->
+  <section class="como-funciona" id="como-funciona">
+    <h2>Como Funciona</h2>
+    <div class="passos">
+      <div class="passo">
+        <img src="icone-quiz.png" alt="Responda o quiz">
+        <p>Passo 1: Responda o quiz</p>
+      </div>
+      <div class="passo">
+        <img src="icone-ia.png" alt="Receba seu roteiro com IA">
+        <p>Passo 2: Receba seu roteiro com IA</p>
+      </div>
+      <div class="passo">
+        <img src="icone-especialista.png" alt="Converse com um especialista">
+        <p>Passo 3: Converse com um especialista</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Destinos -->
+  <section class="destinos" id="destinos">
+    <h2>Destinos em Destaque</h2>
+    <div class="carousel">
+      <div class="destino-item">
+        <img src="destino-islandia.jpg" alt="Islândia">
+        <p>Islândia</p>
+      </div>
+      <div class="destino-item">
+        <img src="destino-chapada.jpg" alt="Chapada dos Veadeiros">
+        <p>Chapada dos Veadeiros</p>
+      </div>
+      <div class="destino-item">
+        <img src="destino-bali.jpg" alt="Bali">
+        <p>Bali</p>
+      </div>
+      <!-- Outros destinos podem ser adicionados aqui -->
+    </div>
+  </section>
+
+  <!-- Curadoria Humana -->
+  <section class="curadoria" id="curadoria">
+    <h2>Curadoria Humana</h2>
     <p>
-      Na Nomade Guru, transformamos a paixão por viagens em uma revolução no estilo de vida. Somos a combinação perfeita entre inovação tecnológica, design sofisticado e o espírito aventureiro que desafia limites. Nossa missão é empoderar nômades digitais a romper as barreiras tradicionais, possibilitando experiências que vão muito além de simplesmente viajar – cada jornada é uma oportunidade para reinventar seu futuro.
-    </p>
-    <p>
-      Com consultoria exclusiva, planejamento personalizado e uma visão disruptiva de mercado, ajudamos você a transformar o mundo no seu escritório e a viver uma vida sem fronteiras. Junte-se à revolução Nomade Guru e descubra o verdadeiro poder de conquistar novas possibilidades!
+      Nossa equipe de curadoria une expertise e paixão por viagens para criar roteiros únicos, alinhados ao seu perfil e às tendências de mercado. Cada roteiro é feito com atenção aos detalhes, garantindo experiências autênticas e personalizadas.
     </p>
   </section>
 
-  <!-- Services Section -->
-  <section id="servicos">
-    <h2>Nossos Serviços</h2>
-    <p>
-      Na Nomade Guru, sua liberdade e segurança são nossa prioridade. Nossa oferta integra consultoria estratégica, planejamento personalizado e suporte operacional completo para transformar sua experiência global. Desenvolvemos serviços especializados para acompanhar o nômade digital em todas as etapas: desde a elaboração de um itinerário sob medida que alia eficiência e inspiração, até a administração de desafios logísticos e administrativos no exterior.
-    </p>
-    <p>
-      Combinamos o que há de mais moderno em tecnologia com uma abordagem de design sofisticado e disruptivo, criando soluções inteligentes que potencializam sua produtividade e enriquecem sua vivência cultural. Seja para otimizar sua rotina de trabalho remoto, explorar novos destinos globais ou reinventar seu estilo de vida, a Nomade Guru oferece um suporte dinâmico e exclusivo, permitindo que você conquiste o mundo com total segurança e elegância.
-    </p>
+  <!-- Provas Sociais -->
+  <section class="provas-sociais" id="provas-sociais">
+    <h2>O que dizem nossos clientes</h2>
+    <div class="testemunhos">
+      <div class="testemunho">
+        <p>"Foi uma das viagens mais incríveis da minha vida. Cada detalhe foi pensado para transformar a experiência!"</p>
+        <p><strong>- Cliente Satisfeito</strong></p>
+      </div>
+      <div class="testemunho">
+        <p>"A curadoria e a tecnologia se unem para criar roteiros únicos e personalizados. Recomendo a todos!"</p>
+        <p><strong>- Viajante Feliz</strong></p>
+      </div>
+    </div>
   </section>
 
-  <!-- Contact Section com Mailchimp Form -->
+  <!-- Chamada Final -->
+  <section class="chamada-final" id="chamada-final">
+    <h2>A sua próxima grande jornada começa aqui</h2>
+    <button class="btn" onclick="document.getElementById('contato').scrollIntoView({behavior:'smooth'})">Criar meu roteiro agora</button>
+  </section>
+
+  <!-- Contato (Mailchimp Form) -->
   <section id="contato">
     <h2>Entre em Contato</h2>
     <div id="mc_embed_shell">
@@ -345,7 +354,7 @@
       </script>
     </div>
   </section>
-
+  
   <!-- Footer -->
   <footer>
     <div class="footer-container">
@@ -360,7 +369,8 @@
           <a href="https://wa.me/5511947745710" target="_blank">WhatsApp</a> |
           <a href="https://www.facebook.com/nomadeguru" target="_blank">Facebook</a> |
           <a href="https://www.instagram.com/nomade.guru/" target="_blank">Instagram</a> |
-          <a href="https://www.youtube.com/@NomadeGuru" target="_blank">YouTube</a>
+          <a href="https://www.youtube.com/@NomadeGuru" target="_blank">YouTube</a> |
+          <a href="https://open.spotify.com/playlist/1NaWkXArYokfc7LNTa8zXD?si=71a425de2f384a5f" target="_blank">Spotify</a>
         </p>
       </div>
     </div>
@@ -372,17 +382,21 @@
       window.__lc.license = 19120885;
       window.__lc.integration_name = "manual_onboarding";
       window.__lc.product_name = "livechat";
-      ;(function(n,t,c){function i(n){return e._h?e._h.apply(null,n):e._q.push(n)}
-      var e={_q:[],_h:null,_v:"2.0",on:function(){i(["on",c.call(arguments)])},
-      once:function(){i(["once",c.call(arguments)])},
-      off:function(){i(["off",c.call(arguments)])},
-      get:function(){if(!e._h)throw new Error("[LiveChatWidget] You can't use getters before load.");
-      return i(["get",c.call(arguments)])},
-      call:function(){i(["call",c.call(arguments)])},
-      init:function(){var n=t.createElement("script");
-      n.async=!0,n.type="text/javascript",n.src="https://cdn.livechatinc.com/tracking.js",
-      t.head.appendChild(n)}};
-      !n.__lc.asyncInit&&e.init(),n.LiveChatWidget=n.LiveChatWidget||e}(window,document,[].slice))
+      (function(n,t,c){
+        function i(n){return e._h?e._h.apply(null,n):e._q.push(n)}
+        var e={_q:[],_h:null,_v:"2.0",on:function(){i(["on",c.call(arguments)])},
+        once:function(){i(["once",c.call(arguments)])},
+        off:function(){i(["off",c.call(arguments)])},
+        get:function(){if(!e._h)throw new Error("[LiveChatWidget] You can't use getters before load."); return i(["get",c.call(arguments)])},
+        call:function(){i(["call",c.call(arguments)])},
+        init:function(){
+          var n=t.createElement("script");
+          n.async=!0; n.type="text/javascript"; 
+          n.src="https://cdn.livechatinc.com/tracking.js";
+          t.head.appendChild(n);
+        }};
+        !n.__lc.asyncInit && e.init(), n.LiveChatWidget=n.LiveChatWidget||e;
+      }(window,document,[].slice))
   </script>
   <noscript>
       <a href="https://www.livechat.com/chat-with/19120885/" rel="nofollow">Chat with us</a>, powered by 

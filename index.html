@@ -16,7 +16,7 @@
   <title>Nomade Guru</title>
   <!-- Fonte Poppins -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
-  <!-- Font Awesome (mantido para possível uso futuro) -->
+  <!-- Font Awesome para ícones sociais -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-p1Cm0GgW8+z1w0Gp4eA0ZnC7y6wEv9B5Sih+nEM+VqFXOqR9m6yPZgW+82e3dvBw0ax0evutQ6DSh3O/hO+9pg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <style>
     /* Reset e configurações básicas */
@@ -57,15 +57,23 @@
     .logo img {
       height: 50px;
     }
+    /* Navegação com separadores e ícones sociais */
     nav ul {
       list-style: none;
       display: flex;
+      align-items: center;
     }
     nav ul li {
-      margin-left: 20px;
+      margin-left: 10px;
     }
     nav ul li a {
       font-weight: 500;
+      color: #2c3e50;
+    }
+    nav ul li .separator {
+      margin: 0 8px;
+      color: #2c3e50;
+      font-weight: bold;
     }
     /* Hero Section */
     .hero {
@@ -134,35 +142,46 @@
       max-width: 600px;
       margin: auto;
     }
-    /* Footer com fonte 9px */
+    /* Rodapé em 2 colunas, com fonte 9px */
     footer {
       background: #2c3e50;
       color: #fff;
-      text-align: center;
       padding: 30px 20px;
       font-size: 9px;
     }
-    footer p {
-      margin-bottom: 10px;
+    .footer-container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+      text-align: justify;
+    }
+    .footer-container p {
       line-height: 1.4;
+      margin-bottom: 4px;
     }
     footer a {
       color: #fff;
-      margin: 0 10px;
     }
     /* Responsividade */
     @media (max-width: 768px) {
       .hero h1 {
         font-size: 2.5em;
       }
+      nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+      }
       nav ul li {
-        margin-left: 15px;
+        margin-left: 5px;
       }
       header .container {
         flex-direction: column;
       }
       nav ul {
         margin-top: 10px;
+      }
+      .footer-container {
+        grid-template-columns: 1fr;
       }
     }
   </style>
@@ -184,8 +203,14 @@
       <nav>
         <ul>
           <li><a href="#sobre">Sobre</a></li>
+          <li><span class="separator">|</span></li>
           <li><a href="#servicos">Serviços</a></li>
+          <li><span class="separator">|</span></li>
           <li><a href="#contato">Contato</a></li>
+          <li><span class="separator">|</span></li>
+          <li><a href="https://www.instagram.com/nomade.guru/" target="_blank"><i class="fab fa-instagram"></i></a></li>
+          <li><a href="https://www.facebook.com/nomadeguru" target="_blank"><i class="fab fa-facebook"></i></a></li>
+          <li><a href="https://wa.me/5511947745710" target="_blank"><i class="fab fa-whatsapp"></i></a></li>
         </ul>
       </nav>
     </div>
@@ -291,22 +316,21 @@
 
   <!-- Footer -->
   <footer>
-    <p>
-      Nomade Guru está presente no Brasil e em diversos destinos globais, conectando nômades digitais a experiências de vida transformadoras.
-    </p>
-    <p>
-      NOMADE GURU TAC LTDA - CNPJ 11.111.227/0001-20. Copyright 2009-2025, Nomade Guru TAC Ltda. Todos os direitos reservados.
-    </p>
-    <p>
-      Rua Comendador Torlogo Dauntre, 74 - Sala 1207, Cambuí, Campinas, SP, CEP 13025-270
-    </p>
-    <p>
-      Nossos serviços são ofertados exclusivamente por nossos canais oficiais: website (www.nomadeguru.com.br), aplicativo e consultoria online.
-    </p>
-    <p>
-      <a href="https://www.facebook.com/nomadeguru" target="_blank">Facebook</a> |
-      <a href="https://www.instagram.com/nomade.guru/" target="_blank">Instagram</a>
-    </p>
+    <div class="footer-container">
+      <div class="footer-col">
+        <p>Nomade Guru está presente no Brasil e em diversos destinos globais, conectando nômades digitais a experiências de vida transformadoras.</p>
+        <p>NOMADE GURU TAC LTDA - CNPJ 11.111.227/0001-20. Copyright 2009-2025, Nomade Guru TAC Ltda. Todos os direitos reservados.</p>
+      </div>
+      <div class="footer-col">
+        <p>Rua Comendador Torlogo Dauntre, 74 - Sala 1207, Cambuí, Campinas, SP, CEP 13025-270</p>
+        <p>Nossos serviços são ofertados exclusivamente por nossos canais oficiais: website (www.nomadeguru.com.br), aplicativo e consultoria online.</p>
+        <p>WhatsApp: <a href="https://wa.me/5511947745710" target="_blank">wa.me/5511947745710</a></p>
+        <p>
+          <a href="https://www.facebook.com/nomadeguru" target="_blank">Facebook</a> |
+          <a href="https://www.instagram.com/nomade.guru/" target="_blank">Instagram</a>
+        </p>
+      </div>
+    </div>
   </footer>
   
   <!-- Start of LiveChat (www.livechat.com) code -->

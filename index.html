@@ -19,8 +19,8 @@
   <style>
     :root {
       /* Paleta de Cores conforme Brand Book */
-      --primary: #5053c4;
-      --denary: #342ca4;
+      --primary: #5053c4;          /* Roxo primário */
+      --denary: #342ca4;           /* Segundo tom primário */
       --secondary1: #333176;
       --secondary2: #232452;
       --secondary3: #2c2b3f;
@@ -42,7 +42,7 @@
       color: var(--neutral-dark2);
     }
     a { text-decoration: none; color: inherit; }
-
+    
     /* Header */
     header {
       padding: 20px;
@@ -52,7 +52,7 @@
       left: 0;
       background: var(--white);
       z-index: 1000;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     }
     .container {
       max-width: 1200px;
@@ -70,8 +70,17 @@
       align-items: center;
     }
     nav ul li { margin-left: 10px; }
-    nav ul li a { font-weight: 500; color: var(--neutral-dark2); font-size: 14px; }
-    nav ul li .separator { margin: 0 8px; color: var(--neutral-dark2); font-weight: bold; font-size: 14px; }
+    nav ul li a {
+      font-weight: 500;
+      color: var(--neutral-dark2);
+      font-size: 14px;
+    }
+    nav ul li .separator {
+      margin: 0 8px;
+      color: var(--neutral-dark2);
+      font-weight: bold;
+      font-size: 14px;
+    }
     .header-btn {
       background: var(--primary);
       color: var(--white);
@@ -84,10 +93,11 @@
       transition: background 0.3s ease;
     }
     .header-btn:hover { background: var(--denary); }
-
+    
     /* Hero Section */
     .hero {
       height: 100vh;
+      /* Use uma imagem de fundo impactante – substitua a URL abaixo pela sua imagem */
       background: url('https://example.com/imagem-impactante.jpg') no-repeat center center/cover;
       position: relative;
       display: flex;
@@ -106,8 +116,8 @@
       z-index: 1;
     }
     .hero > div { position: relative; z-index: 2; }
-    .hero h1 { font-size: 3em; margin-bottom: 20px; color: var(--primary); }
-    .hero p { font-size: 1.2em; margin-bottom: 30px; max-width: 600px; margin: auto; }
+    .hero h1 { font-size: 3em; margin-bottom: 20px; color: var(--white); }
+    .hero p { font-size: 1.2em; margin-bottom: 50px; max-width: 600px; margin-left: auto; margin-right: auto; color: var(--white); }
     .hero .btn {
       background: var(--white);
       color: var(--primary);
@@ -120,44 +130,111 @@
       transition: background 0.3s ease;
     }
     .hero .btn:hover { background: #f1f1f1; }
-
+    
     /* Diferenciais */
-    .diferenciais { padding: 60px 20px; background: var(--white); text-align: center; }
+    .diferenciais {
+      padding: 60px 20px;
+      background: var(--white);
+      text-align: center;
+    }
     .diferenciais h2 { font-size: 2em; margin-bottom: 20px; color: var(--primary); }
-    .diferenciais .items { display: flex; justify-content: space-around; flex-wrap: wrap; }
-    .diferencial-item { flex: 1; margin: 10px; max-width: 200px; }
+    .diferenciais .items {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+    }
+    .diferencial-item {
+      flex: 1; margin: 10px; max-width: 200px;
+    }
     .diferencial-item img { height: 40px; margin-bottom: 10px; }
     .diferencial-item p { font-size: 0.9em; color: var(--neutral-dark2); }
-
+    
     /* Como Funciona */
-    .como-funciona { padding: 60px 20px; background: var(--white); text-align: center; }
+    .como-funciona {
+      padding: 60px 20px;
+      background: var(--white);
+      text-align: center;
+    }
     .como-funciona h2 { font-size: 2em; margin-bottom: 20px; color: var(--primary); }
-    .passos { display: flex; justify-content: space-around; flex-wrap: wrap; }
-    .passo { flex: 1; margin: 10px; max-width: 250px; }
+    .passos {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+    }
+    .passo {
+      flex: 1; margin: 10px; max-width: 250px;
+    }
     .passo img { height: 50px; margin-bottom: 10px; }
     .passo p { font-size: 0.9em; color: var(--neutral-dark2); }
-
+    
     /* Destinos (Carrossel) */
-    .destinos { padding: 60px 20px; background: var(--secondary1); text-align: center; color: var(--white); }
+    .destinos {
+      padding: 60px 20px;
+      background: var(--secondary1);
+      text-align: center;
+      color: var(--white);
+    }
     .destinos h2 { font-size: 2em; margin-bottom: 20px; }
-    .carousel { display: flex; overflow-x: auto; gap: 20px; padding-bottom: 20px; }
-    .destino-item { flex: 0 0 auto; width: 200px; background: var(--secondary3); padding: 10px; border-radius: 8px; }
+    .carousel {
+      display: flex;
+      overflow-x: auto;
+      gap: 20px;
+      padding-bottom: 20px;
+    }
+    .destino-item {
+      flex: 0 0 auto;
+      width: 200px;
+      background: var(--secondary3);
+      padding: 10px;
+      border-radius: 8px;
+    }
     .destino-item img { width: 100%; border-radius: 4px; }
     .destino-item p { margin-top: 10px; font-size: 0.9em; }
     
     /* Curadoria Humana */
-    .curadoria { padding: 60px 20px; background: var(--white); text-align: center; }
+    .curadoria {
+      padding: 60px 20px;
+      background: var(--white);
+      text-align: center;
+    }
     .curadoria h2 { font-size: 2em; margin-bottom: 20px; color: var(--primary); }
-    .curadoria p { font-size: 1em; max-width: 800px; margin: auto; color: var(--neutral-dark2); text-align: justify; }
+    .curadoria p {
+      font-size: 1em;
+      max-width: 800px;
+      margin: auto;
+      color: var(--neutral-dark2);
+      text-align: justify;
+    }
     
     /* Provas Sociais */
-    .provas-sociais { padding: 60px 20px; background: var(--white); text-align: center; }
+    .provas-sociais {
+      padding: 60px 20px;
+      background: var(--white);
+      text-align: center;
+    }
     .provas-sociais h2 { font-size: 2em; margin-bottom: 20px; color: var(--primary); }
-    .testemunhos { display: flex; justify-content: center; flex-wrap: wrap; gap: 20px; }
-    .testemunho { background: #f9f9f9; padding: 20px; border-radius: 8px; max-width: 300px; font-size: 0.9em; color: var(--neutral-dark2); }
+    .testemunhos {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+    .testemunho {
+      background: #f9f9f9;
+      padding: 20px;
+      border-radius: 8px;
+      max-width: 300px;
+      font-size: 0.9em;
+      color: var(--neutral-dark2);
+    }
     
     /* Chamada Final */
-    .chamada-final { padding: 60px 20px; background: var(--primary); text-align: center; color: var(--white); }
+    .chamada-final {
+      padding: 60px 20px;
+      background: var(--primary);
+      text-align: center;
+      color: var(--white);
+    }
     .chamada-final h2 { font-size: 2.5em; margin-bottom: 20px; }
     .chamada-final .btn {
       background: var(--white);
@@ -195,7 +272,10 @@
       gap: 10px;
       text-align: justify;
     }
-    .footer-container p { line-height: 1.4; margin-bottom: 4px; }
+    .footer-container p {
+      line-height: 1.4;
+      margin-bottom: 4px;
+    }
     footer a { color: var(--white); }
     
     /* Responsividade */
@@ -444,19 +524,22 @@
     window.__lc.integration_name = "manual_onboarding";
     window.__lc.product_name = "livechat";
     (function(n,t,c){
-      function i(n){return e._h ? e._h.apply(null,n): e._q.push(n)}
-      var e = {_q:[], _h:null, _v:"2.0", on:function(){i(["on",c.call(arguments)])},
-      once:function(){i(["once",c.call(arguments)])},
-      off:function(){i(["off",c.call(arguments)])},
-      get:function(){if(!e._h)throw new Error("[LiveChatWidget] You can't use getters before load."); return i(["get",c.call(arguments)])},
-      call:function(){i(["call",c.call(arguments)])},
-      init:function(){
-        var n=t.createElement("script");
-        n.async=true;
-        n.type="text/javascript"; 
-        n.src="https://cdn.livechatinc.com/tracking.js";
-        t.head.appendChild(n);
-      }};
+      function i(n){return e._h ? e._h.apply(null,n) : e._q.push(n)}
+      var e = {
+        _q:[], _h:null, _v:"2.0",
+        on: function(){i(["on", c.call(arguments)])},
+        once: function(){i(["once", c.call(arguments)])},
+        off: function(){i(["off", c.call(arguments)])},
+        get: function(){if(!e._h)throw new Error("[LiveChatWidget] You can't use getters before load."); return i(["get", c.call(arguments)])},
+        call: function(){i(["call", c.call(arguments)])},
+        init: function(){
+          var n = t.createElement("script");
+          n.async = true;
+          n.type = "text/javascript"; 
+          n.src = "https://cdn.livechatinc.com/tracking.js";
+          t.head.appendChild(n);
+        }
+      };
       !n.__lc.asyncInit && e.init(), n.LiveChatWidget = n.LiveChatWidget || e;
     }(window, document, [].slice));
   </script>

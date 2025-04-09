@@ -45,15 +45,16 @@
     
     /* Header */
     header {
-      padding: 20px;
-      position: fixed;
-      width: 100%;
-      top: 0;
-      left: 0;
-      background: var(--white);
-      z-index: 1000;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    }
+  padding: 20px;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background: var(--white);
+  z-index: 1000;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
     .container {
       max-width: 1200px;
       margin: auto;
@@ -63,7 +64,10 @@
       justify-content: space-between;
       flex-wrap: wrap;
     }
-    .logo img { height: 80px; }
+    .logo img {
+  height: 80px;
+  transition: height 0.3s ease;
+}
     nav ul {
       list-style: none;
       display: flex;
@@ -146,7 +150,7 @@
     .diferencial-item {
       flex: 1; margin: 10px; max-width: 200px;
     }
-    .diferencial-item img { height: 80px; margin-bottom: 10px; }
+    .diferencial-item img { height: 80px; margin-bottom: 10px; border-radius: 12px; }
     .diferencial-item p { font-size: 0.9em; color: var(--neutral-dark2); }
     
     /* Como Funciona */
@@ -164,7 +168,7 @@
     .passo {
       flex: 1; margin: 10px; max-width: 250px;
     }
-    .passo img { height: 80px; margin-bottom: 10px; }
+    .passo img { height: 80px; margin-bottom: 10px; border-radius: 12px; }
     .passo p { font-size: 0.9em; color: var(--neutral-dark2); }
     
     /* Destinos (Carrossel) */
@@ -188,7 +192,7 @@
       padding: 10px;
       border-radius: 8px;
     }
-    .destino-item img { width: 100%; border-radius: 4px; }
+    .destino-item img { width: 100%; border-radius: 12px; }
     .destino-item p { margin-top: 10px; font-size: 0.9em; }
     
     /* Curadoria Humana */
@@ -282,13 +286,60 @@
     @media (max-width: 768px) {
       .hero h1 { font-size: 2.5em; }
       nav ul li { margin-left: 5px; }
-      header .container { flex-direction: column; align-items: center; }
+      header .container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
       nav ul { margin-top: 10px; justify-content: center; }
       .footer-container { grid-template-columns: 1fr; text-align: center; }
       .diferenciais .items, .passos, .testemunhos { flex-direction: column; align-items: center; }
     }
     @media (max-width: 480px) {
-  header .container { flex-direction: column; align-items: center; }
+  header .container {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .logo {
+    text-align: left;
+    width: auto;
+  }
+  .menu-toggle {
+    order: 2;
+    margin-left: auto;
+  }
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+    gap: 8px;
+  }
+  .logo img {
+    height: 60px;
+    margin-bottom: 10px;
+  }
+  .hero h1 {
+    font-size: 2em;
+  }
+  .hero p {
+    font-size: 1em;
+  }
+  nav ul li a {
+    font-size: 12px;
+  }
+  nav ul li .separator {
+    display: none;
+  }
+  footer {
+    font-size: 10px;
+  }
+}
   .logo { text-align: center; width: 100%; }
   nav ul { flex-direction: column; align-items: center; margin-top: 10px; gap: 8px; }
   .logo img { height: 60px; margin-bottom: 10px; }
@@ -343,6 +394,83 @@
 </style>
 <script id="mcjs">!function(c,h,i,m,p){m=c.createElement(h),p=c.getElementsByTagName(h)[0],m.async=1,m.src=i,p.parentNode.insertBefore(m,p)}(document,"script","https://chimpstatic.com/mcjs-connected/js/users/7318d15754cc569b753c1eeaf/36dd31e4558e39a4ea465bfb6.js");</script>
 <script id="mcjs">!function(c,h,i,m,p){m=c.createElement(h),p=c.getElementsByTagName(h)[0],m.async=1,m.src=i,p.parentNode.insertBefore(m,p)}(document,"script","https://chimpstatic.com/mcjs-connected/js/users/7318d15754cc569b753c1eeaf/36dd31e4558e39a4ea465bfb6.js");</script>
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+<style>
+ul.box-redes-sociais {
+  display: flex;
+  background: transparent;
+  width: auto;
+  margin: 20px auto;
+  justify-content: center;
+  gap: 10px;
+}
+ul.box-redes-sociais li {
+  list-style: none;
+}
+ul.box-redes-sociais li a {
+  width: 50px;
+  height: 50px;
+  background-color: #fff;
+  text-align: center;
+  line-height: 45px;
+  font-size: 22px;
+  display: block;
+  border-radius: 50%;
+  border: 2px solid #eaeaea;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+ul.box-redes-sociais li a .icon {
+  position: relative;
+  color: #262626;
+  transition: .3s;
+  z-index: 3;
+}
+ul.box-redes-sociais li a:hover .icon {
+  color: #fff;
+  transform: scale(1.2);
+}
+ul.box-redes-sociais li a:before {
+  content: "";
+  position: absolute;
+  top: 100%;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background: #f00;
+  transition: .6s;
+  z-index: 2;
+}
+ul.box-redes-sociais li a:hover:before {
+  top: 0;
+}
+ul.box-redes-sociais li.facebook a:before {
+  background: #3b5999;
+}
+ul.box-redes-sociais li.instagram a:before {
+  background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%);
+}
+ul.box-redes-sociais li.youtube a:before {
+  background: #ff1d15;
+}
+ul.box-redes-sociais li.spotify a:before {
+  background: #1DB954;
+}
+</style>
+<script>
+  window.addEventListener('scroll', function() {
+    const header = document.querySelector('header');
+    const logo = document.querySelector('.logo img');
+    if (window.scrollY > 50) {
+      header.classList.add('scrolled');
+      logo.style.height = '50px';
+    } else {
+      header.classList.remove('scrolled');
+      logo.style.height = '80px';
+    }
+  });
+</script>
 </head>
 <body>
   <!-- Google Tag Manager (noscript) -->
@@ -359,16 +487,16 @@
       </div>
       <button class="menu-toggle" onclick="document.querySelector('nav ul').classList.toggle('show')">☰</button>
 <nav>
-  <ul>
-          <li><a href="#home">Home</a></li>
+  <ul onclick="this.classList.remove('show')">
+          <li><a href="#home" onclick="document.querySelector('nav ul').classList.remove('show')">Home</a></li>
           <li><span class="separator">|</span></li>
-          <li><a href="#como-funciona">Como Funciona</a></li>
+          <li><a href="#como-funciona" onclick="document.querySelector('nav ul').classList.remove('show')">Como Funciona</a></li>
           <li><span class="separator">|</span></li>
-          <li><a href="#destinos">Destinos</a></li>
+          <li><a href="#destinos" onclick="document.querySelector('nav ul').classList.remove('show')">Destinos</a></li>
           <li><span class="separator">|</span></li>
-          <li><a href="#curadoria">Curadoria Humana</a></li>
+          <li><a href="#curadoria" onclick="document.querySelector('nav ul').classList.remove('show')">Curadoria Humana</a></li>
           <li><span class="separator">|</span></li>
-          <li><a href="#contato">Contato</a></li>
+          <li><a href="#contato" onclick="document.querySelector('nav ul').classList.remove('show')">Contato</a></li>
           <li><span class="separator">|</span></li>
           <li>
             <button class="header-btn" onclick="document.getElementById('contato').scrollIntoView({behavior:'smooth'})">
@@ -542,7 +670,7 @@
   
   <!-- Contato (Mailchimp Form) -->
   <section id="contato">
-  <h2>Cadastre-se em Nossa Newsletter</h2>
+  <h2 style="text-align: center;">Cadastre-se em Nossa Newsletter</h2>
   <div id="mc_embed_shell">
     <link href="//cdn-images.mailchimp.com/embedcode/classic-061523.css" rel="stylesheet" type="text/css">
     <style type="text/css">
@@ -626,6 +754,22 @@
       </div>
     </div>
   </footer>
+
+<!-- Redes Sociais Flutuantes -->
+<ul class="box-redes-sociais">
+  <li class="facebook">
+    <a href="https://www.facebook.com/nomadeguru" target="_blank"><i class="fab fa-facebook-f icon"></i></a>
+  </li>
+  <li class="instagram">
+    <a href="https://www.instagram.com/nomade.guru/" target="_blank"><i class="fab fa-instagram icon"></i></a>
+  </li>
+  <li class="youtube">
+    <a href="https://www.youtube.com/@NomadeGuru" target="_blank"><i class="fab fa-youtube icon"></i></a>
+  </li>
+  <li class="spotify">
+    <a href="https://open.spotify.com/playlist/1NaWkXArYokfc7LNTa8zXD?si=71a425de2f384a5f" target="_blank"><i class="fab fa-spotify icon"></i></a>
+  </li>
+</ul>
   
   <!-- Start of LiveChat (www.livechat.com) code -->
   <script>

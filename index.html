@@ -63,7 +63,7 @@
       justify-content: space-between;
       flex-wrap: wrap;
     }
-    .logo img { height: 50px; }
+    .logo img { height: 80px; }
     nav ul {
       list-style: none;
       display: flex;
@@ -146,7 +146,7 @@
     .diferencial-item {
       flex: 1; margin: 10px; max-width: 200px;
     }
-    .diferencial-item img { height: 40px; margin-bottom: 10px; }
+    .diferencial-item img { height: 80px; margin-bottom: 10px; }
     .diferencial-item p { font-size: 0.9em; color: var(--neutral-dark2); }
     
     /* Como Funciona */
@@ -164,7 +164,7 @@
     .passo {
       flex: 1; margin: 10px; max-width: 250px;
     }
-    .passo img { height: 50px; margin-bottom: 10px; }
+    .passo img { height: 80px; margin-bottom: 10px; }
     .passo p { font-size: 0.9em; color: var(--neutral-dark2); }
     
     /* Destinos (Carrossel) */
@@ -288,6 +288,10 @@
       .diferenciais .items, .passos, .testemunhos { flex-direction: column; align-items: center; }
     }
     @media (max-width: 480px) {
+  header .container { flex-direction: column; align-items: center; }
+  .logo { text-align: center; width: 100%; }
+  nav ul { flex-direction: column; align-items: center; margin-top: 10px; gap: 8px; }
+  .logo img { height: 60px; margin-bottom: 10px; }
       .hero h1 { font-size: 2em; }
       .hero p { font-size: 1em; }
       nav ul li a, nav ul li .separator { font-size: 12px; }
@@ -303,6 +307,40 @@
 <meta property="og:url" content="https://www.nomade.guru">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="canonical" href="https://www.nomade.guru">
+<style>
+  .menu-toggle {
+    display: none;
+    cursor: pointer;
+    font-size: 24px;
+    padding: 10px;
+    background: none;
+    border: none;
+    color: var(--neutral-dark2);
+  }
+  @media (max-width: 768px) {
+    .menu-toggle {
+      display: block;
+    }
+    nav ul {
+      display: none;
+      flex-direction: column;
+      width: 100%;
+      background: var(--white);
+      position: absolute;
+      top: 70px;
+      left: 0;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      z-index: 999;
+    }
+    nav ul.show {
+      display: flex;
+    }
+    nav ul li {
+      margin: 10px 0;
+      text-align: center;
+    }
+  }
+</style>
 </head>
 <body>
   <!-- Google Tag Manager (noscript) -->
@@ -317,8 +355,9 @@
       <div class="logo">
         <img src="https://res.cloudinary.com/dhqvjxgue/image/upload/v1744155441/logo_nomade_guru_y2inow.png" alt="Nomade Guru">
       </div>
-      <nav>
-        <ul>
+      <button class="menu-toggle" onclick="document.querySelector('nav ul').classList.toggle('show')">☰</button>
+<nav>
+  <ul>
           <li><a href="#home">Home</a></li>
           <li><span class="separator">|</span></li>
           <li><a href="#como-funciona">Como Funciona</a></li>

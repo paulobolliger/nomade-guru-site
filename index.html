@@ -1,131 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<<<<<<< HEAD
- <meta charset="UTF-8" />
- <meta name="viewport" content="width=device-width, initial-scale=1.0" />
- <title>Nomade Guru</title>
- <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet" />
- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" crossorigin="anonymous" />
- <script id="mcjs">!function(c,h,i,m,p){m=c.createElement(h),p=c.getElementsByTagName(h)[0],m.async=1,m.src=i,p.parentNode.insertBefore(m,p)}(document,"script","https://chimpstatic.com/mcjs-connected/js/users/7318d15754cc569b753c1eeaf/36dd31e4558e39a4ea465bfb6.js");</script>
- <style>
-   :root {
-     --primary: #5053c4;
-     --denary: #342ca4;
-     --secondary1: #333176;
-     --secondary2: #232452;
-     --secondary3: #2c2b3f;
-     --secondary4: #424452;
-     --neutral-dark1: #12152c;
-     --neutral-dark2: #242c3e;
-     --neutral-dark3: #04060b;
-     --neutral-dark4: #443c54;
-     --white: #ffffff;
-   }
-   * { margin: 0; padding: 0; box-sizing: border-box; }
-   body { font-family: 'Poppins', sans-serif; color: var(--neutral-dark2); }
-
-   header {
-     padding: 20px;
-     position: fixed;
-     width: 100%;
-     top: 0;
-     left: 0;
-     background: var(--white);
-     z-index: 1000;
-     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-   }
-
-   .container {
-     max-width: 1200px;
-     margin: auto;
-     padding: 0 20px;
-     display: flex;
-     align-items: center;
-     justify-content: space-between;
-   }
-
-   .logo img {
-     height: 80px;
-     transition: height 0.3s ease;
-   }
-
-   .menu-toggle {
-     display: none;
-     background: none;
-     border: none;
-     font-size: 28px;
-     color: var(--neutral-dark2);
-     cursor: pointer;
-   }
-
-   nav ul {
-     list-style: none;
-     display: flex;
-     align-items: center;
-     justify-content: flex-end;
-   }
-
-   nav ul li { margin-left: 10px; }
-   nav ul li .separator { display: none; }
-
-   .header-btn {
-     background: var(--primary);
-     color: var(--white);
-     padding: 8px 16px;
-     border: none;
-     border-radius: 50px;
-     font-weight: 700;
-     font-size: 14px;
-     cursor: pointer;
-     transition: background 0.3s ease;
-   }
-
-   .header-btn:hover { background: var(--denary); }
-
-   @media (max-width: 768px) {
-     .menu-toggle { display: block; }
-     nav ul {
-       display: none;
-       flex-direction: column;
-       background: var(--white);
-       width: 100%;
-       position: absolute;
-       top: 70px;
-       left: 0;
-       padding: 20px 0;
-       z-index: 999;
-       box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-     }
-     nav ul.show { display: flex; }
-     nav ul li {
-       margin: 10px 0;
-       text-align: center;
-     }
-     .logo img { height: 60px; margin: 0; }
-   }
- </style>
-</head>
-<body>
- <header>
-   <div class="container">
-     <div class="logo">
-       <img src="https://res.cloudinary.com/dhqvjxgue/image/upload/v1744155441/logo_nomade_guru_y2inow.png" alt="Nomade Guru" />
-     </div>
-     <button class="menu-toggle" onclick="document.querySelector('nav ul').classList.toggle('show')">☰</button>
-     <nav>
-       <ul onclick="this.classList.remove('show')">
-         <li><a href="#home">Home</a></li>
-         <li><a href="#como-funciona">Como Funciona</a></li>
-         <li><a href="#destinos">Destinos</a></li>
-         <li><a href="#curadoria">Curadoria Humana</a></li>
-         <li><a href="#contato">Contato</a></li>
-         <li><button class="header-btn" onclick="document.getElementById('contato').scrollIntoView({behavior:'smooth'})">Experimente seu Roteiro</button></li>
-       </ul>
-     </nav>
-   </div>
- </header>
-=======
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-HY9T63HTNN"></script>
   <script>
@@ -170,15 +45,16 @@
     
     /* Header */
     header {
-      padding: 20px;
-      position: fixed;
-      width: 100%;
-      top: 0;
-      left: 0;
-      background: var(--white);
-      z-index: 1000;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    }
+  padding: 20px;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background: var(--white);
+  z-index: 1000;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
     .container {
       max-width: 1200px;
       margin: auto;
@@ -188,7 +64,10 @@
       justify-content: space-between;
       flex-wrap: wrap;
     }
-    .logo img { height: 50px; }
+    .logo img {
+  height: 80px;
+  transition: height 0.3s ease;
+}
     nav ul {
       list-style: none;
       display: flex;
@@ -223,7 +102,7 @@
     .hero {
       height: 100vh;
       /* Use uma imagem de fundo impactante – substitua a URL abaixo pela sua imagem */
-      background: url('img/imagem-impactante.png') no-repeat center center/cover;
+      background: url('https://res.cloudinary.com/dhqvjxgue/image/upload/v1744155476/imagem-impactante_1_nv98cg.png') no-repeat center center/cover;
       position: relative;
       display: flex;
       align-items: center;
@@ -271,7 +150,7 @@
     .diferencial-item {
       flex: 1; margin: 10px; max-width: 200px;
     }
-    .diferencial-item img { height: 40px; margin-bottom: 10px; }
+    .diferencial-item img { height: 80px; margin-bottom: 10px; border-radius: 12px; }
     .diferencial-item p { font-size: 0.9em; color: var(--neutral-dark2); }
     
     /* Como Funciona */
@@ -289,7 +168,7 @@
     .passo {
       flex: 1; margin: 10px; max-width: 250px;
     }
-    .passo img { height: 50px; margin-bottom: 10px; }
+    .passo img { height: 80px; margin-bottom: 10px; border-radius: 12px; }
     .passo p { font-size: 0.9em; color: var(--neutral-dark2); }
     
     /* Destinos (Carrossel) */
@@ -313,7 +192,7 @@
       padding: 10px;
       border-radius: 8px;
     }
-    .destino-item img { width: 100%; border-radius: 4px; }
+    .destino-item img { width: 100%; border-radius: 12px; }
     .destino-item p { margin-top: 10px; font-size: 0.9em; }
     
     /* Curadoria Humana */
@@ -407,12 +286,63 @@
     @media (max-width: 768px) {
       .hero h1 { font-size: 2.5em; }
       nav ul li { margin-left: 5px; }
-      header .container { flex-direction: column; align-items: center; }
+      header .container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
       nav ul { margin-top: 10px; justify-content: center; }
       .footer-container { grid-template-columns: 1fr; text-align: center; }
       .diferenciais .items, .passos, .testemunhos { flex-direction: column; align-items: center; }
     }
     @media (max-width: 480px) {
+  header .container {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .logo {
+    text-align: left;
+    width: auto;
+  }
+  .menu-toggle {
+    order: 2;
+    margin-left: auto;
+  }
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+    gap: 8px;
+  }
+  .logo img {
+    height: 60px;
+    margin-bottom: 10px;
+  }
+  .hero h1 {
+    font-size: 2em;
+  }
+  .hero p {
+    font-size: 1em;
+  }
+  nav ul li a {
+    font-size: 12px;
+  }
+  nav ul li .separator {
+    display: none;
+  }
+  footer {
+    font-size: 10px;
+  }
+}
+  .logo { text-align: center; width: 100%; }
+  nav ul { flex-direction: column; align-items: center; margin-top: 10px; gap: 8px; }
+  .logo img { height: 60px; margin-bottom: 10px; }
       .hero h1 { font-size: 2em; }
       .hero p { font-size: 1em; }
       nav ul li a, nav ul li .separator { font-size: 12px; }
@@ -428,6 +358,119 @@
 <meta property="og:url" content="https://www.nomade.guru">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="canonical" href="https://www.nomade.guru">
+<style>
+  .menu-toggle {
+    display: none;
+    cursor: pointer;
+    font-size: 24px;
+    padding: 10px;
+    background: none;
+    border: none;
+    color: var(--neutral-dark2);
+  }
+  @media (max-width: 768px) {
+    .menu-toggle {
+      display: block;
+    }
+    nav ul {
+      display: none;
+      flex-direction: column;
+      width: 100%;
+      background: var(--white);
+      position: absolute;
+      top: 70px;
+      left: 0;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      z-index: 999;
+    }
+    nav ul.show {
+      display: flex;
+    }
+    nav ul li {
+      margin: 10px 0;
+      text-align: center;
+    }
+  }
+</style>
+<script id="mcjs">!function(c,h,i,m,p){m=c.createElement(h),p=c.getElementsByTagName(h)[0],m.async=1,m.src=i,p.parentNode.insertBefore(m,p)}(document,"script","https://chimpstatic.com/mcjs-connected/js/users/7318d15754cc569b753c1eeaf/36dd31e4558e39a4ea465bfb6.js");</script>
+<script id="mcjs">!function(c,h,i,m,p){m=c.createElement(h),p=c.getElementsByTagName(h)[0],m.async=1,m.src=i,p.parentNode.insertBefore(m,p)}(document,"script","https://chimpstatic.com/mcjs-connected/js/users/7318d15754cc569b753c1eeaf/36dd31e4558e39a4ea465bfb6.js");</script>
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+<style>
+ul.box-redes-sociais {
+  display: flex;
+  background: transparent;
+  width: auto;
+  margin: 20px auto;
+  justify-content: center;
+  gap: 10px;
+}
+ul.box-redes-sociais li {
+  list-style: none;
+}
+ul.box-redes-sociais li a {
+  width: 50px;
+  height: 50px;
+  background-color: #fff;
+  text-align: center;
+  line-height: 45px;
+  font-size: 22px;
+  display: block;
+  border-radius: 50%;
+  border: 2px solid #eaeaea;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+ul.box-redes-sociais li a .icon {
+  position: relative;
+  color: #262626;
+  transition: .3s;
+  z-index: 3;
+}
+ul.box-redes-sociais li a:hover .icon {
+  color: #fff;
+  transform: scale(1.2);
+}
+ul.box-redes-sociais li a:before {
+  content: "";
+  position: absolute;
+  top: 100%;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background: #f00;
+  transition: .6s;
+  z-index: 2;
+}
+ul.box-redes-sociais li a:hover:before {
+  top: 0;
+}
+ul.box-redes-sociais li.facebook a:before {
+  background: #3b5999;
+}
+ul.box-redes-sociais li.instagram a:before {
+  background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%);
+}
+ul.box-redes-sociais li.youtube a:before {
+  background: #ff1d15;
+}
+ul.box-redes-sociais li.spotify a:before {
+  background: #1DB954;
+}
+</style>
+<script>
+  window.addEventListener('scroll', function() {
+    const header = document.querySelector('header');
+    const logo = document.querySelector('.logo img');
+    if (window.scrollY > 50) {
+      header.classList.add('scrolled');
+      logo.style.height = '50px';
+    } else {
+      header.classList.remove('scrolled');
+      logo.style.height = '80px';
+    }
+  });
+</script>
 </head>
 <body>
   <!-- Google Tag Manager (noscript) -->
@@ -442,17 +485,18 @@
       <div class="logo">
         <img src="https://res.cloudinary.com/dhqvjxgue/image/upload/v1744155441/logo_nomade_guru_y2inow.png" alt="Nomade Guru">
       </div>
-      <nav>
-        <ul>
-          <li><a href="#home">Home</a></li>
+      <button class="menu-toggle" onclick="document.querySelector('nav ul').classList.toggle('show')">☰</button>
+<nav>
+  <ul onclick="this.classList.remove('show')">
+          <li><a href="#home" onclick="document.querySelector('nav ul').classList.remove('show')">Home</a></li>
           <li><span class="separator">|</span></li>
-          <li><a href="#como-funciona">Como Funciona</a></li>
+          <li><a href="#como-funciona" onclick="document.querySelector('nav ul').classList.remove('show')">Como Funciona</a></li>
           <li><span class="separator">|</span></li>
-          <li><a href="#destinos">Destinos</a></li>
+          <li><a href="#destinos" onclick="document.querySelector('nav ul').classList.remove('show')">Destinos</a></li>
           <li><span class="separator">|</span></li>
-          <li><a href="#curadoria">Curadoria Humana</a></li>
+          <li><a href="#curadoria" onclick="document.querySelector('nav ul').classList.remove('show')">Curadoria Humana</a></li>
           <li><span class="separator">|</span></li>
-          <li><a href="#contato">Contato</a></li>
+          <li><a href="#contato" onclick="document.querySelector('nav ul').classList.remove('show')">Contato</a></li>
           <li><span class="separator">|</span></li>
           <li>
             <button class="header-btn" onclick="document.getElementById('contato').scrollIntoView({behavior:'smooth'})">
@@ -480,15 +524,15 @@
     <h2>Diferenciais</h2>
     <div class="items">
       <div class="diferencial-item">
-        <img loading="lazy" src="/img/icone-tecnologia.png" alt="Tecnologia com propósito">
+        <img loading="lazy" src="https://res.cloudinary.com/dhqvjxgue/image/upload/v1744155474/icone-tecnologia_2_qnuxdh.png" alt="Tecnologia com propósito">
         <p>Tecnologia com propósito</p>
       </div>
       <div class="diferencial-item">
-        <img loading="lazy" src="/img/icone-curadoria.png" alt="Curadoria humana especializada">
+        <img loading="lazy" src="https://res.cloudinary.com/dhqvjxgue/image/upload/v1744155472/icone-curadoria_2_nttjeq.png" alt="Curadoria humana especializada">
         <p>Curadoria humana especializada</p>
       </div>
       <div class="diferencial-item">
-        <img loading="lazy" src="/img/icone-roteiros.png" alt="Roteiros autênticos e exclusivos">
+        <img loading="lazy" src="https://res.cloudinary.com/dhqvjxgue/image/upload/v1744155474/icone-roteiros_pdyi68.png" alt="Roteiros autênticos e exclusivos">
         <p>Roteiros autênticos e exclusivos</p>
       </div>
     </div>
@@ -499,15 +543,15 @@
     <h2>Como Funciona</h2>
     <div class="passos">
       <div class="passo">
-        <img loading="lazy" src="/img/icone-quiz.png" alt="Responda o quiz">
+        <img loading="lazy" src="https://res.cloudinary.com/dhqvjxgue/image/upload/v1744155474/icone-quiz_vqbtlt.png" alt="Responda o quiz">
         <p>Passo 1: Responda o quiz</p>
       </div>
       <div class="passo">
-        <img loading="lazy" src="/img/icone-ia.png" alt="Receba seu roteiro com IA">
+        <img loading="lazy" src="https://res.cloudinary.com/dhqvjxgue/image/upload/v1744155474/icone-ia_k89u8u.png" alt="Receba seu roteiro com IA">
         <p>Passo 2: Receba seu roteiro com IA</p>
       </div>
       <div class="passo">
-        <img loading="lazy" src="/img/icone-especialista.png" alt="Converse com um especialista">
+        <img loading="lazy" src="https://res.cloudinary.com/dhqvjxgue/image/upload/v1744155474/icone-especialista_ev6aa7.png" alt="Converse com um especialista">
         <p>Passo 3: Converse com um especialista</p>
       </div>
     </div>
@@ -519,194 +563,244 @@
   <div class="carousel">
     <!-- Experiências Mágicas com Crianças -->
     <div class="destino-item fade-in">
-      <img loading="lazy" src="/img/laponia-papai-noel.jpg" alt="Vila do Papai Noel na Lapônia com cabanas nevadas, luzes suaves e renas.">
+      <img loading="lazy" src="https://res.cloudinary.com/dhqvjxgue/image/upload/v1744155476/laponia-papai-noel_ex4yss.png" alt="Vila do Papai Noel na Lapônia com cabanas nevadas, luzes suaves e renas.">
       <p>Lapônia – Vila do Papai Noel</p>
     </div>
     <div class="destino-item fade-in">
-      <img loading="lazy" src="/img/gramado-natal-luz.jpg" alt="Natal Luz em Gramado com luzes vibrantes e atmosfera acolhedora.">
+      <img loading="lazy" src="https://res.cloudinary.com/dhqvjxgue/image/upload/v1744155473/gramado-natal-luz_mm3c3c.png" alt="Natal Luz em Gramado com luzes vibrantes e atmosfera acolhedora.">
       <p>Gramado – Natal Luz</p>
     </div>
     <div class="destino-item fade-in">
-      <img loading="lazy" src="/img/disney-magic-kingdom.jpg" alt="Magic Kingdom ao entardecer, com castelo iluminado e fogos de artifício.">
+      <img loading="lazy" src="https://res.cloudinary.com/dhqvjxgue/image/upload/v1744155472/disney-magic-kingdom_bl1w3h.png" alt="Magic Kingdom ao entardecer, com castelo iluminado e fogos de artifício.">
       <p>Disney – Magic Kingdom</p>
     </div>
->>>>>>> parent of aa30e27 (Update index.html)
 
-<<<<<<< HEAD
- <section class="hero" id="home" style="scroll-margin-top: 100px; height: 100vh; background: linear-gradient(135deg, var(--primary), var(--denary)); display: flex; align-items: center; justify-content: center; text-align: center; color: #fff; padding: 0 20px;">
-   <div>
-     <h1 style="font-size: 3em; margin-bottom: 20px; color: #fff;">Viaje com propósito, viva com liberdade</h1>
-     <p style="font-size: 1.2em; max-width: 600px; margin: 0 auto 40px auto; color: #fff;">
-       Crie seu roteiro personalizado e descubra novas fronteiras com nossa tecnologia de IA e curadoria humana.
-     </p>
-     <button class="header-btn" onclick="document.getElementById('contato').scrollIntoView({behavior:'smooth'})">
-       Crie seu roteiro personalizado
-     </button>
-   </div>
- </section>
-
- <section id="diferenciais" style="padding: 60px 20px; text-align: center; background: #fff;">
-   <h2 style="font-size: 2em; color: var(--primary); margin-bottom: 40px;">Diferenciais</h2>
-   <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 40px; max-width: 1000px; margin: auto;">
-     <div style="text-align: center; max-width: 250px;">
-       <img src="https://res.cloudinary.com/dhqvjxgue/image/upload/v1744155474/icone-tecnologia_2_qnuxdh.png" alt="Tecnologia com propósito" loading="lazy" style="height: 80px; border-radius: 12px;">
-       <p style="margin-top: 12px;">Tecnologia com propósito</p>
-     </div>
-     <div style="text-align: center; max-width: 250px;">
-       <img src="https://res.cloudinary.com/dhqvjxgue/image/upload/v1744155472/icone-curadoria_2_nttjeq.png" alt="Curadoria humana especializada" loading="lazy" style="height: 80px; border-radius: 12px;">
-       <p style="margin-top: 12px;">Curadoria humana especializada</p>
-     </div>
-     <div style="text-align: center; max-width: 250px;">
-       <img src="https://res.cloudinary.com/dhqvjxgue/image/upload/v1744155474/icone-roteiros_pdyi68.png" alt="Roteiros autênticos e exclusivos" loading="lazy" style="height: 80px; border-radius: 12px;">
-       <p style="margin-top: 12px;">Roteiros autênticos e exclusivos</p>
-     </div>
-   </div>
- </section>
-
- <section id="como-funciona" style="padding: 60px 20px; text-align: center; background: var(--white);">
-   <h2 style="font-size: 2em; color: var(--primary); margin-bottom: 40px;">Como Funciona</h2>
-   <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 40px; max-width: 1000px; margin: auto;">
-     <div style="text-align: center; max-width: 250px;">
-       <img src="https://res.cloudinary.com/dhqvjxgue/image/upload/v1744155474/icone-quiz_vqbtlt.png" alt="Responda o quiz" loading="lazy" style="height: 80px; border-radius: 12px;">
-       <p style="margin-top: 12px;">Passo 1: Responda o quiz</p>
-     </div>
-     <div style="text-align: center; max-width: 250px;">
-       <img src="https://res.cloudinary.com/dhqvjxgue/image/upload/v1744155474/icone-ia_k89u8u.png" alt="Receba seu roteiro com IA" loading="lazy" style="height: 80px; border-radius: 12px;">
-       <p style="margin-top: 12px;">Passo 2: Receba seu roteiro com IA</p>
-     </div>
-     <div style="text-align: center; max-width: 250px;">
-       <img src="https://res.cloudinary.com/dhqvjxgue/image/upload/v1744155474/icone-especialista_ev6aa7.png" alt="Converse com um especialista" loading="lazy" style="height: 80px; border-radius: 12px;">
-       <p style="margin-top: 12px;">Passo 3: Converse com um especialista</p>
-     </div>
-   </div>
- </section>
-<section id="destinos" style="padding: 60px 20px; text-align: center; background: var(--secondary1); color: #fff;">
- <h2 style="font-size: 2em; margin-bottom: 30px;">Destinos em Destaque</h2>
- <div style="display: flex; overflow-x: auto; gap: 16px; padding-bottom: 20px;">
-   <div style="min-width: 200px; background: var(--secondary3); border-radius: 8px; padding: 10px;">
-     <img src="https://res.cloudinary.com/dhqvjxgue/image/upload/v1744155476/laponia-papai-noel_ex4yss.png" alt="Lapônia – Vila do Papai Noel" loading="lazy" style="width: 100%; border-radius: 8px;">
-     <p style="margin-top: 10px; font-size: 0.9em;">Lapônia – Vila do Papai Noel</p>
-   </div>
-   <!-- Adicione os outros destinos aqui seguindo o padrão acima -->
- </div>
-=======
     <!-- Caçando Auroras Boreais -->
     <div class="destino-item fade-in">
-      <img loading="lazy" src="/img/islandia-aurora-boreal.jpg" alt="Aurora boreal vibrante sobre geleiras ou cachoeiras na Islândia.">
+      <img loading="lazy" src="https://res.cloudinary.com/dhqvjxgue/image/upload/v1744155478/islandia-aurora-boreal_cllicl.png" alt="Aurora boreal vibrante sobre geleiras ou cachoeiras na Islândia.">
       <p>Islândia – Aurora Boreal</p>
     </div>
     <div class="destino-item fade-in">
-      <img loading="lazy" src="/img/kiruna-hotel-gelo.jpg" alt="Interior elegante do Hotel de Gelo em Kiruna com aurora ao fundo.">
+      <img loading="lazy" src="https://res.cloudinary.com/dhqvjxgue/image/upload/v1744155476/kiruna-hotel-gelo_okecpd.png" alt="Interior elegante do Hotel de Gelo em Kiruna com aurora ao fundo.">
       <p>Kiruna – Hotel de Gelo</p>
     </div>
     <div class="destino-item fade-in">
-      <img loading="lazy" src="/img/tromso-expedicao-aurora.jpg" alt="Aurora boreal brilhante sobre fiordes ou cabanas em Tromsø.">
+      <img loading="lazy" src="https://res.cloudinary.com/dhqvjxgue/image/upload/v1744155478/tromso-expedicao-aurora_fvzzsk.png" alt="Aurora boreal brilhante sobre fiordes ou cabanas em Tromsø.">
       <p>Tromsø – Expedição Aurora</p>
     </div>
 
     <!-- Festivais e Celebrações Únicas -->
     <div class="destino-item fade-in">
-      <img loading="lazy" src="/img/festival-lanternas-tailândia.jpg" alt="Festival das Lanternas em Chiang Mai com céu cheio de lanternas luminosas.">
+      <img loading="lazy" src="https://res.cloudinary.com/dhqvjxgue/image/upload/v1744155472/festival-lanternas-tail%C3%A2ndia_bv6arb.png" alt="Festival das Lanternas em Chiang Mai com céu cheio de lanternas luminosas.">
       <p>Tailândia – Festival das Lanternas</p>
     </div>
     <div class="destino-item fade-in">
-      <img loading="lazy" src="/img/holi-india-cores.jpg" alt="Pessoas coloridas e alegres celebrando o festival Holi na Índia.">
+      <img loading="lazy" src="https://res.cloudinary.com/dhqvjxgue/image/upload/v1744155473/holi-india-cores_qhbnyu.png" alt="Pessoas coloridas e alegres celebrando o festival Holi na Índia.">
       <p>Índia – Holi</p>
     </div>
     <div class="destino-item fade-in">
-      <img loading="lazy" src="/img/inti-raymi-peru.jpg" alt="Cerimônia tradicional do Inti Raymi no Peru com trajes incas autênticos.">
+      <img loading="lazy" src="https://res.cloudinary.com/dhqvjxgue/image/upload/v1744155476/inti-raymi-peru_wpsdil.png" alt="Cerimônia tradicional do Inti Raymi no Peru com trajes incas autênticos.">
       <p>Peru – Inti Raymi</p>
     </div>
 
     <!-- Viagens a Lugares Icônicos -->
     <div class="destino-item fade-in">
-      <img loading="lazy" src="/img/machu-picchu-peru.jpg" alt="Paisagem histórica e inspiradora de Machu Picchu, Peru.">
+      <img loading="lazy" src="https://res.cloudinary.com/dhqvjxgue/image/upload/v1744155477/machu-picchu-peru_tcx5y0.png" alt="Paisagem histórica e inspiradora de Machu Picchu, Peru.">
       <p>Peru – Machu Picchu</p>
     </div>
     <div class="destino-item fade-in">
-      <img loading="lazy" src="/img/auschwitz-polonia.jpg" alt="Foto reflexiva e respeitosa de Auschwitz, Polônia.">
+      <img loading="lazy" src="https://res.cloudinary.com/dhqvjxgue/image/upload/v1744155471/auschwitz-polonia_shda1k.png" alt="Foto reflexiva e respeitosa de Auschwitz, Polônia.">
       <p>Polônia – Auschwitz</p>
     </div>
     <div class="destino-item fade-in">
-      <img loading="lazy" src="/img/piramides-egito.jpg" alt="Pirâmides e Esfinge em Gizé, Egito, com iluminação especial.">
+      <img loading="lazy" src="https://res.cloudinary.com/dhqvjxgue/image/upload/v1744155478/piramides-egito_wfy1zv.png" alt="Pirâmides e Esfinge em Gizé, Egito, com iluminação especial.">
       <p>Egito – Pirâmides de Gizé</p>
     </div>
     <div class="destino-item fade-in">
-      <img loading="lazy" src="/img/muralha-china.jpg" alt="Vista da Grande Muralha da China em paisagem ampla.">
+      <img loading="lazy" src="https://res.cloudinary.com/dhqvjxgue/image/upload/v1744155477/muralha-china_kcrahn.png" alt="Vista da Grande Muralha da China em paisagem ampla.">
       <p>China – Grande Muralha</p>
     </div>
   </div>
->>>>>>> parent of aaba989 (Update index.html)
 </section>
 
-<section id="curadoria" style="padding: 60px 20px; text-align: center; background: #fff;">
- <h2 style="font-size: 2em; color: var(--primary); margin-bottom: 30px;">Curadoria Humana</h2>
- <p style="max-width: 800px; margin: auto; color: var(--neutral-dark2); text-align: justify;">
-   Nossa equipe de curadoria une expertise e paixão por viagens para criar roteiros únicos, alinhados ao seu perfil e às tendências do mercado. Cada roteiro é cuidadosamente elaborado para garantir experiências autênticas e personalizadas.
- </p>
+<style>
+  .fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.8s ease forwards;
+  }
+  @keyframes fadeInUp {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+</style>
+  
+  <!-- Curadoria Humana -->
+  <section class="curadoria" id="curadoria">
+    <h2>Curadoria Humana</h2>
+    <p>
+      Nossa equipe de curadoria une expertise e paixão por viagens para criar roteiros únicos, alinhados ao seu perfil e às tendências do mercado. Cada roteiro é cuidadosamente elaborado para garantir experiências autênticas e personalizadas.
+    </p>
+  </section>
+  
+  <!-- Provas Sociais -->
+  <section class="provas-sociais" id="provas-sociais">
+    <h2>O que dizem nossos clientes</h2>
+    <div class="testemunhos">
+      <div class="testemunho">
+        <p>"Foi uma das viagens mais incríveis da minha vida. Cada detalhe foi pensado para transformar a experiência!"</p>
+        <p><strong>- Cliente Satisfeito</strong></p>
+      </div>
+      <div class="testemunho">
+        <p>"A curadoria e a tecnologia se unem para criar roteiros únicos e personalizados. Recomendo a todos!"</p>
+        <p><strong>- Viajante Feliz</strong></p>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Chamada Final -->
+  <section class="chamada-final" id="chamada-final">
+    <h2>A sua próxima grande jornada começa aqui</h2>
+    <button class="btn" onclick="document.getElementById('contato').scrollIntoView({behavior:'smooth'})">
+      Criar meu roteiro agora
+    </button>
+  </section>
+  
+  <!-- Contato (Mailchimp Form) -->
+  <section id="contato">
+  <h2 style="text-align: center;">Cadastre-se em Nossa Newsletter</h2>
+  <div id="mc_embed_shell">
+    <link href="//cdn-images.mailchimp.com/embedcode/classic-061523.css" rel="stylesheet" type="text/css">
+    <style type="text/css">
+      #mc_embed_signup {
+        background: #fff;
+        clear: left;
+        font: 14px Helvetica, Arial, sans-serif;
+        width: 100%;
+        max-width: 600px;
+        margin: auto;
+      }
+    </style>
+    <div id="mc_embed_signup">
+      <form action="https://guru.us20.list-manage.com/subscribe/post?u=7318d15754cc569b753c1eeaf&amp;id=b069757273&amp;f_id=00f1c2e1f0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank">
+        <div id="mc_embed_signup_scroll">
+          <div class="indicates-required">
+            <span class="asterisk">*</span> indica obrigatório
+          </div>
+          <div class="mc-field-group">
+            <label for="mce-EMAIL">Endereço de e-mail <span class="asterisk">*</span></label>
+            <input type="email" name="EMAIL" class="required email" id="mce-EMAIL" required="" value="">
+          </div>
+          <div id="mce-responses" class="clear foot">
+            <div class="response" id="mce-error-response" style="display:none"></div>
+            <div class="response" id="mce-success-response" style="display:none"></div>
+          </div>
+          <div style="position:absolute;left:-5000px" aria-hidden="true">
+            <input type="text" name="b_7318d15754cc569b753c1eeaf_b069757273" tabindex="-1" value="">
+          </div>
+          <div class="optionalParent">
+            <div class="clear foot">
+              <input type="submit" name="subscribe" id="mc-embedded-subscribe" class="button" value="Inscreva-se">
+              <p style="margin:0 auto;">
+                <a href="http://eepurl.com/jb3CT2" title="Mailchimp - marketing por e-mail fácil e divertido">
+                  <span style="display:inline-block;background-color:transparent;border-radius:4px;">
+                    <img class="refferal_badge" src="https://digitalasset.intuit.com/render/content/dam/intuit/mc-fe/en_us/images/intuit-mc-rewards-text-dark.svg" alt="Intuit Mailchimp" style="width:220px;height:40px;display:flex;padding:2px 0;justify-content:center;align-items:center;">
+                  </span>
+                </a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+    <script type="text/javascript" src="//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js"></script>
+    <script type="text/javascript">
+      (function($) {
+        window.fnames = new Array(); 
+        window.ftypes = new Array();
+        fnames[0]='EMAIL'; ftypes[0]='email';
+        fnames[1]='FNAME'; ftypes[1]='text';
+        fnames[2]='LNAME'; ftypes[2]='text';
+        fnames[4]='PHONE'; ftypes[4]='phone';
+        fnames[3]='ADDRESS'; ftypes[3]='address';
+        fnames[5]='BIRTHDAY'; ftypes[5]='birthday';
+        fnames[6]='COMPANY'; ftypes[6]='text';
+      }(jQuery));
+      var $mcj = jQuery.noConflict(true);
+    </script>
+  </div>
 </section>
+  
+  <!-- Footer -->
+  <footer>
+    <div class="footer-container">
+      <div class="footer-col">
+        <p>Nomade Guru está presente no Brasil e em diversos destinos globais, conectando nômades digitais a experiências de vida transformadoras.</p>
+        <p>NOMADE GURU TAC LTDA - CNPJ 11.111.227/0001-20. Copyright 2009-2025, Nomade Guru TAC Ltda. Todos os direitos reservados.</p>
+      </div>
+      <div class="footer-col">
+        <p>Rua Comendador Torlogo Dauntre, 74 - Sala 1207, Cambuí, Campinas, SP, CEP 13025-270</p>
+        <p><strong>Canais Oficiais:</strong></p>
+        <p>
+          Instagram: <a href="https://www.instagram.com/nomade.guru/" target="_blank">nomade.guru</a><br>
+          Facebook: <a href="https://www.facebook.com/nomadeguru" target="_blank">nomadeguru</a><br>
+          YouTube: <a href="https://www.youtube.com/@NomadeGuru" target="_blank">NomadeGuru</a><br>
+          WhatsApp Business: <a href="https://wa.me/5511947745710" target="_blank">Clique aqui</a><br>
+          Website: <a href="https://www.nomade.guru" target="_blank">www.nomade.guru</a><br>
+          Spotify: <a href="https://open.spotify.com/playlist/1NaWkXArYokfc7LNTa8zXD?si=71a425de2f384a5f" target="_blank">Playlist Nomade Guru</a>
+        </p>
+      </div>
+    </div>
+  </footer>
 
-<section id="depoimentos" style="padding: 60px 20px; background: #fff; text-align: center;">
- <h2 style="font-size: 2em; color: var(--primary); margin-bottom: 30px;">O que dizem nossos clientes</h2>
- <div style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap;">
-   <div style="background: #f9f9f9; padding: 20px; border-radius: 8px; max-width: 300px;">
-     <p>"Foi uma das viagens mais incríveis da minha vida. Cada detalhe foi pensado para transformar a experiência!"</p>
-     <strong>- Cliente Satisfeito</strong>
-   </div>
-   <div style="background: #f9f9f9; padding: 20px; border-radius: 8px; max-width: 300px;">
-     <p>"A curadoria e a tecnologia se unem para criar roteiros únicos e personalizados. Recomendo a todos!"</p>
-     <strong>- Viajante Feliz</strong>
-   </div>
- </div>
-</section>
-
-<section class="chamada-final" style="padding: 60px 20px; background: var(--primary); text-align: center; color: #fff;">
- <h2 style="font-size: 2.5em; margin-bottom: 20px;">A sua próxima grande jornada começa aqui</h2>
- <button class="header-btn" onclick="document.getElementById('contato').scrollIntoView({behavior:'smooth'})">
-   Criar meu roteiro agora
- </button>
-</section>
-
-<section id="contato" style="padding: 60px 20px; text-align: center; background: #fff;">
- <h2 style="font-size: 2em; color: var(--primary);">Entre em Contato</h2>
- <div id="mc_embed_shell">
-   <link href="//cdn-images.mailchimp.com/embedcode/classic-061523.css" rel="stylesheet" type="text/css" />
-   <div id="mc_embed_signup">
-     <form action="https://guru.us20.list-manage.com/subscribe/post?u=7318d15754cc569b753c1eeaf&amp;id=b069757273" method="post" target="_blank">
-       <div id="mc_embed_signup_scroll">
-         <div class="mc-field-group">
-           <label for="mce-EMAIL">Endereço de e-mail <span class="asterisk">*</span></label>
-           <input type="email" name="EMAIL" class="required email" id="mce-EMAIL" required />
-         </div>
-         <div class="clear foot">
-           <input type="submit" value="Subscribe" name="subscribe" class="button" />
-         </div>
-       </div>
-     </form>
-   </div>
- </div>
-</section>
-
-<footer style="background: var(--secondary2); color: #fff; padding: 30px 20px; font-size: 11px;">
- <div style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 20px; max-width: 1200px; margin: auto;">
-   <div style="flex: 1; min-width: 250px;">
-     <p>Nomade Guru está presente no Brasil e em diversos destinos globais, conectando nômades digitais a experiências de vida transformadoras.</p>
-     <p>NOMADE GURU TAC LTDA - CNPJ 11.111.227/0001-20. Copyright 2009-2025.</p>
-   </div>
-   <div style="flex: 1; min-width: 250px;">
-     <p><strong>Endereço:</strong><br>Rua Comendador Torlogo Dauntre, 74 - Sala 1207, Cambuí, Campinas, SP</p>
-     <p><strong>Canais Oficiais:</strong></p>
-     <ul style="list-style: none; padding: 0;">
-       <li><a href="https://www.instagram.com/nomade.guru/" target="_blank" style="color: #fff;">Instagram</a></li>
-       <li><a href="https://www.facebook.com/nomadeguru" target="_blank" style="color: #fff;">Facebook</a></li>
-       <li><a href="https://www.youtube.com/@NomadeGuru" target="_blank" style="color: #fff;">YouTube</a></li>
-       <li><a href="https://wa.me/5511947745710" target="_blank" style="color: #fff;">WhatsApp</a></li>
-       <li><a href="https://www.nomade.guru" target="_blank" style="color: #fff;">Website</a></li>
-       <li><a href="https://open.spotify.com/playlist/1NaWkXArYokfc7LNTa8zXD" target="_blank" style="color: #fff;">Spotify</a></li>
-     </ul>
-   </div>
- </div>
-</footer>
+<!-- Redes Sociais Flutuantes -->
+<ul class="box-redes-sociais">
+  <li class="facebook">
+    <a href="https://www.facebook.com/nomadeguru" target="_blank"><i class="fab fa-facebook-f icon"></i></a>
+  </li>
+  <li class="instagram">
+    <a href="https://www.instagram.com/nomade.guru/" target="_blank"><i class="fab fa-instagram icon"></i></a>
+  </li>
+  <li class="youtube">
+    <a href="https://www.youtube.com/@NomadeGuru" target="_blank"><i class="fab fa-youtube icon"></i></a>
+  </li>
+  <li class="spotify">
+    <a href="https://open.spotify.com/playlist/1NaWkXArYokfc7LNTa8zXD?si=71a425de2f384a5f" target="_blank"><i class="fab fa-spotify icon"></i></a>
+  </li>
+</ul>
+  
+  <!-- Start of LiveChat (www.livechat.com) code -->
+  <script>
+    window.__lc = window.__lc || {};
+    window.__lc.license = 19120885;
+    window.__lc.integration_name = "manual_onboarding";
+    window.__lc.product_name = "livechat";
+    (function(n,t,c){
+      function i(n){return e._h ? e._h.apply(null,n) : e._q.push(n)}
+      var e = {
+        _q:[], _h:null, _v:"2.0",
+        on: function(){i(["on", c.call(arguments)])},
+        once: function(){i(["once", c.call(arguments)])},
+        off: function(){i(["off", c.call(arguments)])},
+        get: function(){if(!e._h)throw new Error("[LiveChatWidget] You can't use getters before load."); return i(["get", c.call(arguments)])},
+        call: function(){i(["call", c.call(arguments)])},
+        init: function(){
+          var n = t.createElement("script");
+          n.async = true;
+          n.type = "text/javascript"; 
+          n.src = "https://cdn.livechatinc.com/tracking.js";
+          t.head.appendChild(n);
+        }
+      };
+      !n.__lc.asyncInit && e.init(), n.LiveChatWidget = n.LiveChatWidget || e;
+    }(window, document, [].slice));
+  </script>
+  <noscript>
+    <a href="https://www.livechat.com/chat-with/19120885/" rel="nofollow">Chat with us</a>, powered by 
+    <a href="https://www.livechat.com/?welcome" rel="noopener nofollow" target="_blank">LiveChat</a>
+  </noscript>
+  <!-- End of LiveChat code -->
 </body>
 </html>
- 

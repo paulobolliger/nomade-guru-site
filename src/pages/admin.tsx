@@ -1,7 +1,7 @@
 // src/pages/admin.tsx
 import { TinaEditProvider } from 'tinacms/dist/edit-state';
 import { TinaCMS } from 'tinacms';
-import { TinaProvider, TinaCMSProvider } from 'tinacms/dist/react';
+import { TinaEditProvider } from 'tinacms/dist/edit-state/edit-state-provider';
 
 export default function AdminPage() {
   return (

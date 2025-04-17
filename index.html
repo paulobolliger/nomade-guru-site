@@ -53,7 +53,8 @@
         logo.style.height = '80px';
       }
     });
-  </script>         
+  </script>
+  <script src="https://cdn.tiny.cloud/1/2s498iavk8dtb3gbwnatkxmmkkf9adq8cnr9l0o7srjndjid/tinymce/7/tinymce.min.js" referrerpolicy="origin"></script>         
     </head>     
     <body> 
         <!-- Google Tag Manager (noscript) -->         
@@ -333,6 +334,34 @@
       e.appendChild(f);
     }catch(g){}
   })(window,document,"https://cdn.leadster.com.br/neurolead/neurolead.min.js","swUnUpRD0q9vX5NJvKq0r3pqe");
-</script>         
+</script>
+<!-- Editor de Texto TinyMCE -->
+<section style="padding: 60px 20px; max-width: 900px; margin: 0 auto;">
+    <h2 style="text-align:center;">Editor Inteligente</h2>
+    <textarea>Digite aqui seu conteúdo rico com TinyMCE...</textarea>
+  </section>
+  
+  <script>
+    tinymce.init({
+      selector: 'textarea',
+      plugins: [
+        'anchor', 'autolink', 'charmap', 'codesample', 'emoticons', 'image', 'link', 'lists', 'media',
+        'searchreplace', 'table', 'visualblocks', 'wordcount',
+        'checklist', 'mediaembed', 'casechange', 'formatpainter', 'pageembed',
+        'a11ychecker', 'tinymcespellchecker', 'permanentpen', 'powerpaste', 'advtable',
+        'advcode', 'editimage', 'advtemplate', 'ai', 'mentions', 'tinycomments',
+        'tableofcontents', 'footnotes', 'mergetags', 'autocorrect', 'typography',
+        'inlinecss', 'markdown', 'importword', 'exportword', 'exportpdf'
+      ],
+      toolbar: 'undo redo | blocks fontfamily fontsize | bold italic underline strikethrough | link image media table mergetags | addcomment showcomments | spellcheckdialog a11ycheck typography | align lineheight | checklist numlist bullist indent outdent | emoticons charmap | removeformat',
+      tinycomments_mode: 'embedded',
+      tinycomments_author: 'Nomade Guru',
+      mergetags_list: [
+        { value: 'First.Name', title: 'First Name' },
+        { value: 'Email', title: 'Email' }
+      ],
+      ai_request: (request, respondWith) => respondWith.string(() => Promise.reject('Veja a documentação para implementar o AI Assistant')),
+    });
+  </script>  
     </body>     
 </html>

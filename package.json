@@ -11,29 +11,21 @@
   "dependencies": {
     "arg": "^5.0.2",
     "next": "15.3.0",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "tinacms": "^2.7.5",
-    "react-tinacms-editor": "^0.53.26",
-    "react-tinacms-inline": "^0.54.0"
-  },
-  "resolutions": {
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
   },
   "devDependencies": {
-    "@eslint/eslintrc": "^3.0.0",
-    "@tailwindcss/postcss": "^4.0.0",
-    "@types/node": "^20.11.24",
-    "@types/react": "^18.2.48",
-    "@types/react-dom": "^18.2.18",
+    "@eslint/eslintrc": "^3",
+    "@tailwindcss/postcss": "^4",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
     "autoprefixer": "^10.4.21",
-    "eslint": "^9.0.0",
+    "eslint": "^9",
     "eslint-config-next": "15.3.0",
-    "postcss": "^8.4.38",
+    "postcss": "^8.5.3",
     "postcss-load-config": "^6.0.1",
     "tailwindcss": "^4.1.4",
-    "typescript": "^5.4.5"
-  },
-  "packageManager": "yarn@latest"
+    "typescript": "^5"
+  }
 }

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Reserve seus Passeios - Nomade Guru</title>
+  <meta name="description" content="Escolha e reserve experiências incríveis com a curadoria da Nomade Guru.">
+  <meta name="author" content="Nomade Guru">
+  <meta name="robots" content="index, follow">
+  <meta property="og:title" content="Nomade Guru - Passeios">
+  <meta property="og:description" content="Reserve passeios e atividades personalizadas com nossa curadoria.">
+  <meta property="og:image" content="https://res.cloudinary.com/dhqvjxgue/image/upload/v1744155476/imagem-impactante_1_nv98cg.png">
+  <meta property="og:url" content="https://www.nomade.guru/tours_civ.html">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://www.nomade.guru/tours_civ.html">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #ffffff;
+      color: #242c3e;
+    }
+    header {
+      padding: 20px;
+      background: #ffffff;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    .container {
+      max-width: 1200px;
+      margin: auto;
+      padding: 0 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .logo img {
+      height: 50px;
+    }
+    footer {
+      background: #232452;
+      color: white;
+      padding: 30px 20px;
+      font-size: 11px;
+      text-align: center;
+    }
+    section.passeios {
+      padding: 60px 20px;
+      background: #ffffff;
+      text-align: center;
+    }
+    section.passeios h2 {
+      color: #5053c4;
+      font-size: 2em;
+      font-weight: 700;
+      margin-bottom: 30px;
+    }
+    iframe.civitatis-iframe {
+      max-width: 100%;
+      border: none;
+      border-radius: 16px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="container">
+    <div class="logo">
+      <img src="https://res.cloudinary.com/dhqvjxgue/image/upload/v1744155441/logo_nomade_guru_y2inow.png" alt="Nomade Guru">
+    </div>
+  </div>
+</header>
+
+<!-- Passeios Recomendados -->
+<section class="passeios" id="passeios">
+  <h2>Reserve seus Passeios</h2>
+  <div style='text-align:center;'>
+    <script>
+      function loadScript(url, callback) {
+        var script = document.createElement('script');
+        script.type = 'text/javascript';
+        if (script.readyState) {
+          script.onreadystatechange = function () {
+            if (script.readyState == 'loaded' || script.readyState == 'complete') {
+              script.onreadystatechange = null;
+              callback();
+            }
+          };
+        } else {
+          script.onload = function () {
+            callback();
+          };
+        }
+        script.src = url;
+        document.getElementsByTagName('head')[0].appendChild(script);
+      }
+      loadScript('https://www.civitatis.com/f/js/vendor/iframeResizer.min.js', function () {
+        iFrameResize({
+          checkOrigin: false,
+          initCallback: function (iframe) {
+            setTimeout(function () {
+              var resizeEvent = window.document.createEvent('UIEvents');
+              resizeEvent.initUIEvent('resize', true, false, window, 0);
+              iframe.dispatchEvent(resizeEvent);
+            });
+          }
+        })
+      })
+    </script>
+    <iframe class='civitatis-iframe' src='https://www.civitatis.com/widget-activities/?agencyId=75308&agencyUserId=89530&display=cosy&cant=6&lang=pt&currency=BRL&transfer=0&cmp=Widget_Pt_br&width=100%&hideButton=0&centerContent=1&typeSelection=all&color=5053c4&typography=Poppins&removeBackground=1&showShadow=1&roundedButtons=1' width='100%' frameborder='0' data-maxwidth='100%'></iframe>
+  </div>
+</section>
+
+<footer>
+  <p>Nomade Guru está presente no Brasil e em diversos destinos globais, conectando nômades digitais a experiências de vida transformadoras.</p>
+  <p>NOMADE GURU TAC LTDA - CNPJ 11.111.227/0001-20. Copyright 2009-2025.</p>
+  <p>Rua Comendador Torlogo Dauntre, 74 - Sala 1207, Cambuí, Campinas, SP, CEP 13025-270</p>
+  <p>Instagram: @nomade.guru | YouTube: @NomadeGuru | WhatsApp: (11) 94774-5710</p>
+</footer>
+
+</body>
+</html>

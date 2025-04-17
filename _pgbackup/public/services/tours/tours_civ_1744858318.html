@@ -14,7 +14,6 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Nomade Guru</title>
         <!-- Fonte Poppins -->
-        <link href="../../../css/theme.css" rel="stylesheet" type="text/css">
         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
         <style>:root { /* Paleta de Cores conforme Brand Book */ --primary: #5053c4;  /* Roxo primário */ --denary: #342ca4;  /* Segundo tom primário */ --secondary1: #333176; --secondary2: #232452; --secondary3: #2c2b3f; --secondary4: #424452; --neutral-dark1: #12152c; --neutral-dark2: #242c3e; --neutral-dark3: #04060b; --neutral-dark4: #443c54; --white: #ffffff; } /* Reset e configurações básicas */* { margin: 0; padding: 0; box-sizing: border-box; } body { font-family: 'Poppins', sans-serif; line-height: 1.6; color: var(--neutral-dark2); } a { text-decoration: none; color: inherit; } /* Header */header { padding: 20px; position: fixed; width: 100%; top: 0; left: 0; background: var(--white); z-index: 1000; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); transition: all 0.3s ease; } .container { max-width: 1200px; margin: auto; padding: 0 20px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; } .logo img { height: 50px; transition: height 0.3s ease; } nav ul { list-style: none; display: flex; align-items: center; } nav ul li { margin-left: 10px; } nav ul li a { font-weight: 500; color: var(--neutral-dark2); font-size: 14px; } nav ul li .separator { margin: 0 8px; color: var(--neutral-dark2); font-weight: bold; font-size: 14px; } .header-btn { background: var(--primary); color: var(--white); padding: 8px 16px; border: none; border-radius: 50px; font-weight: 700; font-size: 14px; cursor: pointer; transition: background 0.3s ease; } .header-btn:hover { background: var(--denary); } /* Rodapé */footer { background: var(--secondary2); color: var(--white); padding: 30px 20px; font-size: 11px; } .footer-container { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; text-align: justify; } .footer-container p { line-height: 1.4; margin-bottom: 4px; } footer a { color: var(--white); } /* Responsividade */@media (max-width: 768px) { .hero h1 {  font-size: 2.5em; }  nav ul li {  margin-left: 5px; }  header .container {  flex-direction: row; }  nav ul {  margin-top: 10px;  justify-content: center; }  .footer-container {  grid-template-columns: 1fr;  text-align: center; }  .diferenciais .items, .passos, .testemunhos {  flex-direction: column;  align-items: center; } } @media (max-width: 480px) { header .container {  flex-direction: row;  justify-content: space-between;  align-items: center; }  .logo {  text-align: left;  width: auto; }  .menu-toggle {  order: 2;  margin-left: auto; }  nav ul {  flex-direction: column;  align-items: center;  margin-top: 10px;  gap: 8px; }  .logo img {  height: 60px;  margin-bottom: 10px; }  .hero h1 {  font-size: 2em; }  .hero p {  font-size: 1em; }  nav ul li a {  font-size: 12px; }  nav ul li .separator {  display: none; }  footer {  font-size: 10px; } } /* Menu Toggle */.menu-toggle { display: none; cursor: pointer; font-size: 24px; padding: 10px; background: none; border: none; color: var(--neutral-dark2); } @media (max-width: 768px) { .menu-toggle {  display: block; }  nav ul {  display: none;  flex-direction: column;  width: 100%;  background: var(--white);  position: absolute;  top: 70px;  left: 0;  box-shadow: 0 2px 8px rgba(0,0,0,0.1);  z-index: 999; }  nav ul.show {  display: flex; }  nav ul li {  margin: 10px 0;  text-align: center; } } /* Animação Fade In */.fade-in { opacity: 0; transform: translateY(20px); animation: fadeInUp 0.8s ease forwards; } @keyframes fadeInUp { to {  opacity: 1;  transform: translateY(0); } } /* Script para Redimensionar a logo ao scroll */
     window.addEventListener('scroll', function() {
@@ -70,35 +69,25 @@
                 <button class="menu-toggle" onclick="document.querySelector('nav ul').classList.toggle('show')">☰</button>
                 <nav>
                     <ul onclick="this.classList.remove('show')">
-                        <li>
-                            <a href="#home" onclick="document.querySelector('nav ul').classList.remove('show')">Home</a>
+                        <li><a href="#home" onclick="document.querySelector('nav ul').classList.remove('show')">Home</a>
                         </li>
-                        <li>
-                            <span class="separator">|</span>
+                        <li><span class="separator">|</span>
                         </li>
-                        <li>
-                            <a href="#como-funciona" onclick="document.querySelector('nav ul').classList.remove('show')">Como Funciona</a>
+                        <li><a href="#como-funciona" onclick="document.querySelector('nav ul').classList.remove('show')">Como Funciona</a>
                         </li>
-                        <li>
-                            <span class="separator">|</span>
+                        <li><span class="separator">|</span>
                         </li>
-                        <li>
-                            <a href="#destinos" onclick="document.querySelector('nav ul').classList.remove('show')">Destinos</a>
+                        <li><a href="#destinos" onclick="document.querySelector('nav ul').classList.remove('show')">Destinos</a>
                         </li>
-                        <li>
-                            <span class="separator">|</span>
+                        <li><span class="separator">|</span>
                         </li>
-                        <li>
-                            <a href="#curadoria" onclick="document.querySelector('nav ul').classList.remove('show')">Curadoria Humana</a>
+                        <li><a href="#curadoria" onclick="document.querySelector('nav ul').classList.remove('show')">Curadoria Humana</a>
                         </li>
-                        <li>
-                            <span class="separator">|</span>
+                        <li><span class="separator">|</span>
                         </li>
-                        <li>
-                            <a href="#contato" onclick="document.querySelector('nav ul').classList.remove('show')">Contato</a>
+                        <li><a href="#contato" onclick="document.querySelector('nav ul').classList.remove('show')">Contato</a>
                         </li>
-                        <li>
-                            <span class="separator">|</span>
+                        <li><span class="separator">|</span>
                         </li>
                         <li>
                             <button class="header-btn" onclick="document.getElementById('contato').scrollIntoView({behavior:'smooth'})">

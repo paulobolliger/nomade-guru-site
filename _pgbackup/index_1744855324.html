@@ -1,0 +1,886 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-HY9T63HTNN"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-HY9T63HTNN');
+  </script>
+  <!-- End Google tag (gtag.js) -->
+  
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Nomade Guru</title>
+  <!-- Fonte Poppins -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      /* Paleta de Cores conforme Brand Book */
+      --primary: #5053c4;          /* Roxo primário */
+      --denary: #342ca4;           /* Segundo tom primário */
+      --secondary1: #333176;
+      --secondary2: #232452;
+      --secondary3: #2c2b3f;
+      --secondary4: #424452;
+      --neutral-dark1: #12152c;
+      --neutral-dark2: #242c3e;
+      --neutral-dark3: #04060b;
+      --neutral-dark4: #443c54;
+      --white: #ffffff;
+    }
+    
+    /* Reset e configurações básicas */
+    * {
+      margin: 0; padding: 0; box-sizing: border-box;
+    }
+    body {
+      font-family: 'Poppins', sans-serif;
+      line-height: 1.6;
+      color: var(--neutral-dark2);
+    }
+    a { text-decoration: none; color: inherit; }
+    
+    /* Header */
+    header {
+      padding: 20px;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      left: 0;
+      background: var(--white);
+      z-index: 1000;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      transition: all 0.3s ease;
+    }
+    .container {
+      max-width: 1200px;
+      margin: auto;
+      padding: 0 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+    .logo img {
+      height: 50px;
+      transition: height 0.3s ease;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      align-items: center;
+    }
+    nav ul li {
+      margin-left: 10px;
+    }
+    nav ul li a {
+      font-weight: 500;
+      color: var(--neutral-dark2);
+      font-size: 14px;
+    }
+    nav ul li .separator {
+      margin: 0 8px;
+      color: var(--neutral-dark2);
+      font-weight: bold;
+      font-size: 14px;
+    }
+    .header-btn {
+      background: var(--primary);
+      color: var(--white);
+      padding: 8px 16px;
+      border: none;
+      border-radius: 50px;
+      font-weight: 700;
+      font-size: 14px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+    .header-btn:hover {
+      background: var(--denary);
+    }
+    
+    /* Hero Section */
+    .hero {
+      height: 100vh;
+      /* Use uma imagem de fundo impactante – substitua a URL abaixo pela sua imagem */
+      background: url('https://res.cloudinary.com/dhqvjxgue/image/upload/v1744155476/imagem-impactante_1_nv98cg.png') no-repeat center center/cover;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: var(--white);
+      padding: 0 20px;
+    }
+    .hero::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0, 0, 0, 0.4);
+      z-index: 1;
+    }
+    .hero > div { 
+      position: relative;
+      z-index: 2;
+    }
+    .hero h1 {
+      font-size: 3em;
+      margin-bottom: 20px;
+      color: var(--white);
+    }
+    .hero p {
+      font-size: 1.2em;
+      margin-bottom: 50px;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+      color: var(--white);
+    }
+    .hero .btn {
+      background: var(--white);
+      color: var(--primary);
+      padding: 15px 30px;
+      border: none;
+      border-radius: 50px;
+      font-size: 1em;
+      font-weight: 700;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+    .hero .btn:hover {
+      background: #f1f1f1;
+    }
+    
+    /* Diferenciais */
+    .diferenciais {
+      padding: 60px 20px;
+      background: var(--white);
+      text-align: center;
+    }
+    .diferenciais h2 {
+      font-size: 2em;
+      margin-bottom: 20px;
+      color: var(--primary);
+    }
+    .diferenciais .items {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+    }
+    .diferencial-item {
+      flex: 1;
+      margin: 10px;
+      max-width: 200px;
+    }
+    .diferencial-item img {
+      height: 80px;
+      margin-bottom: 10px;
+      border-radius: 12px;
+    }
+    .diferencial-item p {
+      font-size: 0.9em;
+      color: var(--neutral-dark2);
+    }
+    
+    /* Como Funciona */
+    .como-funciona {
+      padding: 60px 20px;
+      background: var(--white);
+      text-align: center;
+    }
+    .como-funciona h2 {
+      font-size: 2em;
+      margin-bottom: 20px;
+      color: var(--primary);
+    }
+    .passos {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+    }
+    .passo {
+      flex: 1;
+      margin: 10px;
+      max-width: 250px;
+    }
+    .passo img {
+      height: 80px;
+      margin-bottom: 10px;
+      border-radius: 12px;
+    }
+    .passo p {
+      font-size: 0.9em;
+      color: var(--neutral-dark2);
+    }
+    
+    /* Destinos (Carrossel) */
+    .destinos {
+      padding: 60px 20px;
+      background: var(--secondary1);
+      text-align: center;
+      color: var(--white);
+    }
+    .destinos h2 {
+      font-size: 2em;
+      margin-bottom: 20px;
+    }
+    .carousel {
+      display: flex;
+      overflow-x: auto;
+      gap: 20px;
+      padding-bottom: 20px;
+    }
+    .destino-item {
+      flex: 0 0 auto;
+      width: 200px;
+      background: var(--secondary3);
+      padding: 10px;
+      border-radius: 8px;
+    }
+    .destino-item img {
+      width: 100%;
+      border-radius: 12px;
+    }
+    .destino-item p {
+      margin-top: 10px;
+      font-size: 0.9em;
+    }
+    
+    /* Curadoria Humana */
+    .curadoria {
+      padding: 60px 20px;
+      background: var(--white);
+      text-align: center;
+    }
+    .curadoria h2 {
+      font-size: 2em;
+      margin-bottom: 20px;
+      color: var(--primary);
+    }
+    .curadoria p {
+      font-size: 1em;
+      max-width: 800px;
+      margin: auto;
+      color: var(--neutral-dark2);
+      text-align: justify;
+    }
+    
+    /* Provas Sociais */
+    .provas-sociais {
+      padding: 60px 20px;
+      background: var(--white);
+      text-align: center;
+    }
+    .provas-sociais h2 {
+      font-size: 2em;
+      margin-bottom: 20px;
+      color: var(--primary);
+    }
+    .testemunhos {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+    .testemunho {
+      background: #f9f9f9;
+      padding: 20px;
+      border-radius: 8px;
+      max-width: 300px;
+      font-size: 0.9em;
+      color: var(--neutral-dark2);
+    }
+    
+    /* Chamada Final */
+    .chamada-final {
+      padding: 60px 20px;
+      background: var(--primary);
+      text-align: center;
+      color: var(--white);
+    }
+    .chamada-final h2 {
+      font-size: 2.5em;
+      margin-bottom: 20px;
+    }
+    .chamada-final .btn {
+      background: var(--white);
+      color: var(--primary);
+      padding: 15px 30px;
+      border: none;
+      border-radius: 50px;
+      font-size: 1em;
+      font-weight: 700;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+    .chamada-final .btn:hover {
+      background: #f1f1f1;
+    }
+    
+    /* Contato (Mailchimp Form) */
+    #mc_embed_signup {
+      background: var(--white);
+      clear: left;
+      font: 14px Helvetica, Arial, sans-serif;
+      width: 100%;
+      max-width: 600px;
+      margin: auto;
+    }
+    
+    /* Rodapé */
+    footer {
+      background: var(--secondary2);
+      color: var(--white);
+      padding: 30px 20px;
+      font-size: 11px;
+    }
+    .footer-container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+      text-align: justify;
+    }
+    .footer-container p {
+      line-height: 1.4;
+      margin-bottom: 4px;
+    }
+    footer a {
+      color: var(--white);
+    }
+    
+    /* Responsividade */
+    @media (max-width: 768px) {
+      .hero h1 {
+        font-size: 2.5em;
+      }
+      nav ul li {
+        margin-left: 5px;
+      }
+      header .container {
+        flex-direction: row;
+      }
+      nav ul {
+        margin-top: 10px;
+        justify-content: center;
+      }
+      .footer-container {
+        grid-template-columns: 1fr;
+        text-align: center;
+      }
+      .diferenciais .items,
+      .passos,
+      .testemunhos {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+    @media (max-width: 480px) {
+      header .container {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .logo {
+        text-align: left;
+        width: auto;
+      }
+      .menu-toggle {
+        order: 2;
+        margin-left: auto;
+      }
+      nav ul {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 10px;
+        gap: 8px;
+      }
+      .logo img {
+        height: 60px;
+        margin-bottom: 10px;
+      }
+      .hero h1 {
+        font-size: 2em;
+      }
+      .hero p {
+        font-size: 1em;
+      }
+      nav ul li a {
+        font-size: 12px;
+      }
+      nav ul li .separator {
+        display: none;
+      }
+      footer {
+        font-size: 10px;
+      }
+    }
+    
+    /* Menu Toggle */
+    .menu-toggle {
+      display: none;
+      cursor: pointer;
+      font-size: 24px;
+      padding: 10px;
+      background: none;
+      border: none;
+      color: var(--neutral-dark2);
+    }
+    @media (max-width: 768px) {
+      .menu-toggle {
+        display: block;
+      }
+      nav ul {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background: var(--white);
+        position: absolute;
+        top: 70px;
+        left: 0;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        z-index: 999;
+      }
+      nav ul.show {
+        display: flex;
+      }
+      nav ul li {
+        margin: 10px 0;
+        text-align: center;
+      }
+    }
+    
+    /* Animação Fade In */
+    .fade-in {
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeInUp 0.8s ease forwards;
+    }
+    @keyframes fadeInUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    
+    /* Script para Redimensionar a logo ao scroll */
+    window.addEventListener('scroll', function() {
+      const header = document.querySelector('header');
+      const logo = document.querySelector('.logo img');
+      if (window.scrollY > 50) {
+        header.classList.add('scrolled');
+        logo.style.height = '50px';
+      } else {
+        header.classList.remove('scrolled');
+        logo.style.height = '80px';
+      }
+    });
+  </style>
+  <meta name="description" content="Nomade Guru – Viaje com propósito, viva com liberdade. Roteiros personalizados com inteligência artificial e curadoria humana para nômades digitais e viajantes criativos.">
+  <meta name="author" content="Nomade Guru">
+  <meta name="robots" content="index, follow">
+  <meta property="og:title" content="Nomade Guru">
+  <meta property="og:description" content="Roteiros personalizados com IA e curadoria humana. Viva uma vida sem fronteiras.">
+  <meta property="og:image" content="https://res.cloudinary.com/dhqvjxgue/image/upload/v1744155476/imagem-impactante_1_nv98cg.png">
+  <meta property="og:url" content="https://www.nomade.guru">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://www.nomade.guru">
+  <script id="mcjs">!function(c,h,i,m,p){m=c.createElement(h),p=c.getElementsByTagName(h)[0],m.async=1,m.src=i,p.parentNode.insertBefore(m,p)}(document,"script","https://chimpstatic.com/mcjs-connected/js/users/7318d15754cc569b753c1eeaf/36dd31e4558e39a4ea465bfb6.js");</script>
+  <script id="mcjs">!function(c,h,i,m,p){m=c.createElement(h),p=c.getElementsByTagName(h)[0],m.async=1,m.src=i,p.parentNode.insertBefore(m,p)}(document,"script","https://chimpstatic.com/mcjs-connected/js/users/7318d15754cc569b753c1eeaf/36dd31e4558e39a4ea465bfb6.js");</script>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+  <style>
+    ul.box-redes-sociais {
+      display: flex;
+      background: transparent;
+      width: auto;
+      margin: 20px auto;
+      justify-content: center;
+      gap: 10px;
+    }
+    ul.box-redes-sociais li {
+      list-style: none;
+    }
+    ul.box-redes-sociais li a {
+      width: 50px;
+      height: 50px;
+      background-color: #fff;
+      text-align: center;
+      line-height: 45px;
+      font-size: 22px;
+      display: block;
+      border-radius: 50%;
+      border: 2px solid #eaeaea;
+      position: relative;
+      overflow: hidden;
+      z-index: 1;
+    }
+    ul.box-redes-sociais li a .icon {
+      position: relative;
+      color: #262626;
+      transition: .3s;
+      z-index: 3;
+    }
+    ul.box-redes-sociais li a:hover .icon {
+      color: #fff;
+      transform: scale(1.2);
+    }
+    ul.box-redes-sociais li a:before {
+      content: "";
+      position: absolute;
+      top: 100%;
+      right: 0;
+      width: 100%;
+      height: 100%;
+      background: #f00;
+      transition: .6s;
+      z-index: 2;
+    }
+    ul.box-redes-sociais li a:hover:before {
+      top: 0;
+    }
+    ul.box-redes-sociais li.facebook a:before {
+      background: #3b5999;
+    }
+    ul.box-redes-sociais li.instagram a:before {
+      background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+    }
+    ul.box-redes-sociais li.youtube a:before {
+      background: #ff1d15;
+    }
+    ul.box-redes-sociais li.spotify a:before {
+      background: #1DB954;
+    }
+  </style>
+  <script>
+    window.addEventListener('scroll', function() {
+      const header = document.querySelector('header');
+      const logo = document.querySelector('.logo img');
+      if (window.scrollY > 50) {
+        header.classList.add('scrolled');
+        logo.style.height = '50px';
+      } else {
+        header.classList.remove('scrolled');
+        logo.style.height = '80px';
+      }
+    });
+  </script>
+</head>
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript>
+    <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MNPND843" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+  </noscript>
+  <!-- End Google Tag Manager (noscript) -->
+  
+  <!-- Header -->
+  <header>
+    <div class="container">
+      <div class="logo">
+        <img src="https://res.cloudinary.com/dhqvjxgue/image/upload/v1744155441/logo_nomade_guru_y2inow.png" alt="Nomade Guru">
+      </div>
+      <button class="menu-toggle" onclick="document.querySelector('nav ul').classList.toggle('show')">☰</button>
+      <nav>
+        <ul onclick="this.classList.remove('show')">
+          <li><a href="#home" onclick="document.querySelector('nav ul').classList.remove('show')">Home</a></li>
+          <li><span class="separator">|</span></li>
+          <li><a href="#como-funciona" onclick="document.querySelector('nav ul').classList.remove('show')">Como Funciona</a></li>
+          <li><span class="separator">|</span></li>
+          <li><a href="#destinos" onclick="document.querySelector('nav ul').classList.remove('show')">Destinos</a></li>
+          <li><span class="separator">|</span></li>
+          <li><a href="#curadoria" onclick="document.querySelector('nav ul').classList.remove('show')">Curadoria Humana</a></li>
+          <li><span class="separator">|</span></li>
+          <li><a href="#contato" onclick="document.querySelector('nav ul').classList.remove('show')">Contato</a></li>
+          <li><span class="separator">|</span></li>
+          <li>
+            <button class="header-btn" onclick="document.getElementById('contato').scrollIntoView({behavior:'smooth'})">
+              Experimente seu Roteiro
+            </button>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  
+  <!-- Hero Section -->
+  <section class="hero" id="home">
+    <div>
+      <h1>Viaje com propósito, viva com liberdade</h1>
+      <p>Crie seu roteiro personalizado e descubra novas fronteiras com nossa tecnologia de IA e curadoria humana.</p>
+      <button class="btn" onclick="document.getElementById('contato').scrollIntoView({behavior:'smooth'})">
+        Crie seu roteiro personalizado
+      </button>
+    </div>
+  </section>
+  
+  <!-- Diferenciais -->
+  <section class="diferenciais" id="diferenciais">
+    <h2>Diferenciais</h2>
+    <div class="items">
+      <div class="diferencial-item">
+        <img loading="lazy" src="https://res.cloudinary.com/dhqvjxgue/image/upload/v1744155474/icone-tecnologia_2_qnuxdh.png" alt="Tecnologia com propósito">
+        <p>Tecnologia com propósito</p>
+      </div>
+      <div class="diferencial-item">
+        <img loading="lazy" src="https://res.cloudinary.com/dhqvjxgue/image/upload/v1744155472/icone-curadoria_2_nttjeq.png" alt="Curadoria humana especializada">
+        <p>Curadoria humana especializada</p>
+      </div>
+      <div class="diferencial-item">
+        <img loading="lazy" src="https://res.cloudinary.com/dhqvjxgue/image/upload/v1744155474/icone-roteiros_pdyi68.png" alt="Roteiros autênticos e exclusivos">
+        <p>Roteiros autênticos e exclusivos</p>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Como Funciona -->
+  <section class="como-funciona" id="como-funciona">
+    <h2>Como Funciona</h2>
+    <div class="passos">
+      <div class="passo">
+        <img loading="lazy" src="https://res.cloudinary.com/dhqvjxgue/image/upload/v1744155474/icone-quiz_vqbtlt.png" alt="Responda o quiz">
+        <p>Passo 1: Responda o quiz</p>
+      </div>
+      <div class="passo">
+        <img loading="lazy" src="https://res.cloudinary.com/dhqvjxgue/image/upload/v1744155474/icone-ia_k89u8u.png" alt="Receba seu roteiro com IA">
+        <p>Passo 2: Receba seu roteiro com IA</p>
+      </div>
+      <div class="passo">
+        <img loading="lazy" src="https://res.cloudinary.com/dhqvjxgue/image/upload/v1744155474/icone-especialista_ev6aa7.png" alt="Converse com um especialista">
+        <p>Passo 3: Converse com um especialista</p>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Destinos -->
+  <section class="destinos" id="destinos">
+    <h2>Destinos em Destaque</h2>
+    <div class="carousel">
+      <!-- Experiências Mágicas com Crianças -->
+      <div class="destino-item fade-in">
+        <img loading="lazy" src="https://res.cloudinary.com/dhqvjxgue/image/upload/v1744155476/laponia-papai-noel_ex4yss.png" alt="Vila do Papai Noel na Lapônia com cabanas nevadas, luzes suaves e renas.">
+        <p>Lapônia – Vila do Papai Noel</p>
+      </div>
+      <div class="destino-item fade-in">
+        <img loading="lazy" src="https://res.cloudinary.com/dhqvjxgue/image/upload/v1744155473/gramado-natal-luz_mm3c3c.png" alt="Natal Luz em Gramado com luzes vibrantes e atmosfera acolhedora.">
+        <p>Gramado – Natal Luz</p>
+      </div>
+      <div class="destino-item fade-in">
+        <img loading="lazy" src="https://res.cloudinary.com/dhqvjxgue/image/upload/v1744155472/disney-magic-kingdom_bl1w3h.png" alt="Magic Kingdom ao entardecer, com castelo iluminado e fogos de artifício.">
+        <p>Disney – Magic Kingdom</p>
+      </div>
+  
+      <!-- Caçando Auroras Boreais -->
+      <div class="destino-item fade-in">
+        <img loading="lazy" src="https://res.cloudinary.com/dhqvjxgue/image/upload/v1744155478/islandia-aurora-boreal_cllicl.png" alt="Aurora boreal vibrante sobre geleiras ou cachoeiras na Islândia.">
+        <p>Islândia – Aurora Boreal</p>
+      </div>
+      <div class="destino-item fade-in">
+        <img loading="lazy" src="https://res.cloudinary.com/dhqvjxgue/image/upload/v1744155476/kiruna-hotel-gelo_okecpd.png" alt="Interior elegante do Hotel de Gelo em Kiruna com aurora ao fundo.">
+        <p>Kiruna – Hotel de Gelo</p>
+      </div>
+      <div class="destino-item fade-in">
+        <img loading="lazy" src="https://res.cloudinary.com/dhqvjxgue/image/upload/v1744155478/tromso-expedicao-aurora_fvzzsk.png" alt="Aurora boreal brilhante sobre fiordes ou cabanas em Tromsø.">
+        <p>Tromsø – Expedição Aurora</p>
+      </div>
+  
+      <!-- Festivais e Celebrações Únicas -->
+      <div class="destino-item fade-in">
+        <img loading="lazy" src="https://res.cloudinary.com/dhqvjxgue/image/upload/v1744155472/festival-lanternas-tail%C3%A2ndia_bv6arb.png" alt="Festival das Lanternas em Chiang Mai com céu cheio de lanternas luminosas.">
+        <p>Tailândia – Festival das Lanternas</p>
+      </div>
+      <div class="destino-item fade-in">
+        <img loading="lazy" src="https://res.cloudinary.com/dhqvjxgue/image/upload/v1744155473/holi-india-cores_qhbnyu.png" alt="Pessoas coloridas e alegres celebrando o festival Holi na Índia.">
+        <p>Índia – Holi</p>
+      </div>
+      <div class="destino-item fade-in">
+        <img loading="lazy" src="https://res.cloudinary.com/dhqvjxgue/image/upload/v1744155476/inti-raymi-peru_wpsdil.png" alt="Cerimônia tradicional do Inti Raymi no Peru com trajes incas autênticos.">
+        <p>Peru – Inti Raymi</p>
+      </div>
+  
+      <!-- Viagens a Lugares Icônicos -->
+      <div class="destino-item fade-in">
+        <img loading="lazy" src="https://res.cloudinary.com/dhqvjxgue/image/upload/v1744155477/machu-picchu-peru_tcx5y0.png" alt="Paisagem histórica e inspiradora de Machu Picchu, Peru.">
+        <p>Peru – Machu Picchu</p>
+      </div>
+      <div class="destino-item fade-in">
+        <img loading="lazy" src="https://res.cloudinary.com/dhqvjxgue/image/upload/v1744155471/auschwitz-polonia_shda1k.png" alt="Foto reflexiva e respeitosa de Auschwitz, Polônia.">
+        <p>Polônia – Auschwitz</p>
+      </div>
+      <div class="destino-item fade-in">
+        <img loading="lazy" src="https://res.cloudinary.com/dhqvjxgue/image/upload/v1744155478/piramides-egito_wfy1zv.png" alt="Pirâmides e Esfinge em Gizé, Egito, com iluminação especial.">
+        <p>Egito – Pirâmides de Gizé</p>
+      </div>
+      <div class="destino-item fade-in">
+        <img loading="lazy" src="https://res.cloudinary.com/dhqvjxgue/image/upload/v1744155477/muralha-china_kcrahn.png" alt="Vista da Grande Muralha da China em paisagem ampla.">
+        <p>China – Grande Muralha</p>
+      </div>
+    </div>
+  </section>
+  
+  <style>
+    .fade-in {
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeInUp 0.8s ease forwards;
+    }
+    @keyframes fadeInUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+  
+  <!-- Curadoria Humana -->
+  <section class="curadoria" id="curadoria">
+    <h2>Curadoria Humana</h2>
+    <p>
+      Nossa equipe de curadoria une expertise e paixão por viagens para criar roteiros únicos, alinhados ao seu perfil e às tendências do mercado. Cada roteiro é cuidadosamente elaborado para garantir experiências autênticas e personalizadas.
+    </p>
+  </section>
+  
+  <!-- Provas Sociais -->
+  <section class="provas-sociais" id="provas-sociais">
+    <h2>O que dizem nossos clientes</h2>
+    <div class="testemunhos">
+      <div class="testemunho">
+        <p>"Foi uma das viagens mais incríveis da minha vida. Cada detalhe foi pensado para transformar a experiência!"</p>
+        <p><strong>- Cliente Satisfeito</strong></p>
+      </div>
+      <div class="testemunho">
+        <p>"A curadoria e a tecnologia se unem para criar roteiros únicos e personalizados. Recomendo a todos!"</p>
+        <p><strong>- Viajante Feliz</strong></p>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Chamada Final -->
+  <section class="chamada-final" id="chamada-final">
+    <h2>A sua próxima grande jornada começa aqui</h2>
+    <button class="btn" onclick="document.getElementById('contato').scrollIntoView({behavior:'smooth'})">
+      Criar meu roteiro agora
+    </button>
+  </section>
+  
+  <!-- Contato (Mailchimp Form) -->
+  <section id="contato">
+    <h2 style="text-align: center;">Cadastre-se em Nossa Newsletter</h2>
+    <div id="mc_embed_shell">
+      <link href="//cdn-images.mailchimp.com/embedcode/classic-061523.css" rel="stylesheet" type="text/css">
+      <style type="text/css">
+        #mc_embed_signup {
+          background: #fff;
+          clear: left;
+          font: 14px Helvetica, Arial, sans-serif;
+          width: 100%;
+          max-width: 600px;
+          margin: auto;
+        }
+      </style>
+      <div id="mc_embed_signup">
+        <form action="https://guru.us20.list-manage.com/subscribe/post?u=7318d15754cc569b753c1eeaf&amp;id=b069757273&amp;f_id=00f1c2e1f0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank">
+          <div id="mc_embed_signup_scroll">
+            <div class="indicates-required">
+              <span class="asterisk">*</span> indica obrigatório
+            </div>
+            <div class="mc-field-group">
+              <label for="mce-EMAIL">Endereço de e-mail <span class="asterisk">*</span></label>
+              <input type="email" name="EMAIL" class="required email" id="mce-EMAIL" required="" value="">
+            </div>
+            <div id="mce-responses" class="clear foot">
+              <div class="response" id="mce-error-response" style="display:none"></div>
+              <div class="response" id="mce-success-response" style="display:none"></div>
+            </div>
+            <div style="position:absolute;left:-5000px" aria-hidden="true">
+              <input type="text" name="b_7318d15754cc569b753c1eeaf_b069757273" tabindex="-1" value="">
+            </div>
+            <div class="optionalParent">
+              <div class="clear foot">
+                <input type="submit" name="subscribe" id="mc-embedded-subscribe" class="button" value="Inscreva-se">
+                <p style="margin:0 auto;">
+                  <a href="http://eepurl.com/jb3CT2" title="Mailchimp - marketing por e-mail fácil e divertido">
+                    <span style="display:inline-block;background-color:transparent;border-radius:4px;">
+                      <img class="refferal_badge" src="https://digitalasset.intuit.com/render/content/dam/intuit/mc-fe/en_us/images/intuit-mc-rewards-text-dark.svg" alt="Intuit Mailchimp" style="width:220px;height:40px;display:flex;padding:2px 0;justify-content:center;align-items:center;">
+                    </span>
+                  </a>
+                </p>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+      <script type="text/javascript" src="//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js"></script>
+      <script type="text/javascript">
+        (function($) {
+          window.fnames = new Array(); 
+          window.ftypes = new Array();
+          fnames[0]='EMAIL'; ftypes[0]='email';
+          fnames[1]='FNAME'; ftypes[1]='text';
+          fnames[2]='LNAME'; ftypes[2]='text';
+          fnames[4]='PHONE'; ftypes[4]='phone';
+          fnames[3]='ADDRESS'; ftypes[3]='address';
+          fnames[5]='BIRTHDAY'; ftypes[5]='birthday';
+          fnames[6]='COMPANY'; ftypes[6]='text';
+        }(jQuery));
+        var $mcj = jQuery.noConflict(true);
+      </script>
+    </div>
+  </section>
+  
+  <!-- Footer -->
+  <footer>
+    <div class="footer-container">
+      <div class="footer-col">
+        <p>Nomade Guru está presente no Brasil e em diversos destinos globais, conectando nômades digitais a experiências de vida transformadoras.</p>
+        <p>NOMADE GURU TAC LTDA - CNPJ 11.111.227/0001-20. Copyright 2009-2025, Nomade Guru TAC Ltda. Todos os direitos reservados.</p>
+      </div>
+      <div class="footer-col">
+        <p>Rua Comendador Torlogo Dauntre, 74 - Sala 1207, Cambuí, Campinas, SP, CEP 13025-270</p>
+        <p><strong>Canais Oficiais:</strong></p>
+        <p>
+          Instagram: <a href="https://www.instagram.com/nomade.guru/" target="_blank">nomade.guru</a><br>
+          Facebook: <a href="https://www.facebook.com/nomadeguru" target="_blank">nomadeguru</a><br>
+          YouTube: <a href="https://www.youtube.com/@NomadeGuru" target="_blank">NomadeGuru</a><br>
+          WhatsApp Business: <a href="https://wa.me/5511947745710" target="_blank">Clique aqui</a><br>
+          Website: <a href="https://www.nomade.guru" target="_blank">www.nomade.guru</a><br>
+          Spotify: <a href="https://open.spotify.com/playlist/1NaWkXArYokfc7LNTa8zXD?si=71a425de2f384a5f" target="_blank">Playlist Nomade Guru</a>
+        </p>
+      </div>
+    </div>
+  </footer>
+  
+  <!-- Redes Sociais Flutuantes -->
+  <ul class="box-redes-sociais">
+    <li class="facebook">
+      <a href="https://www.facebook.com/nomadeguru" target="_blank"><i class="fab fa-facebook-f icon"></i></a>
+    </li>
+    <li class="instagram">
+      <a href="https://www.instagram.com/nomade.guru/" target="_blank"><i class="fab fa-instagram icon"></i></a>
+    </li>
+    <li class="youtube">
+      <a href="https://www.youtube.com/@NomadeGuru" target="_blank"><i class="fab fa-youtube icon"></i></a>
+    </li>
+    <li class="spotify">
+      <a href="https://open.spotify.com/playlist/1NaWkXArYokfc7LNTa8zXD?si=71a425de2f384a5f" target="_blank"><i class="fab fa-spotify icon"></i></a>
+    </li>
+  </ul>
+  
+<!-- Leadster Live Chat -->
+<script>
+  (function(a,b,c,d){
+    try{
+      var e=b.head||b.getElementsByTagName("head")[0];
+      var f=b.createElement("script");
+      f.setAttribute("src",c);
+      f.setAttribute("charset","UTF-8");
+      f.defer=true;
+      a.neuroleadId=d;
+      e.appendChild(f);
+    }catch(g){}
+  })(window,document,"https://cdn.leadster.com.br/neurolead/neurolead.min.js","swUnUpRD0q9vX5NJvKq0r3pqe");
+</script>
+
+</body>
+</html>

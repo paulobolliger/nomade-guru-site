@@ -147,167 +147,370 @@
                         <label for="usa-whatsapp" style="font-weight: 500; margin: 0;">WhatsApp</label>                         
                     </div>                     
                 </div>                 
-                <hr style="margin: 30px 0;"> 
-                <h3 style="width: 100%; font-size: 1.5em; margin-bottom: 20px; color: var(--primary);">Documents</h3> 
-                <div style="display: flex; flex-wrap: wrap; gap: 20px;"> 
-                    <div style="flex: 1; display: flex; flex-direction: column;"> 
-                        <label style="font-weight: 500; margin-bottom: 5px;">CPF (Brazilian ID)</label>                         
-                        <input type="text" name="CPF" placeholder="CPF (Brazilian ID)" style="padding: 10px;"> 
-                    </div>                     
-                    <div style="flex: 1; display: flex; flex-direction: column;"> 
-                        <label style="font-weight: 500; margin-bottom: 5px;">RG (State ID)</label>                         
-                        <input type="text" name="RG" placeholder="RG (State ID)" style="padding: 10px;"> 
-                    </div>                     
-                    <div style="flex: 1; display: flex; flex-direction: column;"> 
-                        <label style="font-weight: 500; margin-bottom: 5px;">Nationality</label>                         
-                        <input type="text" name="Nacionalidade" placeholder="Nationality" style="padding: 10px;"> 
-                    </div>                     
-                    <div style="flex: 1; display: flex; flex-direction: column;"> 
-                        <label style="font-weight: 500; margin-bottom: 5px;">Marital Status</label>                         
-                        <input type="text" name="State Civil" placeholder="Marital Status" style="padding: 10px;"> 
-                    </div>                     
-                </div>                 
-                <div style="margin: 10px 0;"> 
-                    Gender:
-                    <label>
-                        <input type="radio" name="Sexo" value="Male"> Masculino
-                    </label>                     
-                    <label>
-                        <input type="radio" name="Sexo" value="Female"> Feminino
-                    </label>                     
-                </div>                 
-                <div style="display: flex; flex-wrap: wrap; gap: 20px; margin-top: 20px;"> 
-                    <div style="flex: 1; display: flex; flex-direction: column;"> 
-                        <label style="font-weight: 500; margin-bottom: 5px;">Driver&apos;s License (CNH)</label>                         
-                        <input type="text" name="CNH" placeholder="Driver's License" style="padding: 10px;"> 
-                    </div>                     
-                    <div style="flex: 1; display: flex; flex-direction: column;"> 
-                        <label style="font-weight: 500; margin-bottom: 5px;">License Expiry</label>                         
-                        <input type="date" name="Validade CNH" placeholder="License Expiry" style="padding: 10px;"> 
-                    </div>                     
-                    <div style="flex: 1; display: flex; flex-direction: column;"> 
-                        <label style="font-weight: 500; margin-bottom: 5px;">First Issued</label>                         
-                        <input type="date" name="1a Habilitação" placeholder="First Issued" style="padding: 10px;"> 
-                    </div>                     
-                    <div style="flex: 1; display: flex; flex-direction: column;"> 
-                        <label style="font-weight: 500; margin-bottom: 5px;">License Category</label>                         
-                        <input type="text" name="Categoria CNH" placeholder="License Category" style="padding: 10px;"> 
-                    </div>                     
-                </div>                 
-                <hr style="margin: 30px 0;"> 
-                <h3 style="width: 100%; font-size: 1.5em; margin-bottom: 20px; color: var(--primary);">Primary Address</h3> 
-                <div style="display: flex; flex-wrap: wrap; gap: 20px;"> 
-                    <div style="flex: 1; display: flex; flex-direction: column;"> 
-                        <label style="font-weight: 500; margin-bottom: 5px;">ZIP Code</label>                         
-                        <input type="text" name="CEP" placeholder="ZIP Code" style="padding: 10px;"> 
-                    </div>                     
-                    <div style="flex: 2; display: flex; flex-direction: column;"> 
-                        <label style="font-weight: 500; margin-bottom: 5px;">Street / Avenue</label>                         
-                        <input type="text" name="Rua/Avenida" placeholder="Street / Avenue" style="padding: 10px;"> 
-                    </div>                     
-                    <div style="flex: 1; display: flex; flex-direction: column;"> 
-                        <label style="font-weight: 500; margin-bottom: 5px;">Number</label>                         
-                        <input type="text" name="Número" placeholder="Number" style="padding: 10px;"> 
-                    </div>                     
-                    <div style="flex: 1; display: flex; flex-direction: column;"> 
-                        <label style="font-weight: 500; margin-bottom: 5px;">Complement</label>                         
-                        <input type="text" name="Complemento" placeholder="Complement" style="padding: 10px;"> 
-                    </div>                     
-                    <div style="flex: 1; display: flex; flex-direction: column;"> 
-                        <label style="font-weight: 500; margin-bottom: 5px;">District</label>                         
-                        <input type="text" name="Bairro" placeholder="District" style="padding: 10px;"> 
-                    </div>                     
-                    <div style="flex: 1; display: flex; flex-direction: column;"> 
-                        <label style="font-weight: 500; margin-bottom: 5px;">City</label>                         
-                        <input type="text" name="Cidade" placeholder="City" style="padding: 10px;"> 
-                    </div>                     
-                    <div style="flex: 1; display: flex; flex-direction: column;"> 
-                        <label style="font-weight: 500; margin-bottom: 5px;">Estado</label>                         
-                        <input type="text" name="Estado" placeholder="State" style="padding: 10px;"> 
-                    </div>                     
-                    <div style="flex: 1; display: flex; flex-direction: column;"> 
-                        <label style="font-weight: 500; margin-bottom: 5px;">Country</label>                         
-                        <input type="text" name="País" placeholder="Country" style="padding: 10px;"> 
-                    </div>                     
-                </div>                 
-                <hr style="margin: 30px 0;"> 
-                <h3 style="width: 100%; font-size: 1.5em; margin-bottom: 20px; color: var(--primary);">Passport</h3> 
-                <div style="display: flex; flex-wrap: wrap; gap: 20px;"> 
-                    <div style="flex: 1; display: flex; flex-direction: column;"> 
-                        <label style="font-weight: 500; margin-bottom: 5px;">Passport Number</label>                         
-                        <input type="text" name="Passaporte" placeholder="Passport Number" style="padding: 10px;"> 
-                    </div>                     
-                    <div style="flex: 1; display: flex; flex-direction: column;"> 
-                        <label style="font-weight: 500; margin-bottom: 5px;">Issued On</label>                         
-                        <input type="date" name="Emissão Passaporte" placeholder="Issued On" style="padding: 10px;"> 
-                    </div>                     
-                    <div style="flex: 1; display: flex; flex-direction: column;"> 
-                        <label style="font-weight: 500; margin-bottom: 5px;">Expires On</label>                         
-                        <input type="date" name="Vencimento Passaporte" placeholder="Expires On" style="padding: 10px;"> 
-                    </div>                     
-                    <div style="flex: 1; display: flex; flex-direction: column;"> 
-                        <label style="font-weight: 500; margin-bottom: 5px;">Passport Nationality</label>                         
-                        <input type="text" name="Nacionalidade do Passaporte" placeholder="Passport Nationality" style="padding: 10px;"> 
-                    </div>                     
-                </div>                 
-                <hr style="margin: 30px 0;"> 
-                <h3 style="width: 100%; font-size: 1.5em; margin-bottom: 20px; color: var(--primary);">Visas</h3> 
-                <div style="display: flex; flex-wrap: wrap; gap: 20px;"> 
-                    <div style="flex: 1; display: flex; flex-direction: column;"> 
-                        <label style="font-weight: 500; margin-bottom: 5px;">Visa Country</label>                         
-                        <input type="text" name="Visto País" placeholder="Visa Country" style="padding: 10px;"> 
-                    </div>                     
-                    <div style="flex: 1; display: flex; flex-direction: column;"> 
-                        <label style="font-weight: 500; margin-bottom: 5px;">Visa Type</label>                         
-                        <input type="text" name="Tipo Visto" placeholder="Visa Type" style="padding: 10px;"> 
-                    </div>                     
-                    <div style="flex: 1; display: flex; flex-direction: column;"> 
-                        <label style="font-weight: 500; margin-bottom: 5px;">Visa Expiry</label>                         
-                        <input type="date" name="Validade Visto" placeholder="Visa Expiry" style="padding: 10px;"> 
-                    </div>                     
-                </div>                 
-                <hr style="margin: 30px 0;"> 
-                <h3 style="width: 100%; font-size: 1.5em; margin-bottom: 20px; color: var(--primary);">Frequent Flyer Program</h3> 
-                <div style="display: flex; flex-wrap: wrap; gap: 20px;"> 
-                    <div style="flex: 1; display: flex; flex-direction: column;"> 
-                        <label style="font-weight: 500; margin-bottom: 5px;">Program Name</label>                         
-                        <input type="text" name="Programa" placeholder="Program Name" style="padding: 10px;"> 
-                    </div>                     
-                    <div style="flex: 1; display: flex; flex-direction: column;"> 
-                        <label style="font-weight: 500; margin-bottom: 5px;">Program Number</label>                         
-                        <input type="text" name="Número" placeholder="Program Number" style="padding: 10px;"> 
-                    </div>                     
-                    <div style="flex: 1; display: flex; flex-direction: column;"> 
-                        <label style="font-weight: 500; margin-bottom: 5px;">Airline</label>                         
-                        <input type="text" name="Companhia Aérea" placeholder="Airline" style="padding: 10px;"> 
-                    </div>                     
-                    <div style="flex: 2; display: flex; flex-direction: column;"> 
-                        <label style="font-weight: 500; margin-bottom: 5px;">Additional Info</label>                         
-                        <input type="text" name="Info Adicional" placeholder="Additional Info" style="padding: 10px;"> 
-                    </div>                     
-                </div>                 
-                <h3>Attach Your Passport</h3> 
-                <p>You can upload a copy of your passport here (PDF or image):</p> 
-                <div style="margin: 20px 0;"> 
-                    <input type="file" name="Arquivo do Passaporte" accept=".pdf,image/*" style="padding: 10px;"> 
-                </div>                 
-                <div style="margin-top: 40px; text-align: center;"> 
-                    <button type="submit" class="btn" style="background: var(--primary); color: var(--white); padding: 15px 40px; border: none; border-radius: 50px; font-size: 1em; font-weight: 700; cursor: pointer; transition: background 0.3s ease;">Submit Registration</button>                     
-                </div>                 
-                <input type="hidden" name="_next" value="https://www.nomade.guru/obrigado"> 
-                <input type="hidden" name="_captcha" value="false"> 
-            </form>             
-            <script>
-    function calcularIdade(dataNascimento) {
-      const hoje = new Date();
-      const nascimento = new Date(dataNascimento);
-      let idade = hoje.getFullYear() - nascimento.getFullYear();
-      const m = hoje.getMonth() - nascimento.getMonth();
-      if (m < 0 || (m === 0 && hoje.getDate() < nascimento.getDate())) {
-        idade--;
-      }
-      document.querySelector('input[name="Idade"]').value = idade;
+              <script>window.enableEventObserver=true</script>
+<script src="https://cdn03.jotfor.ms/static/prototype.forms.js?v=3.3.62337" type="text/javascript"></script>
+<script src="https://cdn01.jotfor.ms/static/jotform.forms.js?v=3.3.62337" type="text/javascript"></script>
+<script src="https://cdn02.jotfor.ms/js/vendor/maskedinput_5.0.9.min.js?v=3.3.62337" type="text/javascript"></script>
+<script src="https://cdn03.jotfor.ms/js/punycode-1.4.1.min.js?v=3.3.62337" type="text/javascript" defer></script>
+<script src="https://cdn01.jotfor.ms/js/vendor/imageinfo.js?v=3.3.62337" type="text/javascript"></script>
+<script src="https://cdn02.jotfor.ms/file-uploader/fileuploader.js?v=3.3.62337" type="text/javascript"></script>
+<script src="https://cdn01.jotfor.ms/s/umd/05cdf69c55f/for-form-encryption.js?v=3.3.62337" type="text/javascript"></script>
+<script src="https://cdn01.jotfor.ms/s/umd/05cdf69c55f/for-form-branding-footer.js?v=3.3.62337" type="text/javascript" defer></script>
+<script src="https://cdn03.jotfor.ms/js/vendor/smoothscroll.min.js?v=3.3.62337" type="text/javascript"></script>
+<script src="https://cdn01.jotfor.ms/js/errorNavigation.js?v=3.3.62337" type="text/javascript"></script>
+<script type="text/javascript">	JotForm.newDefaultTheme = false;
+	JotForm.extendsNewTheme = true;
+	JotForm.singleProduct = false;
+	JotForm.newPaymentUIForNewCreatedForms = false;
+	JotForm.texts = {"confirmEmail":"E-mail does not match","pleaseWait":"Please wait...","validateEmail":"You need to validate this e-mail","confirmClearForm":"Are you sure you want to clear the form","lessThan":"Your score should be less than or equal to","incompleteFields":"There are incomplete required fields. Please complete them.","required":"This field is required.","requireOne":"At least one field required.","requireEveryRow":"Every row is required.","requireEveryCell":"Every cell is required.","email":"Enter a valid e-mail address","alphabetic":"This field can only contain letters","numeric":"This field can only contain numeric values","alphanumeric":"This field can only contain letters and numbers.","cyrillic":"This field can only contain cyrillic characters","url":"This field can only contain a valid URL","currency":"This field can only contain currency values.","fillMask":"Field value must fill mask.","uploadExtensions":"You can only upload following files:","noUploadExtensions":"File has no extension file type (e.g. .txt, .png, .jpeg)","uploadFilesize":"File size cannot be bigger than:","uploadFilesizemin":"File size cannot be smaller than:","gradingScoreError":"Score total should only be less than or equal to","inputCarretErrorA":"Input should not be less than the minimum value:","inputCarretErrorB":"Input should not be greater than the maximum value:","maxDigitsError":"The maximum digits allowed is","minCharactersError":"The number of characters should not be less than the minimum value:","maxCharactersError":"The number of characters should not be more than the maximum value:","freeEmailError":"Free email accounts are not allowed","minSelectionsError":"The minimum required number of selections is ","maxSelectionsError":"The maximum number of selections allowed is ","pastDatesDisallowed":"Date must not be in the past.","dateLimited":"This date is unavailable.","dateInvalid":"This date is not valid. The date format is {format}","dateInvalidSeparate":"This date is not valid. Enter a valid {element}.","ageVerificationError":"You must be older than {minAge} years old to submit this form.","multipleFileUploads_typeError":"{file} has invalid extension. Only {extensions} are allowed.","multipleFileUploads_sizeError":"{file} is too large, maximum file size is {sizeLimit}.","multipleFileUploads_minSizeError":"{file} is too small, minimum file size is {minSizeLimit}.","multipleFileUploads_emptyError":"{file} is empty, please select files again without it.","multipleFileUploads_uploadFailed":"File upload failed, please remove it and upload the file again.","multipleFileUploads_onLeave":"The files are being uploaded, if you leave now the upload will be cancelled.","multipleFileUploads_fileLimitError":"Only {fileLimit} file uploads allowed.","dragAndDropFilesHere_infoMessage":"Drag and drop files here","chooseAFile_infoMessage":"Choose a file","maxFileSize_infoMessage":"Max. file size","generalError":"There are errors on the form. Please fix them before continuing.","generalPageError":"There are errors on this page. Please fix them before continuing.","wordLimitError":"Too many words. The limit is","wordMinLimitError":"Too few words.  The minimum is","characterLimitError":"Too many Characters.  The limit is","characterMinLimitError":"Too few characters. The minimum is","ccInvalidNumber":"Credit Card Number is invalid.","ccInvalidCVC":"CVC number is invalid.","ccInvalidExpireDate":"Expire date is invalid.","ccInvalidExpireMonth":"Expiration month is invalid.","ccInvalidExpireYear":"Expiration year is invalid.","ccMissingDetails":"Please fill up the credit card details.","ccMissingProduct":"Please select at least one product.","ccMissingDonation":"Please enter numeric values for donation amount.","disallowDecimals":"Please enter a whole number.","restrictedDomain":"This domain is not allowed","ccDonationMinLimitError":"Minimum amount is {minAmount} {currency}","requiredLegend":"All fields marked with * are required and must be filled.","geoPermissionTitle":"Permission Denied","geoPermissionDesc":"Check your browser's privacy settings.","geoNotAvailableTitle":"Position Unavailable","geoNotAvailableDesc":"Location provider not available. Please enter the address manually.","geoTimeoutTitle":"Timeout","geoTimeoutDesc":"Please check your internet connection and try again.","selectedTime":"Selected Time","formerSelectedTime":"Former Time","cancelAppointment":"Cancel Appointment","cancelSelection":"Cancel Selection","noSlotsAvailable":"No slots available","slotUnavailable":"{time} on {date} has been selected is unavailable. Please select another slot.","multipleError":"There are {count} errors on this page. Please correct them before moving on.","oneError":"There is {count} error on this page. Please correct it before moving on.","doneMessage":"Well done! All errors are fixed.","invalidTime":"Enter a valid time","doneButton":"Done","reviewSubmitText":"Review and Submit","nextButtonText":"Next","prevButtonText":"Previous","seeErrorsButton":"See Errors","notEnoughStock":"Not enough stock for the current selection","notEnoughStock_remainedItems":"Not enough stock for the current selection ({count} items left)","soldOut":"Sold Out","justSoldOut":"Just Sold Out","selectionSoldOut":"Selection Sold Out","subProductItemsLeft":"({count} items left)","startButtonText":"START","submitButtonText":"Submit","submissionLimit":"Sorry! Only one entry is allowed. <br> Multiple submissions are disabled for this form.","reviewBackText":"Back to Form","seeAllText":"See All","progressMiddleText":"of","fieldError":"field has an error.","error":"Error"};
+	JotForm.newPaymentUI = true;
+	JotForm.originalLanguage = "en";
+	JotForm.isFormViewTrackingAllowed = true;
+	JotForm.replaceTagTest = true;
+	JotForm.uploadServerURL = "https://upload.jotform.com/upload";
+	JotForm.submitError="jumpToFirstError";
+	JotForm.encryptionProtocol = "JF-CSE-V2";
+	window.addEventListener('DOMContentLoaded',function(){window.brandingFooter.init({"formID":251063939209662,"campaign":"powered_by_jotform_le","isCardForm":false,"isLegacyForm":true,"formLanguage":"en"})});	JotForm.isFullSource = true;
+
+	JotForm.init(function(){
+	/*INIT-START*/
+if (window.JotForm && JotForm.accessible) $('input_1').setAttribute('tabindex',0);
+if (window.JotForm && JotForm.accessible) $('input_2').setAttribute('tabindex',0);
+
+ JotForm.calendarMonths = ["January","February","March","April","May","June","July","August","September","October","November","December"];
+ if (!JotForm.calenderViewMonths) JotForm.calenderViewMonths = {};  JotForm.calenderViewMonths[39] = ["January","February","March","April","May","June","July","August","September","October","November","December"];
+ if (!JotForm.calenderViewDays) JotForm.calenderViewDays = {};  JotForm.calenderViewDays[39] = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"];
+ JotForm.calendarDays = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"];
+ JotForm.calendarOther = {"today":"Today"};
+ var languageOptions = document.querySelectorAll('#langList li'); 
+ for(var langIndex = 0; langIndex < languageOptions.length; langIndex++) { 
+   languageOptions[langIndex].on('click', function(e) { setTimeout(function(){ JotForm.setCalendar("39", false, {"days":{"monday":true,"tuesday":true,"wednesday":true,"thursday":true,"friday":true,"saturday":true,"sunday":true},"future":true,"past":true,"custom":false,"ranges":false,"start":"","end":"","countSelectedDaysOnly":false}); }, 0); });
+ } 
+ JotForm.onTranslationsFetch(function() { JotForm.setCalendar("39", false, {"days":{"monday":true,"tuesday":true,"wednesday":true,"thursday":true,"friday":true,"saturday":true,"sunday":true},"future":true,"past":true,"custom":false,"ranges":false,"start":"","end":"","countSelectedDaysOnly":false}); });
+      JotForm.setPhoneMaskingValidator( 'input_41_full', '\u0028\u0023\u0023\u0023\u0029 \u0023\u0023\u0023\u002d\u0023\u0023\u0023\u0023' );
+if (window.JotForm && JotForm.accessible) $('input_11').setAttribute('tabindex',0);
+if (window.JotForm && JotForm.accessible) $('input_9').setAttribute('tabindex',0);
+if (window.JotForm && JotForm.accessible) $('input_10').setAttribute('tabindex',0);
+if (window.JotForm && JotForm.accessible) $('input_14').setAttribute('tabindex',0);
+if (window.JotForm && JotForm.accessible) $('input_15').setAttribute('tabindex',0);
+if (window.JotForm && JotForm.accessible) $('input_26').setAttribute('tabindex',0);
+if (window.JotForm && JotForm.accessible) $('input_27').setAttribute('tabindex',0);
+if (window.JotForm && JotForm.accessible) $('input_28').setAttribute('tabindex',0);
+if (window.JotForm && JotForm.accessible) $('input_29').setAttribute('tabindex',0);
+if (window.JotForm && JotForm.accessible) $('input_30').setAttribute('tabindex',0);
+if (window.JotForm && JotForm.accessible) $('input_31').setAttribute('tabindex',0);
+if (window.JotForm && JotForm.accessible) $('input_32').setAttribute('tabindex',0);
+if (window.JotForm && JotForm.accessible) $('input_33').setAttribute('tabindex',0);
+if (window.JotForm && JotForm.accessible) $('input_35').setAttribute('tabindex',0);
+if (window.JotForm && JotForm.accessible) $('input_34').setAttribute('tabindex',0);
+if (window.JotForm && JotForm.accessible) $('input_36').setAttribute('tabindex',0);
+      setTimeout(function() {
+          JotForm.initMultipleUploads();
+      }, 2);
+	/*INIT-END*/
+	});
+
+   setTimeout(function() {
+JotForm.paymentExtrasOnTheFly([null,{"description":"","name":"firstName","qid":"1","subLabel":"","text":"First Name","type":"control_textbox"},{"description":"","name":"lastName","qid":"2","subLabel":"","text":"Last Name","type":"control_textbox"},null,null,null,null,{"description":"","name":"whatsapp","qid":"7","text":"WhatsApp","type":"control_checkbox"},null,{"description":"","name":"dni","qid":"9","subLabel":"","text":"DNI \u002F ID Card","type":"control_textbox"},{"description":"","name":"nationality","qid":"10","subLabel":"","text":"Nationality","type":"control_textbox"},{"description":"","name":"maritalStatus","qid":"11","subLabel":"","text":"Marital Status","type":"control_textbox"},{"description":"","name":"gender","qid":"12","text":"Gender","type":"control_radio"},null,{"description":"","name":"driverapossLicense","qid":"14","subLabel":"","text":"Driver&apos;s License (CNH)","type":"control_textbox"},{"description":"","name":"licenseExpiry","qid":"15","subLabel":"","text":"License Expiry","type":"control_textbox"},null,null,null,null,null,null,null,null,null,null,{"description":"","name":"passportNumber","qid":"26","subLabel":"","text":"Passport Number","type":"control_textbox"},{"description":"","name":"issuedOn","qid":"27","subLabel":"","text":"Issued On","type":"control_textbox"},{"description":"","name":"expiresOn","qid":"28","subLabel":"","text":"Expires On","type":"control_textbox"},{"description":"","name":"passportNationality","qid":"29","subLabel":"","text":"Passport Nationality","type":"control_textbox"},{"description":"","name":"visaCountry","qid":"30","subLabel":"","text":"Visa Country","type":"control_textbox"},{"description":"","name":"visaType","qid":"31","subLabel":"","text":"Visa Type","type":"control_textbox"},{"description":"","name":"visaExpiry","qid":"32","subLabel":"","text":"Visa Expiry","type":"control_textbox"},{"description":"","name":"programName","qid":"33","subLabel":"","text":"Program Name","type":"control_textbox"},{"description":"","name":"programNumber","qid":"34","subLabel":"","text":"Program Number","type":"control_textbox"},{"description":"","name":"airline","qid":"35","subLabel":"","text":"Airline","type":"control_textbox"},{"description":"","name":"additionalInfo","qid":"36","subLabel":"","text":"Additional Info","type":"control_textbox"},null,{"name":"firstName38","qid":"38","text":"Submit Registration","type":"control_button"},{"description":"","name":"birthDate","qid":"39","text":"Birth Date","type":"control_datetime"},{"description":"","name":"email40","qid":"40","subLabel":"example@example.com","text":"Email","type":"control_email"},{"description":"","name":"phoneNumber","qid":"41","text":"Phone Number","type":"control_phone"},null,{"description":"","name":"address","qid":"43","text":"Address","type":"control_address"},{"description":"","name":"uploadA","qid":"44","subLabel":"","text":"Upload a Copy of your Passport","type":"control_fileupload"},{"description":"","name":"pleaseVerify","qid":"45","text":"Please verify that you are human","type":"control_captcha"},null,{"name":"registrationForm","qid":"47","text":"Registration Form","type":"control_head"},{"name":"heading","qid":"48","text":"Personal Information","type":"control_head"},{"name":"divider","qid":"49","text":"Divider","type":"control_divider"},{"name":"heading50","qid":"50","text":"Documents","type":"control_head"},null,null,null,{"name":"pageBreak54","qid":"54","text":"Page Break","type":"control_pagebreak"},{"name":"pageBreak55","qid":"55","text":"Page Break","type":"control_pagebreak"},{"name":"heading56","qid":"56","text":"Passport","type":"control_head"},{"name":"visa","qid":"57","text":"Visa","type":"control_head"},{"name":"pageBreak","qid":"58","text":"Page Break","type":"control_pagebreak"},{"name":"mileagePrograms","qid":"59","text":"Mileage Programs","type":"control_head"}]);}, 20); 
+</script>
+<link type="text/css" rel="stylesheet" href="https://cdn01.jotfor.ms/stylebuilder/static/form-common.css?v=c79fd50
+"/>
+<style type="text/css">@media print{*{-webkit-print-color-adjust: exact !important;color-adjust: exact !important;}.form-section{display:inline!important}.form-pagebreak{display:none!important}.form-section-closed{height:auto!important}.page-section{position:initial!important}}</style>
+<link id="custom-font" type="text/css" rel="stylesheet" href="//cdn.jotfor.ms/fonts/?family=Inter" />
+<link type="text/css" rel="stylesheet" href="https://cdn02.jotfor.ms/themes/CSS/defaultV2.css?v=c79fd50
+"/>
+<link type="text/css" rel="stylesheet" href="https://cdn03.jotfor.ms/themes/CSS/548b1325700cc48d318b4567.css?v=3.3.62337&themeRevisionID=64ff099762313412041c01ae"/>
+<link type="text/css" rel="stylesheet" href="https://cdn01.jotfor.ms/css/styles/payment/payment_styles.css?3.3.62337" />
+<link type="text/css" rel="stylesheet" href="https://cdn02.jotfor.ms/css/styles/payment/payment_feature.css?3.3.62337" />
+<form class="jotform-form" onsubmit="return typeof testSubmitFunction !== 'undefined' && testSubmitFunction();" action="https://eu-submit.jotform.com/submit/251063939209662" method="post" enctype="multipart/form-data" name="form_251063939209662" id="251063939209662" accept-charset="utf-8" autocomplete="on"><input type="hidden" name="formID" value="251063939209662" /><input type="hidden" id="JWTContainer" value="" /><input type="hidden" id="cardinalOrderNumber" value="" /><input type="hidden" id="jsExecutionTracker" name="jsExecutionTracker" value="build-date-1744895304691" /><input type="hidden" id="submitSource" name="submitSource" value="unknown" /><input type="hidden" id="buildDate" name="buildDate" value="1744895304691" /><input type="hidden" name="uploadServerUrl" value="https://upload.jotform.com/upload" /><input type="hidden" name="eventObserver" value="1" />
+  <div role="main" class="form-all">
+    <ul class="form-section page-section" role="presentation">
+      <li id="cid_47" class="form-input-wide" data-type="control_head">
+        <div class="form-header-group  header-large">
+          <div class="header-text httac htvam">
+            <h1 id="header_47" class="form-header" data-component="header">Registration Form</h1>
+          </div>
+        </div>
+      </li>
+      <li id="cid_55" class="form-input-wide" data-type="control_pagebreak">
+        <div class="form-pagebreak" data-component="pagebreak">
+          <div class="form-pagebreak-back-container"><button id="form-pagebreak-back_55" type="button" class="form-pagebreak-back  form-submit-button-reports-400 jf-form-buttons" data-component="pagebreak-back">Back</button></div>
+          <div class="form-pagebreak-next-container"><button id="form-pagebreak-next_55" type="button" class="form-pagebreak-next  form-submit-button-reports-400 jf-form-buttons" data-component="pagebreak-next">Next</button></div>
+          <div style="clear:both" class="pageInfo form-sub-label" id="pageInfo_55"></div>
+        </div>
+      </li>
+    </ul>
+    <ul class="form-section page-section" role="presentation" style="display:none;">
+      <li class="form-line" data-type="control_divider" id="id_49">
+        <div id="cid_49" class="form-input-wide" data-layout="full">
+          <div class="divider" data-component="divider" style="border-bottom-width:1px;border-bottom-style:solid;border-color:#ffffff;height:1px;margin-left:0px;margin-right:0px;margin-top:5px;margin-bottom:5px"></div>
+        </div>
+      </li>
+      <li id="cid_48" class="form-input-wide" data-type="control_head">
+        <div class="form-header-group  header-default">
+          <div class="header-text httac htvam">
+            <h2 id="header_48" class="form-header" data-component="header">Personal Information</h2>
+          </div>
+        </div>
+      </li>
+      <li class="form-line" data-type="control_textbox" id="id_1"><label class="form-label form-label-top form-label-auto" id="label_1" for="input_1" aria-hidden="false"> First Name </label>
+        <div id="cid_1" class="form-input-wide" data-layout="half"> <input type="text" id="input_1" name="q1_firstName" data-type="input-textbox" class="form-textbox" data-defaultvalue="" style="width:310px" size="310" data-component="textbox" aria-labelledby="label_1" value="" /> </div>
+      </li>
+      <li class="form-line" data-type="control_textbox" id="id_2"><label class="form-label form-label-top form-label-auto" id="label_2" for="input_2" aria-hidden="false"> Last Name </label>
+        <div id="cid_2" class="form-input-wide" data-layout="half"> <input type="text" id="input_2" name="q2_lastName" data-type="input-textbox" class="form-textbox" data-defaultvalue="" style="width:310px" size="310" data-component="textbox" aria-labelledby="label_2" value="" /> </div>
+      </li>
+      <li class="form-line" data-type="control_datetime" id="id_39"><label class="form-label form-label-top form-label-auto" id="label_39" for="lite_mode_39" aria-hidden="false"> Birth Date </label>
+        <div id="cid_39" class="form-input-wide" data-layout="half">
+          <div data-wrapper-react="true">
+            <div style="display:none"><span class="form-sub-label-container" style="vertical-align:top"><input class="form-textbox validate[limitDate]" id="month_39" name="q39_birthDate[month]" type="tel" size="2" data-maxlength="2" data-age="" maxLength="2" autoComplete="off" aria-labelledby="label_39 sublabel_39_month" value="" /><span class="date-separate" aria-hidden="true"> -</span><label class="form-sub-label" for="month_39" id="sublabel_39_month" style="min-height:13px">Month</label></span><span class="form-sub-label-container" style="vertical-align:top"><input class="form-textbox validate[limitDate]" id="day_39" name="q39_birthDate[day]" type="tel" size="2" data-maxlength="2" data-age="" maxLength="2" autoComplete="off" aria-labelledby="label_39 sublabel_39_day" value="" /><span class="date-separate" aria-hidden="true"> -</span><label class="form-sub-label" for="day_39" id="sublabel_39_day" style="min-height:13px">Day</label></span><span class="form-sub-label-container" style="vertical-align:top"><input class="form-textbox validate[limitDate]" id="year_39" name="q39_birthDate[year]" type="tel" size="4" data-maxlength="4" data-age="" maxLength="4" autoComplete="off" aria-labelledby="label_39 sublabel_39_year" value="" /><label class="form-sub-label" for="year_39" id="sublabel_39_year" style="min-height:13px">Year</label></span></div><span class="form-sub-label-container" style="vertical-align:top"><input class="form-textbox validate[limitDate, validateLiteDate]" id="lite_mode_39" type="text" size="12" data-maxlength="12" maxLength="12" data-age="" data-format="mmddyyyy" data-seperator="-" placeholder="MM-DD-YYYY" data-placeholder="MM-DD-YYYY" autoComplete="off" aria-labelledby="label_39 sublabel_39_litemode" value="" /><button type="button" class=" newDefaultTheme-dateIcon focusable icon-liteMode" id="input_39_pick" data-component="datetime" aria-hidden="true" data-allow-time="No" data-version="v2"></button><label class="form-sub-label" for="lite_mode_39" id="sublabel_39_litemode" style="min-height:13px">Date</label></span>
+          </div>
+        </div>
+      </li>
+      <li class="form-line" data-type="control_email" id="id_40"><label class="form-label form-label-top form-label-auto" id="label_40" for="input_40" aria-hidden="false"> Email </label>
+        <div id="cid_40" class="form-input-wide" data-layout="half"> <span class="form-sub-label-container" style="vertical-align:top"><input type="email" id="input_40" name="q40_email40" class="form-textbox validate[Email]" data-defaultvalue="" autoComplete="section-input_40 email" style="width:310px" size="310" data-component="email" aria-labelledby="label_40 sublabel_input_40" value="" /><label class="form-sub-label" for="input_40" id="sublabel_input_40" style="min-height:13px">example@example.com</label></span> </div>
+      </li>
+      <li class="form-line" data-type="control_phone" id="id_41"><label class="form-label form-label-top form-label-auto" id="label_41" for="input_41_full"> Phone Number </label>
+        <div id="cid_41" class="form-input-wide" data-layout="half"> <span class="form-sub-label-container" style="vertical-align:top"><input type="tel" id="input_41_full" name="q41_phoneNumber[full]" data-type="mask-number" class="mask-phone-number form-textbox validate[Fill Mask]" data-defaultvalue="" autoComplete="section-input_41 tel-national" style="width:310px" data-masked="true" placeholder="(000) 000-0000" data-component="phone" aria-labelledby="label_41" value="" /></span> </div>
+      </li>
+      <li class="form-line" data-type="control_checkbox" id="id_7"><label class="form-label form-label-top form-label-auto" id="label_7" for="input_7_0" aria-hidden="false"> WhatsApp </label>
+        <div id="cid_7" class="form-input-wide" data-layout="full">
+          <div class="form-single-column" role="group" aria-labelledby="label_7" data-component="checkbox"><span class="form-checkbox-item" style="clear:left"><span class="dragger-item"></span><input aria-describedby="label_7" type="checkbox" class="form-checkbox" id="input_7_0" name="q7_whatsapp[]" value="" /><label id="label_input_7_0" for="input_7_0"></label></span></div>
+        </div>
+      </li>
+      <li class="form-line" data-type="control_address" id="id_43" data-compound-hint=",,,,Please Select,,Please Select,"><label class="form-label form-label-top form-label-auto" id="label_43" for="input_43_addr_line1" aria-hidden="false"> Address </label>
+        <div id="cid_43" class="form-input-wide" data-layout="full">
+          <div summary="" class="form-address-table jsTest-addressField">
+            <div class="form-address-line-wrapper jsTest-address-line-wrapperField"><span class="form-address-line form-address-street-line jsTest-address-lineField"><span class="form-sub-label-container" style="vertical-align:top"><input type="text" id="input_43_addr_line1" name="q43_address[addr_line1]" class="form-textbox form-address-line" data-defaultvalue="" autoComplete="section-input_43 address-line1" data-component="address_line_1" aria-labelledby="label_43 sublabel_43_addr_line1" value="" /><label class="form-sub-label" for="input_43_addr_line1" id="sublabel_43_addr_line1" style="min-height:13px">Street Address</label></span></span></div>
+            <div class="form-address-line-wrapper jsTest-address-line-wrapperField"><span class="form-address-line form-address-street-line jsTest-address-lineField"><span class="form-sub-label-container" style="vertical-align:top"><input type="text" id="input_43_addr_line2" name="q43_address[addr_line2]" class="form-textbox form-address-line" data-defaultvalue="" autoComplete="section-input_43 address-line2" data-component="address_line_2" aria-labelledby="label_43 sublabel_43_addr_line2" value="" /><label class="form-sub-label" for="input_43_addr_line2" id="sublabel_43_addr_line2" style="min-height:13px">Street Address Line 2</label></span></span></div>
+            <div class="form-address-line-wrapper jsTest-address-line-wrapperField"><span class="form-address-line form-address-city-line jsTest-address-lineField "><span class="form-sub-label-container" style="vertical-align:top"><input type="text" id="input_43_city" name="q43_address[city]" class="form-textbox form-address-city" data-defaultvalue="" autoComplete="section-input_43 address-level2" data-component="city" aria-labelledby="label_43 sublabel_43_city" value="" /><label class="form-sub-label" for="input_43_city" id="sublabel_43_city" style="min-height:13px">City</label></span></span><span class="form-address-line form-address-state-line jsTest-address-lineField "><span class="form-sub-label-container" style="vertical-align:top"><select class="form-dropdown form-address-state" name="q43_address[state]" id="input_43_state" data-component="state" required="" aria-labelledby="label_43 sublabel_43_state" autoComplete="section-input_43 address-level1">
+                    <option value="" selected="">Please Select</option>
+                    <option value="Alabama">Alabama</option>
+                    <option value="Alaska">Alaska</option>
+                    <option value="Arizona">Arizona</option>
+                    <option value="Arkansas">Arkansas</option>
+                    <option value="California">California</option>
+                    <option value="Colorado">Colorado</option>
+                    <option value="Connecticut">Connecticut</option>
+                    <option value="Delaware">Delaware</option>
+                    <option value="District of Columbia">District of Columbia</option>
+                    <option value="Florida">Florida</option>
+                    <option value="Georgia">Georgia</option>
+                    <option value="Hawaii">Hawaii</option>
+                    <option value="Idaho">Idaho</option>
+                    <option value="Illinois">Illinois</option>
+                    <option value="Indiana">Indiana</option>
+                    <option value="Iowa">Iowa</option>
+                    <option value="Kansas">Kansas</option>
+                    <option value="Kentucky">Kentucky</option>
+                    <option value="Louisiana">Louisiana</option>
+                    <option value="Maine">Maine</option>
+                    <option value="Maryland">Maryland</option>
+                    <option value="Massachusetts">Massachusetts</option>
+                    <option value="Michigan">Michigan</option>
+                    <option value="Minnesota">Minnesota</option>
+                    <option value="Mississippi">Mississippi</option>
+                    <option value="Missouri">Missouri</option>
+                    <option value="Montana">Montana</option>
+                    <option value="Nebraska">Nebraska</option>
+                    <option value="Nevada">Nevada</option>
+                    <option value="New Hampshire">New Hampshire</option>
+                    <option value="New Jersey">New Jersey</option>
+                    <option value="New Mexico">New Mexico</option>
+                    <option value="New York">New York</option>
+                    <option value="North Carolina">North Carolina</option>
+                    <option value="North Dakota">North Dakota</option>
+                    <option value="Ohio">Ohio</option>
+                    <option value="Oklahoma">Oklahoma</option>
+                    <option value="Oregon">Oregon</option>
+                    <option value="Pennsylvania">Pennsylvania</option>
+                    <option value="Rhode Island">Rhode Island</option>
+                    <option value="South Carolina">South Carolina</option>
+                    <option value="South Dakota">South Dakota</option>
+                    <option value="Tennessee">Tennessee</option>
+                    <option value="Texas">Texas</option>
+                    <option value="Utah">Utah</option>
+                    <option value="Vermont">Vermont</option>
+                    <option value="Virginia">Virginia</option>
+                    <option value="Washington">Washington</option>
+                    <option value="West Virginia">West Virginia</option>
+                    <option value="Wisconsin">Wisconsin</option>
+                    <option value="Wyoming">Wyoming</option>
+                  </select><label class="form-sub-label" for="input_43_state" id="sublabel_43_state" style="min-height:13px">State</label></span></span></div>
+            <div class="form-address-line-wrapper jsTest-address-line-wrapperField"><span class="form-address-line form-address-zip-line jsTest-address-lineField "><span class="form-sub-label-container" style="vertical-align:top"><input type="text" id="input_43_postal" name="q43_address[postal]" class="form-textbox form-address-postal" data-defaultvalue="" autoComplete="section-input_43 postal-code" data-component="zip" aria-labelledby="label_43 sublabel_43_postal" value="" /><label class="form-sub-label" for="input_43_postal" id="sublabel_43_postal" style="min-height:13px">Zip Code</label></span></span></div>
+          </div>
+        </div>
+      </li>
+      <li class="form-line" data-type="control_radio" id="id_12"><label class="form-label form-label-top form-label-auto" id="label_12" aria-hidden="false"> Gender </label>
+        <div id="cid_12" class="form-input-wide" data-layout="full">
+          <div class="form-single-column" role="group" aria-labelledby="label_12" data-component="radio"><span class="form-radio-item" style="clear:left"><span class="dragger-item"></span><input aria-describedby="label_12" type="radio" class="form-radio" id="input_12_0" name="q12_gender" value="Male" /><label id="label_input_12_0" for="input_12_0">Male</label></span><span class="form-radio-item" style="clear:left"><span class="dragger-item"></span><input aria-describedby="label_12" type="radio" class="form-radio" id="input_12_1" name="q12_gender" value="Female" /><label id="label_input_12_1" for="input_12_1">Female</label></span></div>
+        </div>
+      </li>
+      <li class="form-line" data-type="control_textbox" id="id_11"><label class="form-label form-label-top form-label-auto" id="label_11" for="input_11" aria-hidden="false"> Marital Status </label>
+        <div id="cid_11" class="form-input-wide" data-layout="half"> <input type="text" id="input_11" name="q11_maritalStatus" data-type="input-textbox" class="form-textbox" data-defaultvalue="" style="width:310px" size="310" data-component="textbox" aria-labelledby="label_11" value="" /> </div>
+      </li>
+      <li id="cid_54" class="form-input-wide" data-type="control_pagebreak">
+        <div class="form-pagebreak" data-component="pagebreak">
+          <div class="form-pagebreak-back-container"><button id="form-pagebreak-back_54" type="button" class="form-pagebreak-back  form-submit-button-reports-400 jf-form-buttons" data-component="pagebreak-back">Back</button></div>
+          <div class="form-pagebreak-next-container"><button id="form-pagebreak-next_54" type="button" class="form-pagebreak-next  form-submit-button-reports-400 jf-form-buttons" data-component="pagebreak-next">Next</button></div>
+          <div style="clear:both" class="pageInfo form-sub-label" id="pageInfo_54"></div>
+        </div>
+      </li>
+    </ul>
+    <ul class="form-section page-section" role="presentation" style="display:none;">
+      <li id="cid_50" class="form-input-wide" data-type="control_head">
+        <div class="form-header-group  header-default">
+          <div class="header-text httac htvam">
+            <h2 id="header_50" class="form-header" data-component="header">Documents</h2>
+          </div>
+        </div>
+      </li>
+      <li class="form-line" data-type="control_textbox" id="id_9"><label class="form-label form-label-top form-label-auto" id="label_9" for="input_9" aria-hidden="false"> DNI / ID Card </label>
+        <div id="cid_9" class="form-input-wide" data-layout="half"> <input type="text" id="input_9" name="q9_dni" data-type="input-textbox" class="form-textbox" data-defaultvalue="" style="width:310px" size="310" data-component="textbox" aria-labelledby="label_9" value="" /> </div>
+      </li>
+      <li class="form-line" data-type="control_textbox" id="id_10"><label class="form-label form-label-top form-label-auto" id="label_10" for="input_10" aria-hidden="false"> Nationality </label>
+        <div id="cid_10" class="form-input-wide" data-layout="half"> <input type="text" id="input_10" name="q10_nationality" data-type="input-textbox" class="form-textbox" data-defaultvalue="" style="width:310px" size="310" data-component="textbox" aria-labelledby="label_10" value="" /> </div>
+      </li>
+      <li class="form-line" data-type="control_textbox" id="id_14"><label class="form-label form-label-top form-label-auto" id="label_14" for="input_14" aria-hidden="false"> Driver's License (CNH) </label>
+        <div id="cid_14" class="form-input-wide" data-layout="half"> <input type="text" id="input_14" name="q14_driverapossLicense" data-type="input-textbox" class="form-textbox" data-defaultvalue="" style="width:310px" size="310" data-component="textbox" aria-labelledby="label_14" value="" /> </div>
+      </li>
+      <li class="form-line" data-type="control_textbox" id="id_15"><label class="form-label form-label-top form-label-auto" id="label_15" for="input_15" aria-hidden="false"> License Expiry </label>
+        <div id="cid_15" class="form-input-wide" data-layout="half"> <input type="text" id="input_15" name="q15_licenseExpiry" data-type="input-textbox" class="form-textbox" data-defaultvalue="" style="width:310px" size="310" data-component="textbox" aria-labelledby="label_15" value="" /> </div>
+      </li>
+      <li id="cid_56" class="form-input-wide" data-type="control_head">
+        <div class="form-header-group  header-default">
+          <div class="header-text httac htvam">
+            <h2 id="header_56" class="form-header" data-component="header">Passport</h2>
+          </div>
+        </div>
+      </li>
+      <li class="form-line" data-type="control_textbox" id="id_26"><label class="form-label form-label-top form-label-auto" id="label_26" for="input_26" aria-hidden="false"> Passport Number </label>
+        <div id="cid_26" class="form-input-wide" data-layout="half"> <input type="text" id="input_26" name="q26_passportNumber" data-type="input-textbox" class="form-textbox" data-defaultvalue="" style="width:310px" size="310" data-component="textbox" aria-labelledby="label_26" value="" /> </div>
+      </li>
+      <li class="form-line" data-type="control_textbox" id="id_27"><label class="form-label form-label-top form-label-auto" id="label_27" for="input_27" aria-hidden="false"> Issued On </label>
+        <div id="cid_27" class="form-input-wide" data-layout="half"> <input type="text" id="input_27" name="q27_issuedOn" data-type="input-textbox" class="form-textbox" data-defaultvalue="" style="width:310px" size="310" data-component="textbox" aria-labelledby="label_27" value="" /> </div>
+      </li>
+      <li class="form-line" data-type="control_textbox" id="id_28"><label class="form-label form-label-top form-label-auto" id="label_28" for="input_28" aria-hidden="false"> Expires On </label>
+        <div id="cid_28" class="form-input-wide" data-layout="half"> <input type="text" id="input_28" name="q28_expiresOn" data-type="input-textbox" class="form-textbox" data-defaultvalue="" style="width:310px" size="310" data-component="textbox" aria-labelledby="label_28" value="" /> </div>
+      </li>
+      <li class="form-line" data-type="control_textbox" id="id_29"><label class="form-label form-label-top form-label-auto" id="label_29" for="input_29" aria-hidden="false"> Passport Nationality </label>
+        <div id="cid_29" class="form-input-wide" data-layout="half"> <input type="text" id="input_29" name="q29_passportNationality" data-type="input-textbox" class="form-textbox" data-defaultvalue="" style="width:310px" size="310" data-component="textbox" aria-labelledby="label_29" value="" /> </div>
+      </li>
+      <li class="form-line" data-type="control_fileupload" id="id_44"><label class="form-label form-label-top form-label-auto" id="label_44" for="input_44" aria-hidden="false"> Upload a Copy of your Passport </label>
+        <div id="cid_44" class="form-input-wide" data-layout="full">
+          <div class="jfQuestion-fields" data-wrapper-react="true">
+            <div class="jfField isFilled">
+              <div class="jfUpload-wrapper">
+                <div class="jfUpload-container">
+                  <div class="jfUpload-button-container">
+                    <div class="jfUpload-button" aria-hidden="true" tabindex="0" style="display:none" data-version="v2">Browse Files<div class="jfUpload-heading forDesktop">Drag and drop files here</div>
+                      <div class="jfUpload-heading forMobile">Choose a file</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="jfUpload-files-container">
+                  <div class="validate[multipleUpload]"><input type="file" id="input_44" name="q44_uploadA[]" multiple="" class="form-upload-multiple" data-imagevalidate="yes" data-file-accept="pdf, doc, docx, xls, xlsx, csv, txt, rtf, html, zip, mp3, wma, mpg, flv, avi, jpg, jpeg, png, gif" data-limit-file-size="Yes" data-file-maxsize="10854" data-file-minsize="0" data-file-limit="" data-component="fileupload" aria-label="Browse Files" /></div>
+                </div>
+              </div>
+              <div data-wrapper-react="true"></div>
+            </div><span style="display:none" class="cancelText">Cancel</span><span style="display:none" class="ofText">of</span>
+          </div>
+        </div>
+      </li>
+      <li id="cid_57" class="form-input-wide" data-type="control_head">
+        <div class="form-header-group  header-default">
+          <div class="header-text httac htvam">
+            <h2 id="header_57" class="form-header" data-component="header">Visa</h2>
+          </div>
+        </div>
+      </li>
+      <li class="form-line" data-type="control_textbox" id="id_30"><label class="form-label form-label-top form-label-auto" id="label_30" for="input_30" aria-hidden="false"> Visa Country </label>
+        <div id="cid_30" class="form-input-wide" data-layout="half"> <input type="text" id="input_30" name="q30_visaCountry" data-type="input-textbox" class="form-textbox" data-defaultvalue="" style="width:310px" size="310" data-component="textbox" aria-labelledby="label_30" value="" /> </div>
+      </li>
+      <li class="form-line" data-type="control_textbox" id="id_31"><label class="form-label form-label-top form-label-auto" id="label_31" for="input_31" aria-hidden="false"> Visa Type </label>
+        <div id="cid_31" class="form-input-wide" data-layout="half"> <input type="text" id="input_31" name="q31_visaType" data-type="input-textbox" class="form-textbox" data-defaultvalue="" style="width:310px" size="310" data-component="textbox" aria-labelledby="label_31" value="" /> </div>
+      </li>
+      <li class="form-line" data-type="control_textbox" id="id_32"><label class="form-label form-label-top form-label-auto" id="label_32" for="input_32" aria-hidden="false"> Visa Expiry </label>
+        <div id="cid_32" class="form-input-wide" data-layout="half"> <input type="text" id="input_32" name="q32_visaExpiry" data-type="input-textbox" class="form-textbox" data-defaultvalue="" style="width:310px" size="310" data-component="textbox" aria-labelledby="label_32" value="" /> </div>
+      </li>
+      <li id="cid_58" class="form-input-wide" data-type="control_pagebreak">
+        <div class="form-pagebreak" data-component="pagebreak">
+          <div class="form-pagebreak-back-container"><button id="form-pagebreak-back_58" type="button" class="form-pagebreak-back  form-submit-button-reports-400 jf-form-buttons" data-component="pagebreak-back">Back</button></div>
+          <div class="form-pagebreak-next-container"><button id="form-pagebreak-next_58" type="button" class="form-pagebreak-next  form-submit-button-reports-400 jf-form-buttons" data-component="pagebreak-next">Next</button></div>
+          <div style="clear:both" class="pageInfo form-sub-label" id="pageInfo_58"></div>
+        </div>
+      </li>
+    </ul>
+    <ul class="form-section page-section" role="presentation" style="display:none;">
+      <li id="cid_59" class="form-input-wide" data-type="control_head">
+        <div class="form-header-group  header-default">
+          <div class="header-text httac htvam">
+            <h2 id="header_59" class="form-header" data-component="header">Mileage Programs</h2>
+          </div>
+        </div>
+      </li>
+      <li class="form-line" data-type="control_textbox" id="id_33"><label class="form-label form-label-top form-label-auto" id="label_33" for="input_33" aria-hidden="false"> Program Name </label>
+        <div id="cid_33" class="form-input-wide" data-layout="half"> <input type="text" id="input_33" name="q33_programName" data-type="input-textbox" class="form-textbox" data-defaultvalue="" style="width:310px" size="310" data-component="textbox" aria-labelledby="label_33" value="" /> </div>
+      </li>
+      <li class="form-line" data-type="control_textbox" id="id_35"><label class="form-label form-label-top form-label-auto" id="label_35" for="input_35" aria-hidden="false"> Airline </label>
+        <div id="cid_35" class="form-input-wide" data-layout="half"> <input type="text" id="input_35" name="q35_airline" data-type="input-textbox" class="form-textbox" data-defaultvalue="" style="width:310px" size="310" data-component="textbox" aria-labelledby="label_35" value="" /> </div>
+      </li>
+      <li class="form-line" data-type="control_textbox" id="id_34"><label class="form-label form-label-top form-label-auto" id="label_34" for="input_34" aria-hidden="false"> Program Number </label>
+        <div id="cid_34" class="form-input-wide" data-layout="half"> <input type="text" id="input_34" name="q34_programNumber" data-type="input-textbox" class="form-textbox" data-defaultvalue="" style="width:310px" size="310" data-component="textbox" aria-labelledby="label_34" value="" /> </div>
+      </li>
+      <li class="form-line" data-type="control_textbox" id="id_36"><label class="form-label form-label-top form-label-auto" id="label_36" for="input_36" aria-hidden="false"> Additional Info </label>
+        <div id="cid_36" class="form-input-wide" data-layout="half"> <input type="text" id="input_36" name="q36_additionalInfo" data-type="input-textbox" class="form-textbox" data-defaultvalue="" style="width:310px" size="310" data-component="textbox" aria-labelledby="label_36" value="" /> </div>
+      </li>
+      <li class="form-line jf-required" data-type="control_captcha" id="id_45"><label class="form-label form-label-top form-label-auto" id="label_45" for="input_45" aria-hidden="false"> Please verify that you are human<span class="form-required">*</span> </label>
+        <div id="cid_45" class="form-input-wide jf-required" data-layout="full">
+          <section data-wrapper-react="true">
+            <div id="hcaptcha_input_45" class="h-captcha" data-siteKey="772f4a50-7161-425e-8cd5-4d7e361ab765" data-callback="hcaptchaCallbackinput_45" data-expired-callback="hcaptchaExpiredCallbackinput_45"></div><input type="hidden" id="input_45" class="hidden validate[required]" name="hcaptcha_visible" required="" />
+            <script type="text/javascript" src="https://hcaptcha.com/1/api.js"></script>
+            <script type="text/javascript">
+              var hcaptchaCallbackinput_45 = function(token)
+              {
+                var hiddenInput = $("input_45");
+                hiddenInput.setValue(1);
+                if (hiddenInput.validateInput)
+                {
+                  hiddenInput.validateInput();
+                }
+              }
+
+              var hcaptchaExpiredCallbackinput_45 = function()
+              {
+                var hiddenInput = $("input_45");
+                hiddenInput.writeAttribute("value", false);
+                if (hiddenInput.validateInput)
+                {
+                  hiddenInput.validateInput();
+                }
+              }
+            </script>
+          </section>
+        </div>
+      </li>
+      <li class="form-line" data-type="control_button" id="id_38">
+        <div id="cid_38" class="form-input-wide" data-layout="full">
+          <div data-align="center" class="form-buttons-wrapper form-buttons-center   jsTest-button-wrapperField"><button id="input_38" type="submit" class="form-submit-button form-submit-button-reports-400 submit-button jf-form-buttons jsTest-submitField legacy-submit" data-component="button" data-content="">Submit Registration</button></div>
+        </div>
+      </li>
+      <li style="display:none">Should be Empty: <input type="text" name="website" value="" type="hidden" /></li>
+    </ul>
+  </div>
+  <script>
+    JotForm.showJotFormPowered = "new_footer";
+  </script>
+  <script>
+    JotForm.poweredByText = "Powered by Jotform";
+  </script><input type="hidden" class="simple_spc" id="simple_spc" name="simple_spc" value="251063939209662" />
+  <script type="text/javascript">
+    var all_spc = document.querySelectorAll("form[id='251063939209662'] .si" + "mple" + "_spc");
+    for (var i = 0; i < all_spc.length; i++)
+    {
+      all_spc[i].value = "251063939209662-251063939209662";
     }
+  </script>
+</form><script type="text/javascript">JotForm.ownerView=true;</script><script type="text/javascript">JotForm.forwardToEu=true;</script><script type="text/javascript">JotForm.isNewSACL=true;</script>
   </script>
         </section>         
         <!-- Footer -->
